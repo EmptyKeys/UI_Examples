@@ -7,6 +7,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
+using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Generated;
+using EmptyKeys.UserInterface.Input;
 #endregion
 
 namespace BasicUI_MonoGame_Win_Desktop
@@ -19,11 +22,28 @@ namespace BasicUI_MonoGame_Win_Desktop
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        private int nativeScreenWidth;
+        private int nativeScreenHeight;
+
+        private BasicUI basicUI;
+
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
+        }
+
+        private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
+        {
+            nativeScreenWidth = graphics.PreferredBackBufferWidth;
+            nativeScreenHeight = graphics.PreferredBackBufferHeight;
+
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferMultiSampling = true;
+            graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
         }
 
         /// <summary>
@@ -45,10 +65,22 @@ namespace BasicUI_MonoGame_Win_Desktop
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            this.IsMouseVisible = true;
 
-            // TODO: use this.Content to load your game content here
+            FontManager.DefaultFont = Content.Load<SpriteFont>("SegoeUI_10_Bold");
+            Viewport viewport = GraphicsDevice.Viewport;
+
+            basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+
+            RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
+
+            KeyBinding keyBinding = new KeyBinding(command, Keys.Escape, ModifierKeys.None);
+            basicUI.InputBindings.Add(keyBinding);
+        }
+
+        private void ExitEvent(object parameter)
+        {
+            Exit();
         }
 
         /// <summary>
@@ -67,10 +99,8 @@ namespace BasicUI_MonoGame_Win_Desktop
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
+            basicUI.UpdateInput(gameTime);
+            basicUI.UpdateLayout(gameTime);
 
             base.Update(gameTime);
         }
@@ -83,7 +113,7 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            basicUI.Draw(gameTime);
 
             base.Draw(gameTime);
         }
