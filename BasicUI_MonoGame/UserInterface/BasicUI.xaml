@@ -22,18 +22,32 @@
     </ek:UIRoot.Style>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition></RowDefinition>            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock TextWrapping="Wrap" Text="Text" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock TextWrapping="Wrap" Text="Basic UI Example" HorizontalAlignment="Center" VerticalAlignment="Center" />
         <StackPanel Grid.Row="1" Background="Black">
-            <Button x:Name="button1" Content="1" Width="100" Height="30" Margin="5"/>
-            <Button x:Name="button2" Content="2" Width="100" Height="30" Margin="5"/>
-            <Button x:Name="button3" Content="3" Width="100" Height="30" Margin="5"/>
+            <ComboBox Name="combo" Width="200" Margin="5">
+                <ComboBoxItem Name="item1" Content="Item 1" />
+                <ComboBoxItem Name="item2" Content="Item 2" />
+                <ComboBoxItem Name="item3" Content="Item 3" />
+            </ComboBox>
+            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5"/>
+            <Button Name="button2" Content="2" Width="200" Height="30" Margin="5"/>
+            <Button Name="button3" Content="3" Width="200" Height="30" Margin="5"/>
+            <Button Name="button4" Content="4" Width="200" Height="30" Margin="5"/>
+            <Button Name="button5" Content="5" Width="200" Height="30" Margin="5"/>
+            <Button Name="button6" Content="6" Width="200" Height="30" Margin="5"/>
+            <TextBox Name="textBox" Width="200" Text="Text Box" Margin="5"/>
+            <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
+            <TabControl Width="400">
+                <TabItem Header="Tab 1" Content="Tab 1 Content" />
+                <TabItem Header="Tab 2" Content="Tab 2 Content" />
+                <TabItem Header="Tab 3" Content="Tab 3 Content" />
+            </TabControl>
         </StackPanel>
     </Grid>
 </ek:UIRoot>
