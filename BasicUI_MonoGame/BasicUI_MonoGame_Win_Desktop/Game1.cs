@@ -67,10 +67,10 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             this.IsMouseVisible = true;
 
-            FontManager.DefaultFont = Content.Load<SpriteFont>("SegoeUI_10_Bold");
+            FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");            
             Viewport viewport = GraphicsDevice.Viewport;
-
             basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+            FontManager.Instance.LoadFonts(Content);
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 

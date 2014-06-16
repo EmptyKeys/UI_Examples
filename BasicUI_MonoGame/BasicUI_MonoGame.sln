@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUI_MonoGame_Win_Desktop", "BasicUI_MonoGame_Win_Desktop\BasicUI_MonoGame_Win_Desktop.csproj", "{33FA0DFF-98CB-4F38-8C5C-70BDD4239892}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentProject", "ContentProject\ContentProject\ContentProject.csproj", "{75409693-8DF3-4F17-8A94-50AEFFAABBFF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E66E4C19-43B7-42AC-BF64-98C3A6D2C4D1} = {E66E4C19-43B7-42AC-BF64-98C3A6D2C4D1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContentProjectContent", "ContentProject\ContentProjectContent\ContentProjectContent.contentproj", "{06465219-AE08-4AD5-8631-118F08A631D7}"
 EndProject

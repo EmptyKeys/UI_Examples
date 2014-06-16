@@ -84,7 +84,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>$(ProjectDir)..\..\EmptyKeysUI\Generator\ekUIGen.exe $(ProjectDir) $(ProjectDir)..\GameUILibrary $(ProjectDir) /mg</PostBuildEvent>
+    <PostBuildEvent>$(ProjectDir)..\..\EmptyKeysUI\Generator\ekUIGen.exe $(ProjectDir) $(ProjectDir)..\GameUILibrary $(ProjectDir)..\ContentProject\ContentProjectContent /mg</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

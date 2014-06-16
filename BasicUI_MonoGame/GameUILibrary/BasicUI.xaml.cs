@@ -45,6 +45,8 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private TabControl e_5;
         
+        private ProgressBar e_10;
+        
         public BasicUI(int width, int height, GraphicsDevice graphicsDevice, int nativeScreenWidth, int nativeScreenHeight) : 
                 base(width, height, graphicsDevice, nativeScreenWidth, nativeScreenHeight) {
             this.InitializeComponent();
@@ -77,6 +79,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_3.HorizontalAlignment = HorizontalAlignment.Center;
             this.e_3.VerticalAlignment = VerticalAlignment.Center;
             this.e_3.Text = "Basic UI Example";
+            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
+            this.e_3.FontFamily = new FontFamily("Segoe UI");
+            this.e_3.FontSize = 20F;
+            this.e_3.FontStyle = FontStyle.Bold;
             // e_4 element
             this.e_4 = new StackPanel();
             this.e_2.Children.Add(this.e_4);
@@ -89,6 +95,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.combo.Name = "combo";
             this.combo.Width = 200F;
             this.combo.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
             this.combo.ItemsSource = this.Get_combo_Items();
             // button1 element
             this.button1 = new Button();
@@ -113,6 +120,9 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.Height = 30F;
             this.button3.Width = 200F;
             this.button3.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.button3.FontFamily = new FontFamily("Segoe UI");
+            this.button3.FontSize = 20F;
+            this.button3.FontStyle = FontStyle.Bold;
             this.button3.Content = "3";
             // button4 element
             this.button4 = new Button();
@@ -158,6 +168,14 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_5.Name = "e_5";
             this.e_5.Width = 400F;
             this.e_5.ItemsSource = this.Get_e_5_Items();
+            // e_10 element
+            this.e_10 = new ProgressBar();
+            this.e_4.Children.Add(this.e_10);
+            this.e_10.Name = "e_10";
+            this.e_10.Height = 30F;
+            this.e_10.Width = 400F;
+            this.e_10.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_10.Value = 39F;
         }
         
         private UIElement _s_S_0_ctMethod(UIElement parent) {
@@ -224,6 +242,12 @@ namespace EmptyKeys.UserInterface.Generated {
             e_8.Content = "Tab 3 Content";
             e_8.Header = "Tab 3";
             items.Add(e_8);
+            // e_9 element
+            TabItem e_9 = new TabItem();
+            e_9.Name = "e_9";
+            e_9.Content = "Tab 4 Content";
+            e_9.Header = "Tab 4";
+            items.Add(e_9);
             return items;
         }
     }
