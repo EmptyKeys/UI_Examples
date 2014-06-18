@@ -19,8 +19,7 @@ namespace BasicUI_MonoGame_Win_Desktop
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        GraphicsDeviceManager graphics;        
 
         private int nativeScreenWidth;
         private int nativeScreenHeight;
