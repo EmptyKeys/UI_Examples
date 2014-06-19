@@ -52,6 +52,8 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private ProgressBar e_9;
         
+        private Button imageButton;
+        
         public BasicUI(int width, int height, GraphicsDevice graphicsDevice, int nativeScreenWidth, int nativeScreenHeight) : 
                 base(width, height, graphicsDevice, nativeScreenWidth, nativeScreenHeight) {
             Style style = RootStyle.CreateRootStyle();
@@ -188,6 +190,16 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_9.Width = 400F;
             this.e_9.Margin = new Thickness(5F, 5F, 5F, 5F);
             this.e_9.Value = 39F;
+            // imageButton element
+            this.imageButton = new Button();
+            this.e_3.Children.Add(this.imageButton);
+            this.imageButton.Name = "imageButton";
+            this.imageButton.Height = 96F;
+            this.imageButton.Width = 96F;
+            ImageBrush imageButton_Background = new ImageBrush();
+            imageButton_Background.ImageSourceAsset = "Images/MonogameLogo";
+            ImageManager.Instance.AddImage("Images/MonogameLogo");
+            this.imageButton.Background = imageButton_Background;
         }
         
         private System.Collections.ObjectModel.ObservableCollection<object> Get_combo_Items() {

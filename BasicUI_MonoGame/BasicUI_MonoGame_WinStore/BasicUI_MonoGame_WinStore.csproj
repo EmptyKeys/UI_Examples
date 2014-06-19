@@ -154,6 +154,10 @@
       <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\MonogameLogo.xnb">
+      <Link>Content\Images\MonogameLogo.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="BasicUI_MonoGame_WinStore_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

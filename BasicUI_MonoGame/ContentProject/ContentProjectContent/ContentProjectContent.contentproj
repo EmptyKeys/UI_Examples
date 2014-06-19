@@ -71,7 +71,13 @@
       <Processor>NuclexSpriteFontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Images\MonogameLogo.png">
+      <Name>MonogameLogo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Images\EmptyKeysLogoTextSmall.png">
       <Name>EmptyKeysLogoTextSmall</Name>
