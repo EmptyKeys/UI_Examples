@@ -150,12 +150,8 @@
       <Link>Content\Segoe_UI_9_Regular.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_Light_10_Regular.xnb">
-      <Link>Content\Segoe_UI_Light_10_Regular.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_Light_15_Bold.xnb">
-      <Link>Content\Segoe_UI_Light_15_Bold.xnb</Link>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\EmptyKeysLogoTextSmall.xnb">
+      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="BasicUI_MonoGame_WinStore_TemporaryKey.pfx" />

@@ -1,25 +1,19 @@
-﻿#region Using Statements
-using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Storage;
-using Microsoft.Xna.Framework.GamerServices;
+﻿using System;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
-#endregion
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
-namespace BasicUI_MonoGame_Win_Desktop
+namespace BasicUI_MonoGame_WinStore
 {
     /// <summary>
     /// This is the main type for your game
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;        
+        GraphicsDeviceManager graphics;
 
         private int nativeScreenWidth;
         private int nativeScreenHeight;
@@ -39,8 +33,8 @@ namespace BasicUI_MonoGame_Win_Desktop
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
             graphics.PreferMultiSampling = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
         }
@@ -66,7 +60,7 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             this.IsMouseVisible = true;
 
-            FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");            
+            FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
             FontManager.Instance.LoadFonts(Content);

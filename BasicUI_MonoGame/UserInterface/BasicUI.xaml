@@ -5,32 +5,42 @@
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="800">
-    <ek:UIRoot.Style>
+    
+    <!-- User can define style for his root control -->
+    <!--ek:UIRoot.Style>
         <Style>
             <Setter Property="Control.Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ek:UIRoot}">
                         <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                            BorderThickness="{TemplateBinding BorderThickness}">                            
                             <ContentPresenter Content="{TemplateBinding Content}" />
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
-    </ek:UIRoot.Style>
+    </ek:UIRoot.Style-->
+    
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"></RowDefinition>
-            <RowDefinition></RowDefinition>            
+            <RowDefinition Height="110"></RowDefinition>
+            <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock TextWrapping="Wrap" Text="Basic UI Example" HorizontalAlignment="Center" VerticalAlignment="Center" 
-                   FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" />
-        <StackPanel Grid.Row="1" Background="Black">
+        <StackPanel Background="Black">
+            <Image Name="logo" Stretch="None" HorizontalAlignment="Center">
+                <Image.Source>
+                    <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
+                </Image.Source>
+            </Image>
+            <TextBlock TextWrapping="Wrap" Text="Basic UI Example" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                   FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
+        </StackPanel>
+        <StackPanel Grid.Row="1">
             <ComboBox Name="combo" Width="200" Margin="5">
                 <ComboBoxItem Name="item1" Content="Item 1" />
                 <ComboBoxItem Name="item2" Content="Item 2" />

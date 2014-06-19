@@ -58,14 +58,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Segoe_UI_Light_10_Regular.spritefont">
-      <Name>Segoe_UI_Light_10_Regular</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>NuclexSpriteFontDescriptionProcessor</Processor>
-      <SubType>Designer</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Segoe_UI_9_Regular.spritefont">
       <Name>Segoe_UI_9_Regular</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -73,17 +65,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Segoe_UI_Light_15_Bold.spritefont">
-      <Name>Segoe_UI_Light_15_Bold</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Segoe_UI_15_Bold.spritefont">
       <Name>Segoe_UI_15_Bold</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>NuclexSpriteFontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Images\EmptyKeysLogoTextSmall.png">
+      <Name>EmptyKeysLogoTextSmall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
