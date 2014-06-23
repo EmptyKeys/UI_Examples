@@ -217,3 +217,9 @@ EmptyKeysUI/Generator/EmptyKeys.UserInterface.Designer.dll
 EmptyKeysUI/Generator/EmptyKeys.UserInterface.Generator.dll
 EmptyKeysUI/Generator/ekUiGen.exe
 EmptyKeysUI/Generator/ekUiGen.exe.config
+/EmptyKeysUI
+*.userprefs
+*.info
+*.txt
+/BasicUI_SunBurn/BasicUI_Pro/GameContent/bin-content
+*.sbsln
