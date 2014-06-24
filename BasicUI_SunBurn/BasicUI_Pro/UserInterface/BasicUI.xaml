@@ -23,6 +23,14 @@
         </Style>
     </ek:UIRoot.Style-->
 
+    <ek:UIRoot.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/UserInterface;component/Dictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ek:UIRoot.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="110"></RowDefinition>
@@ -37,7 +45,7 @@
                     <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
                 </Image.Source>
             </Image>
-            <TextBlock TextWrapping="Wrap" Text="Basic UI Example" HorizontalAlignment="Center" VerticalAlignment="Center" 
+            <TextBlock TextWrapping="Wrap" Text="{StaticResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
         </StackPanel>
         <StackPanel Grid.Row="1">

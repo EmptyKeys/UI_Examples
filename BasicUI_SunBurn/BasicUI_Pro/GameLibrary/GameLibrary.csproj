@@ -40,6 +40,7 @@
     <Compile Include="BaseGameProgram.cs" />
     <Compile Include="BasicUIScreen.cs" />
     <Compile Include="GeneratedUI\BasicUI.xaml.cs" />
+    <Compile Include="GeneratedUI\Dictionary.xaml.cs" />
     <Compile Include="Input\CompositeInputSource.cs" />
     <Compile Include="Input\InputHelper.cs" />
     <Compile Include="Input\InputSources.cs" />
