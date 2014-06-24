@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
+using GameUILibrary;
 #endregion
 
 namespace BasicUI_MonoGame_Win_Desktop
@@ -69,6 +70,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");            
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+            basicUI.DataContext = new BasicUIViewModel();
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
 

@@ -54,12 +54,11 @@
                 <ComboBoxItem Name="item2" Content="Item 2" />
                 <ComboBoxItem Name="item3" Content="Item 3" />
             </ComboBox>
-            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" />
-            <Button Name="button2" Content="2" Width="200" Height="30" Margin="5"/>
-            <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" />
-            <Button Name="button4" Content="4" Width="200" Height="30" Margin="5"/>
-            <Button Name="button5" Content="5" Width="200" Height="30" Margin="5"/>
-            <Button Name="button6" Content="6" Width="200" Height="30" Margin="5"/>
+            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
+            <Button Name="button2" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
+            <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
+                    Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
+            <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
             <TextBox Name="textBox" Width="200" Text="Text Box" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
             <TabControl Width="400">
