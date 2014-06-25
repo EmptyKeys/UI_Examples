@@ -37,11 +37,7 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private Button button3;
         
-        private Button button4;
-        
-        private Button button5;
-        
-        private Button button6;
+        private TextBlock buttonResult;
         
         private TextBox textBox;
         
@@ -118,6 +114,9 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button1.Width = 200F;
             this.button1.Margin = new Thickness(5F, 5F, 5F, 5F);
             this.button1.Content = "1";
+            this.button1.CommandParameter = "Click Button 1";
+            Binding binding_button1_Command = new Binding("ButtonCommand");
+            this.button1.SetBinding(Button.CommandProperty, binding_button1_Command);
             // button2 element
             this.button2 = new Button();
             this.e_3.Children.Add(this.button2);
@@ -126,6 +125,9 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button2.Width = 200F;
             this.button2.Margin = new Thickness(5F, 5F, 5F, 5F);
             this.button2.Content = "2";
+            this.button2.CommandParameter = "Click Button 2";
+            Binding binding_button2_Command = new Binding("ButtonCommand");
+            this.button2.SetBinding(Button.CommandProperty, binding_button2_Command);
             // button3 element
             this.button3 = new Button();
             this.e_3.Children.Add(this.button3);
@@ -137,30 +139,16 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.FontSize = 20F;
             this.button3.FontStyle = FontStyle.Bold;
             this.button3.Content = "3";
-            // button4 element
-            this.button4 = new Button();
-            this.e_3.Children.Add(this.button4);
-            this.button4.Name = "button4";
-            this.button4.Height = 30F;
-            this.button4.Width = 200F;
-            this.button4.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.button4.Content = "4";
-            // button5 element
-            this.button5 = new Button();
-            this.e_3.Children.Add(this.button5);
-            this.button5.Name = "button5";
-            this.button5.Height = 30F;
-            this.button5.Width = 200F;
-            this.button5.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.button5.Content = "5";
-            // button6 element
-            this.button6 = new Button();
-            this.e_3.Children.Add(this.button6);
-            this.button6.Name = "button6";
-            this.button6.Height = 30F;
-            this.button6.Width = 200F;
-            this.button6.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.button6.Content = "6";
+            this.button3.CommandParameter = "Click Button 3";
+            Binding binding_button3_Command = new Binding("ButtonCommand");
+            this.button3.SetBinding(Button.CommandProperty, binding_button3_Command);
+            // buttonResult element
+            this.buttonResult = new TextBlock();
+            this.e_3.Children.Add(this.buttonResult);
+            this.buttonResult.Name = "buttonResult";
+            this.buttonResult.HorizontalAlignment = HorizontalAlignment.Center;
+            Binding binding_buttonResult_Text = new Binding("ButtonResult");
+            this.buttonResult.SetBinding(TextBlock.TextProperty, binding_buttonResult_Text);
             // textBox element
             this.textBox = new TextBox();
             this.e_3.Children.Add(this.textBox);

@@ -46,6 +46,7 @@
     <Compile Include="Input\InputSources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleGameScreen.cs" />
+    <Compile Include="ViewModels\BasicUIViewModel.cs" />
     <None Include="readme.htm" />
   </ItemGroup>
   <ItemGroup>

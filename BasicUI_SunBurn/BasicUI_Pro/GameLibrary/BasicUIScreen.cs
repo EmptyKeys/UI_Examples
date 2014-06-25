@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
+using GameLibrary.ViewModels;
 using SynapseGaming.SunBurn.Framework.Core;
 using SynapseGaming.SunBurn.Framework.Graphics;
 using SynapseGaming.SunBurn.Framework.Graphics.Sprites;
@@ -33,6 +34,7 @@ namespace GameLibrary
             Viewport viewport = Platform.Instance.GraphicsDevice.Viewport;
 
             basicUI = new BasicUI(viewport.Width, viewport.Height);
+            basicUI.DataContext = new BasicUIViewModel();
 
             FontManager.Instance.LoadFonts(BaseGameProgram.Instance.ContentDatabase);
             ImageManager.Instance.LoadImages(BaseGameProgram.Instance.ContentDatabase);
