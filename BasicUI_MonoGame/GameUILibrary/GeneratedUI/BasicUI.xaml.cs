@@ -46,7 +46,7 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private TabControl e_4;
         
-        private ProgressBar e_9;
+        private ProgressBar e_17;
         
         private Button imageButton;
         
@@ -168,16 +168,17 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_4 = new TabControl();
             this.e_3.Children.Add(this.e_4);
             this.e_4.Name = "e_4";
-            this.e_4.Width = 400F;
+            this.e_4.Height = 150F;
+            this.e_4.Width = 360F;
             this.e_4.ItemsSource = this.Get_e_4_Items();
-            // e_9 element
-            this.e_9 = new ProgressBar();
-            this.e_3.Children.Add(this.e_9);
-            this.e_9.Name = "e_9";
-            this.e_9.Height = 30F;
-            this.e_9.Width = 400F;
-            this.e_9.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.e_9.Value = 39F;
+            // e_17 element
+            this.e_17 = new ProgressBar();
+            this.e_3.Children.Add(this.e_17);
+            this.e_17.Name = "e_17";
+            this.e_17.Height = 30F;
+            this.e_17.Width = 400F;
+            this.e_17.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_17.Value = 39F;
             // imageButton element
             this.imageButton = new Button();
             this.e_3.Children.Add(this.imageButton);
@@ -215,27 +216,71 @@ namespace EmptyKeys.UserInterface.Generated {
             // e_5 element
             TabItem e_5 = new TabItem();
             e_5.Name = "e_5";
-            e_5.Content = "Tab 1 Content";
             e_5.Header = "Tab 1";
-            items.Add(e_5);
             // e_6 element
-            TabItem e_6 = new TabItem();
+            StackPanel e_6 = new StackPanel();
+            e_5.Content = e_6;
             e_6.Name = "e_6";
-            e_6.Content = "Tab 2 Content";
-            e_6.Header = "Tab 2";
-            items.Add(e_6);
             // e_7 element
-            TabItem e_7 = new TabItem();
+            ListBox e_7 = new ListBox();
+            e_6.Children.Add(e_7);
             e_7.Name = "e_7";
-            e_7.Content = "Tab 3 Content";
-            e_7.Header = "Tab 3";
-            items.Add(e_7);
+            e_7.Height = 100F;
+            e_7.ItemsSource = this.Get_e_7_Items();
+            items.Add(e_5);
+            // e_14 element
+            TabItem e_14 = new TabItem();
+            e_14.Name = "e_14";
+            e_14.Content = "Tab 2 Content";
+            e_14.Header = "Tab 2";
+            items.Add(e_14);
+            // e_15 element
+            TabItem e_15 = new TabItem();
+            e_15.Name = "e_15";
+            e_15.Content = "Tab 3 Content";
+            e_15.Header = "Tab 3";
+            items.Add(e_15);
+            // e_16 element
+            TabItem e_16 = new TabItem();
+            e_16.Name = "e_16";
+            e_16.Content = "Tab 4 Content";
+            e_16.Header = "Tab 4";
+            items.Add(e_16);
+            return items;
+        }
+        
+        private System.Collections.ObjectModel.ObservableCollection<object> Get_e_7_Items() {
+            System.Collections.ObjectModel.ObservableCollection<object> items = new System.Collections.ObjectModel.ObservableCollection<object>();
             // e_8 element
-            TabItem e_8 = new TabItem();
+            ListBoxItem e_8 = new ListBoxItem();
             e_8.Name = "e_8";
-            e_8.Content = "Tab 4 Content";
-            e_8.Header = "Tab 4";
+            e_8.Content = "Selection 1";
             items.Add(e_8);
+            // e_9 element
+            ListBoxItem e_9 = new ListBoxItem();
+            e_9.Name = "e_9";
+            e_9.Content = "Selection 2";
+            items.Add(e_9);
+            // e_10 element
+            ListBoxItem e_10 = new ListBoxItem();
+            e_10.Name = "e_10";
+            e_10.Content = "Selection 3";
+            items.Add(e_10);
+            // e_11 element
+            ListBoxItem e_11 = new ListBoxItem();
+            e_11.Name = "e_11";
+            e_11.Content = "Selection 4";
+            items.Add(e_11);
+            // e_12 element
+            ListBoxItem e_12 = new ListBoxItem();
+            e_12.Name = "e_12";
+            e_12.Content = "Selection 5";
+            items.Add(e_12);
+            // e_13 element
+            ListBoxItem e_13 = new ListBoxItem();
+            e_13.Name = "e_13";
+            e_13.Content = "Selection 6";
+            items.Add(e_13);
             return items;
         }
     }

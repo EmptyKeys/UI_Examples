@@ -61,8 +61,19 @@
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
             <TextBox Name="textBox" Width="200" Text="Text Box" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
-            <TabControl Width="400">
-                <TabItem Header="Tab 1" Content="Tab 1 Content" />
+            <TabControl Width="400" Height="150">
+                <TabItem Header="Tab 1">
+                    <StackPanel>
+                        <ListBox Height="100">
+                            <ListBoxItem>Selection 1</ListBoxItem>
+                            <ListBoxItem>Selection 2</ListBoxItem>
+                            <ListBoxItem>Selection 3</ListBoxItem>
+                            <ListBoxItem>Selection 4</ListBoxItem>
+                            <ListBoxItem>Selection 5</ListBoxItem>
+                            <ListBoxItem>Selection 6</ListBoxItem>
+                        </ListBox>
+                    </StackPanel>
+                </TabItem>
                 <TabItem Header="Tab 2" Content="Tab 2 Content" />
                 <TabItem Header="Tab 3" Content="Tab 3 Content" />
                 <TabItem Header="Tab 4" Content="Tab 4 Content"/>
