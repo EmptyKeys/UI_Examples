@@ -12,6 +12,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
     using EmptyKeys.UserInterface.Media;
+    using EmptyKeys.UserInterface.Media.Imaging;
     using EmptyKeys.UserInterface.Themes;
     using SynapseGaming.SunBurn.Framework.Primitives;
     

@@ -12,6 +12,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
     using EmptyKeys.UserInterface.Media;
+    using EmptyKeys.UserInterface.Media.Imaging;
     using EmptyKeys.UserInterface.Themes;
     using SynapseGaming.SunBurn.Framework.Primitives;
     
@@ -58,6 +59,8 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private void InitializeComponent() {
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
+            this.FontSize = 13.33333F;
             // e_0 element
             this.e_0 = new Grid();
             this.Content = this.e_0;
@@ -79,8 +82,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_1.Children.Add(this.logo);
             this.logo.Name = "logo";
             this.logo.HorizontalAlignment = HorizontalAlignment.Center;
-            this.logo.SourceAsset = "Images/EmptyKeysLogoTextSmall";
+            BitmapImage logo_bm = new BitmapImage();
+            logo_bm.TextureAsset = "Images/EmptyKeysLogoTextSmall";
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
+            this.logo.Source = logo_bm;
             // e_2 element
             this.e_2 = new TextBlock();
             this.e_1.Children.Add(this.e_2);
@@ -104,7 +109,6 @@ namespace EmptyKeys.UserInterface.Generated {
             this.combo.Name = "combo";
             this.combo.Width = 200F;
             this.combo.Margin = new Thickness(5F, 5F, 5F, 5F);
-            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.combo.ItemsSource = this.Get_combo_Items();
             // button1 element
             this.button1 = new Button();
@@ -186,8 +190,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.imageButton.Height = 68F;
             this.imageButton.Width = 57F;
             ImageBrush imageButton_Background = new ImageBrush();
-            imageButton_Background.ImageSourceAsset = "Images/SunBurn";
+            BitmapImage imageButton_Background_bm = new BitmapImage();
+            imageButton_Background_bm.TextureAsset = "Images/SunBurn";
             ImageManager.Instance.AddImage("Images/SunBurn");
+            imageButton_Background.ImageSource = imageButton_Background_bm;
             this.imageButton.Background = imageButton_Background;
         }
         
