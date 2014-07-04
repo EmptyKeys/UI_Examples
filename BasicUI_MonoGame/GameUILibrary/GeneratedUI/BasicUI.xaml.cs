@@ -18,7 +18,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using Microsoft.Xna.Framework.Graphics;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.2.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -159,7 +159,8 @@ namespace EmptyKeys.UserInterface.Generated {
             this.textBox.Name = "textBox";
             this.textBox.Width = 200F;
             this.textBox.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.textBox.Text = "Text Box";
+            Binding binding_textBox_Text = new Binding("TextBoxText");
+            this.textBox.SetBinding(TextBox.TextProperty, binding_textBox_Text);
             // checkBox element
             this.checkBox = new CheckBox();
             this.e_3.Children.Add(this.checkBox);

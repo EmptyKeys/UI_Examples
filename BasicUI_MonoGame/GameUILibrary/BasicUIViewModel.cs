@@ -14,6 +14,7 @@ namespace GameUILibrary
     public class BasicUIViewModel : ViewModelBase
     {
         private string buttonResult;
+        private string textBoxText;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -37,6 +38,18 @@ namespace GameUILibrary
         {
             get { return buttonResult; }
             set { SetProperty<string>(ref buttonResult, value); }
+        }        
+
+        /// <summary>
+        /// Gets or sets the text box text.
+        /// </summary>
+        /// <value>
+        /// The text box text.
+        /// </value>
+        public string TextBoxText
+        {
+            get { return textBoxText; }
+            set { SetProperty<string>(ref textBoxText, value); }
         }
 
         /// <summary>

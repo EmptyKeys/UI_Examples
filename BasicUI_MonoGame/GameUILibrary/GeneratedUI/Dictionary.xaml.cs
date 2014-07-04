@@ -18,7 +18,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using Microsoft.Xna.Framework.Graphics;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.2.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -34,6 +34,11 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private void InitializeResources() {
+            // Resource - [Image] BitmapImage
+            BitmapImage r_0_bm = new BitmapImage();
+            r_0_bm.TextureAsset = "Images/MonogameLogo";
+            ImageManager.Instance.AddImage("Images/MonogameLogo");
+            this.Add("Image", r_0_bm);
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");
         }
