@@ -45,7 +45,7 @@
                     <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
                 </Image.Source>
             </Image>
-            <TextBlock TextWrapping="Wrap" Text="{StaticResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
+            <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
         </StackPanel>
         <StackPanel Grid.Row="1">
@@ -55,7 +55,7 @@
                 <ComboBoxItem Name="item3" Content="Item 3" />
             </ComboBox>
             <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
-            <Button Name="button2" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
+            <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
             <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
                     Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
