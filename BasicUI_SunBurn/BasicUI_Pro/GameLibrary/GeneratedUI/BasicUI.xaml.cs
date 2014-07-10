@@ -61,6 +61,15 @@ namespace EmptyKeys.UserInterface.Generated {
         private void InitializeComponent() {
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.FontSize = 13.33333F;
+            var _sounds = SoundManager.GetSounds(this);
+            _sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
+            SoundManager.Instance.AddSound("Click");
+            _sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            SoundManager.Instance.AddSound("KeyPress");
+            _sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            SoundManager.Instance.AddSound("Move");
+            _sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            SoundManager.Instance.AddSound("Select");
             this.InitializeElementResources(this);
             // e_0 element
             this.e_0 = new Grid();

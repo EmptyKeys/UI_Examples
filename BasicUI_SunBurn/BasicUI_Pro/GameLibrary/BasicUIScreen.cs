@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
+using EmptyKeys.UserInterface.Media;
 using GameLibrary.ViewModels;
 using SynapseGaming.SunBurn.Framework.Core;
 using SynapseGaming.SunBurn.Framework.Graphics;
@@ -38,6 +39,7 @@ namespace GameLibrary
 
             FontManager.Instance.LoadFonts(BaseGameProgram.Instance.ContentDatabase);
             ImageManager.Instance.LoadImages(BaseGameProgram.Instance.ContentDatabase);
+            SoundManager.Instance.LoadSounds(BaseGameProgram.Instance.ContentDatabase);
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 

@@ -30,7 +30,14 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ek:UIRoot.Resources>
-    
+    <ek:SoundManager.Sounds>
+        <ek:SoundSourceCollection>
+            <ek:SoundSource SoundType="ButtonsClick" SoundAsset="Click" />
+            <ek:SoundSource SoundType="TextBoxKeyPress" SoundAsset="KeyPress" />
+            <ek:SoundSource SoundType="TabControlMove" SoundAsset="Move" />
+            <ek:SoundSource SoundType="TabControlSelect" SoundAsset="Select" />
+        </ek:SoundSourceCollection>
+    </ek:SoundManager.Sounds>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="110"></RowDefinition>
