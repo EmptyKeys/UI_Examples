@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="800" FontSize="10pt">
+             d:DesignHeight="640" d:DesignWidth="800" FontSize="10pt" ek:SoundManager.Sounds="{DynamicResource Sounds}">
 
     <!-- User can define style for his root control -->
     <!--ek:UIRoot.Style>
@@ -30,14 +30,6 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ek:UIRoot.Resources>
-    <ek:SoundManager.Sounds>
-        <ek:SoundSourceCollection>
-            <ek:SoundSource SoundType="ButtonsClick" SoundAsset="Click" />
-            <ek:SoundSource SoundType="TextBoxKeyPress" SoundAsset="KeyPress" />
-            <ek:SoundSource SoundType="TabControlMove" SoundAsset="Move" />
-            <ek:SoundSource SoundType="TabControlSelect" SoundAsset="Select" />
-        </ek:SoundSourceCollection>
-    </ek:SoundManager.Sounds>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="110"></RowDefinition>
