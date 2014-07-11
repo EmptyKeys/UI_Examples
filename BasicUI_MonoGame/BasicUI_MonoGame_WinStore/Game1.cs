@@ -2,6 +2,7 @@
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
+using EmptyKeys.UserInterface.Media;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -65,6 +66,7 @@ namespace BasicUI_MonoGame_WinStore
             basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
+            SoundManager.Instance.LoadSounds(Content);
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 

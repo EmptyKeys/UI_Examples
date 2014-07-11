@@ -11,6 +11,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
 using GameUILibrary;
+using EmptyKeys.UserInterface.Media;
 #endregion
 
 namespace BasicUI_MonoGame_Win_Desktop
@@ -73,6 +74,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             basicUI.DataContext = new BasicUIViewModel();
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
+            SoundManager.Instance.LoadSounds(Content);
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 

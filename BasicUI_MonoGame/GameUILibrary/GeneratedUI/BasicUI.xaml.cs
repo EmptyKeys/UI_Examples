@@ -18,7 +18,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using Microsoft.Xna.Framework.Graphics;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.2.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.3.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -61,6 +61,8 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private void InitializeComponent() {
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
+            this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
+            this.InitializeElementResources(this);
             // e_0 element
             this.e_0 = new Grid();
             this.Content = this.e_0;
@@ -93,11 +95,11 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_2.HorizontalAlignment = HorizontalAlignment.Center;
             this.e_2.VerticalAlignment = VerticalAlignment.Center;
             this.e_2.Foreground = new Color(211, 211, 211, 255);
-            this.e_2.Text = "Basic UI Example";
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
             this.e_2.FontFamily = new FontFamily("Segoe UI");
             this.e_2.FontSize = 20F;
             this.e_2.FontStyle = FontStyle.Bold;
+            this.e_2.SetResourceReference(TextBlock.TextProperty, "TitleResource");
             // e_3 element
             this.e_3 = new StackPanel();
             this.e_0.Children.Add(this.e_3);
@@ -132,6 +134,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button2.CommandParameter = "Click Button 2";
             Binding binding_button2_Command = new Binding("ButtonCommand");
             this.button2.SetBinding(Button.CommandProperty, binding_button2_Command);
+            this.button2.SetResourceReference(Button.StyleProperty, "buttonStyle");
             // button3 element
             this.button3 = new Button();
             this.e_3.Children.Add(this.button3);
@@ -195,6 +198,10 @@ namespace EmptyKeys.UserInterface.Generated {
             ImageManager.Instance.AddImage("Images/MonogameLogo");
             imageButton_Background.ImageSource = imageButton_Background_bm;
             this.imageButton.Background = imageButton_Background;
+        }
+        
+        private void InitializeElementResources(UIElement elem) {
+            elem.Resources.MergedDictionaries.Add(Dictionary.Instance);
         }
         
         private System.Collections.ObjectModel.ObservableCollection<object> Get_combo_Items() {
