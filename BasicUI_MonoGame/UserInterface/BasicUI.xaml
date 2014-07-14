@@ -58,6 +58,7 @@
             <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
             <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
                     Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
+            <Button Name="button4" IsEnabled="{Binding ButtonEnabled}" Content="4" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 4" />
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />

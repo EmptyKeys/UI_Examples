@@ -15,6 +15,7 @@ namespace GameUILibrary
     {
         private string buttonResult;
         private string textBoxText;
+        private bool buttonEnabled;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -50,6 +51,18 @@ namespace GameUILibrary
         {
             get { return textBoxText; }
             set { SetProperty<string>(ref textBoxText, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether [button enabled].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if [button enabled]; otherwise, <c>false</c>.
+        /// </value>
+        public bool ButtonEnabled
+        {
+            get { return buttonEnabled; }
+            set { SetProperty<bool>(ref buttonEnabled, value); }
         }
 
         /// <summary>

@@ -39,6 +39,8 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private Button button3;
         
+        private Button button4;
+        
         private TextBlock buttonResult;
         
         private TextBox textBox;
@@ -149,6 +151,17 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.CommandParameter = "Click Button 3";
             Binding binding_button3_Command = new Binding("ButtonCommand");
             this.button3.SetBinding(Button.CommandProperty, binding_button3_Command);
+            // button4 element
+            this.button4 = new Button();
+            this.e_3.Children.Add(this.button4);
+            this.button4.Name = "button4";
+            this.button4.Height = 30F;
+            this.button4.Width = 200F;
+            this.button4.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.button4.Content = "4";
+            this.button4.CommandParameter = "Click Button 4";
+            Binding binding_button4_IsEnabled = new Binding("ButtonEnabled");
+            this.button4.SetBinding(Button.IsEnabledProperty, binding_button4_IsEnabled);
             // buttonResult element
             this.buttonResult = new TextBlock();
             this.e_3.Children.Add(this.buttonResult);
