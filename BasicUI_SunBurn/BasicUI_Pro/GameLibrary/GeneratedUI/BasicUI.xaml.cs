@@ -88,6 +88,7 @@ namespace EmptyKeys.UserInterface.Generated {
             logo_bm.TextureAsset = "Images/EmptyKeysLogoTextSmall";
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             this.logo.Source = logo_bm;
+            this.logo.SetResourceReference(Image.SourceProperty, "logoEmptyKeys");
             // e_2 element
             this.e_2 = new TextBlock();
             this.e_1.Children.Add(this.e_2);

@@ -39,10 +39,7 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Background="Black">
-            <Image Name="logo" Stretch="None" HorizontalAlignment="Center">
-                <Image.Source>
-                    <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
-                </Image.Source>
+            <Image Name="logo" Stretch="None" HorizontalAlignment="Center" Source="{DynamicResource logoEmptyKeys}">                
             </Image>
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
@@ -80,13 +77,9 @@
             <ProgressBar Value="39" Height="30" Margin="5" Width="400"/>
             <Button Name="imageButton" Width="57" Height="68">
                 <Button.Background>
-                    <ImageBrush Stretch="None">
-                        <ImageBrush.ImageSource>
-                            <BitmapImage UriSource="Images/SunBurn.png" />
-                        </ImageBrush.ImageSource>
-                    </ImageBrush>
+                    <ImageBrush Stretch="None" ImageSource="{DynamicResource logoSunburn}" />
                 </Button.Background>
-            </Button>
+            </Button>            
         </StackPanel>
     </Grid>
 </ek:UIRoot>

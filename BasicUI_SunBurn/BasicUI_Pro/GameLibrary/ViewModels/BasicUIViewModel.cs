@@ -50,7 +50,7 @@ namespace GameLibrary.ViewModels
         {
             get { return textBoxText; }
             set { SetProperty<string>(ref textBoxText, value); }
-        }
+        }        
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
