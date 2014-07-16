@@ -16,6 +16,7 @@ namespace GameUILibrary
         private string buttonResult;
         private string textBoxText;
         private bool buttonEnabled;
+        private float progressValue;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -66,6 +67,18 @@ namespace GameUILibrary
         }
 
         /// <summary>
+        /// Gets or sets the progress value.
+        /// </summary>
+        /// <value>
+        /// The progress value.
+        /// </value>
+        public float ProgressValue
+        {
+            get { return progressValue; }
+            set { SetProperty<float>(ref progressValue, value); }
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
@@ -78,6 +91,7 @@ namespace GameUILibrary
             if (obj != null)
             {
                 ButtonResult = obj.ToString();
+                ProgressValue += 0.5f;
             }
         }
     }

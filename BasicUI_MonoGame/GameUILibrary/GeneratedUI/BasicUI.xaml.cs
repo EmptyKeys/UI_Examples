@@ -198,7 +198,8 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_17.Height = 30F;
             this.e_17.Width = 400F;
             this.e_17.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.e_17.Value = 39F;
+            Binding binding_e_17_Value = new Binding("ProgressValue");
+            this.e_17.SetBinding(ProgressBar.ValueProperty, binding_e_17_Value);
             // imageButton element
             this.imageButton = new Button();
             this.e_3.Children.Add(this.imageButton);

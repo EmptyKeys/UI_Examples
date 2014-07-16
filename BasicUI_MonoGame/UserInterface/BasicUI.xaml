@@ -79,7 +79,7 @@
                 <TabItem Header="Tab 3" Content="Tab 3 Content" />
                 <TabItem Header="Tab 4" Content="Tab 4 Content"/>
             </TabControl>
-            <ProgressBar Value="39" Height="30" Margin="5" Width="400"/>
+            <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="400"/>
             <Button Name="imageButton" Width="96" Height="96">
                 <Button.Background>
                     <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
