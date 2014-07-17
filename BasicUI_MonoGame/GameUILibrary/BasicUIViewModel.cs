@@ -92,6 +92,7 @@ namespace GameUILibrary
             {
                 ButtonResult = obj.ToString();
                 ProgressValue += 0.5f;
+                ButtonEnabled = true;
             }
         }
     }

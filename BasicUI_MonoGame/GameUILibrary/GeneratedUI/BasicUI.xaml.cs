@@ -90,6 +90,7 @@ namespace EmptyKeys.UserInterface.Generated {
             logo_bm.TextureAsset = "Images/EmptyKeysLogoTextSmall";
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             this.logo.Source = logo_bm;
+            this.logo.Stretch = Stretch.None;
             // e_2 element
             this.e_2 = new TextBlock();
             this.e_1.Children.Add(this.e_2);
@@ -162,6 +163,8 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button4.CommandParameter = "Click Button 4";
             Binding binding_button4_IsEnabled = new Binding("ButtonEnabled");
             this.button4.SetBinding(Button.IsEnabledProperty, binding_button4_IsEnabled);
+            Binding binding_button4_Command = new Binding("ButtonCommand");
+            this.button4.SetBinding(Button.CommandProperty, binding_button4_Command);
             // buttonResult element
             this.buttonResult = new TextBlock();
             this.e_3.Children.Add(this.buttonResult);
