@@ -60,9 +60,13 @@
                     Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
             <Button Name="button4" IsEnabled="{Binding ButtonEnabled}" Content="4" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 4" />
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" Width="200">
+                <Slider Name="slider" Width="150" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
+                <TextBlock Name="sliderValue" Text="{Binding SliderValue}" Margin="5" />
+            </StackPanel>
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
-            <TabControl Width="360" Height="150">
+            <TabControl Width="360" Height="130">
                 <TabItem Header="Tab 1">
                     <StackPanel>
                         <ListBox Height="100">

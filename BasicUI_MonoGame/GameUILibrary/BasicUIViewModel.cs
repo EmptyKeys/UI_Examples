@@ -17,6 +17,7 @@ namespace GameUILibrary
         private string textBoxText;
         private bool buttonEnabled;
         private float progressValue;
+        private float sliderValue;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -79,14 +80,26 @@ namespace GameUILibrary
         }
 
         /// <summary>
+        /// Gets or sets the slider value.
+        /// </summary>
+        /// <value>
+        /// The slider value.
+        /// </value>
+        public float SliderValue
+        {
+            get { return sliderValue; }
+            set { SetProperty<float>(ref sliderValue, value); }
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
         {
-            ButtonCommand = new RelayCommand(new Action<object>(ButtonClick));            
+            ButtonCommand = new RelayCommand(new Action<object>(OnButtonClick));
         }
 
-        private void ButtonClick(object obj)
+        private void OnButtonClick(object obj)
         {
             if (obj != null)
             {
