@@ -18,7 +18,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using Microsoft.Xna.Framework.Graphics;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.3.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.4.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;

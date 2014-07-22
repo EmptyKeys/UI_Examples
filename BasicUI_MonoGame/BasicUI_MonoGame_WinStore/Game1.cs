@@ -3,6 +3,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Media;
+using GameUILibrary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -64,6 +65,7 @@ namespace BasicUI_MonoGame_WinStore
             FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+            basicUI.DataContext = new BasicUIViewModel();
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);
