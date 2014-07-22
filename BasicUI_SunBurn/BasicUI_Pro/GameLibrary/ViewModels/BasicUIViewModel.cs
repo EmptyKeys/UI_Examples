@@ -15,6 +15,7 @@ namespace GameLibrary.ViewModels
     {
         private string buttonResult;
         private string textBoxText;
+        private float sliderValue;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -50,7 +51,19 @@ namespace GameLibrary.ViewModels
         {
             get { return textBoxText; }
             set { SetProperty<string>(ref textBoxText, value); }
-        }        
+        }
+
+        /// <summary>
+        /// Gets or sets the slider value.
+        /// </summary>
+        /// <value>
+        /// The slider value.
+        /// </value>
+        public float SliderValue
+        {
+            get { return sliderValue; }
+            set { SetProperty<float>(ref sliderValue, value); }
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.

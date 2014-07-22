@@ -55,6 +55,10 @@
             <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
                     Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" Width="200">
+                <Slider Name="slider" Width="150" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
+                <TextBlock Name="sliderValue" Text="{Binding SliderValue}" Margin="5" />
+            </StackPanel>
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
             <TabControl Width="400" Height="150">
