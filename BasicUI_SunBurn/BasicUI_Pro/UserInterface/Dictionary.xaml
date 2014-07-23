@@ -9,6 +9,8 @@
 
     <Style x:Key="buttonStyle" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
         <Setter Property="Background" Value="DarkOrange"/>
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Padding" Value="2" />        
     </Style>
 
     <ek:SoundSourceCollection x:Key="Sounds">

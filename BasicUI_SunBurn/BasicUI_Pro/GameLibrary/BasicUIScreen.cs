@@ -35,7 +35,7 @@ namespace GameLibrary
             Viewport viewport = Platform.Instance.GraphicsDevice.Viewport;
 
             basicUI = new BasicUI(viewport.Width, viewport.Height);
-            basicUI.DataContext = new BasicUIViewModel();
+            basicUI.DataContext = new BasicUIViewModel();            
 
             FontManager.Instance.LoadFonts(BaseGameProgram.Instance.ContentDatabase);
             ImageManager.Instance.LoadImages(BaseGameProgram.Instance.ContentDatabase);

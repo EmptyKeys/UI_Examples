@@ -66,11 +66,29 @@ namespace GameLibrary.ViewModels
         }
 
         /// <summary>
+        /// Gets the ListBox source.
+        /// </summary>
+        /// <value>
+        /// The ListBox source.
+        /// </value>
+        public List<ExampleClass> ComboBoxSource
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
         {
             ButtonCommand = new RelayCommand(new Action<object>(ButtonClick));
+            ComboBoxSource = new List<ExampleClass>();
+            ComboBoxSource.Add(new ExampleClass { Name = "Item 1" });
+            ComboBoxSource.Add(new ExampleClass { Name = "Item 2" });
+            ComboBoxSource.Add(new ExampleClass { Name = "Item 3" });
+            ComboBoxSource.Add(new ExampleClass { Name = "Item 4" });
+            ComboBoxSource.Add(new ExampleClass { Name = "Item 5" });
         }
 
         private void ButtonClick(object obj)

@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.3.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.4.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -54,6 +54,10 @@ namespace EmptyKeys.UserInterface.Generated {
             Style r_2_s = new Style(typeof(Button), r_2_s_bo as Style);
             Setter r_2_s_S_0 = new Setter(Button.BackgroundProperty, new SolidColorBrush(new Color(255, 140, 0, 255)));
             r_2_s.Setters.Add(r_2_s_S_0);
+            Setter r_2_s_S_1 = new Setter(Button.WidthProperty, 200F);
+            r_2_s.Setters.Add(r_2_s_S_1);
+            Setter r_2_s_S_2 = new Setter(Button.PaddingProperty, new Thickness(2F));
+            r_2_s.Setters.Add(r_2_s_S_2);
             this.Add("buttonStyle", r_2_s);
             // Resource - [logoSunburn] BitmapImage
             BitmapImage r_3_bm = new BitmapImage();
