@@ -10,6 +10,7 @@ using SynapseGaming.SunBurn.Framework.Models;
 using SynapseGaming.SunBurn.Engine.Core;
 
 using TargetPlatform = SynapseGaming.SunBurn.Framework.Driver.DX11.DX11Platform;
+using System.Threading;
 
 
 namespace WindowsDesktop
@@ -28,7 +29,7 @@ namespace WindowsDesktop
         /// </summary>
         [STAThread]
         private static void Main()
-        {
+        {            
             using (Platform platform = new TargetPlatform(GraphicsProfile.Any))
                 platform.RunAsGameLoop.Run<WindowsDesktopProgram>();
         }
