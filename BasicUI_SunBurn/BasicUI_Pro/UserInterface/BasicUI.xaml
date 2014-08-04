@@ -66,7 +66,7 @@
             <TabControl Width="400" Height="150">                
                 <TabItem Header="Tab 1">
                     <StackPanel>
-                        <ListBox Height="100" ItemsSource="{Binding ComboBoxSource}">
+                        <ListBox Height="100" ItemsSource="{Binding ComboBoxSource}" SelectedIndex="{Binding SelectedIndex}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock HorizontalAlignment="Center" Margin="2" Text="{Binding Name}" />

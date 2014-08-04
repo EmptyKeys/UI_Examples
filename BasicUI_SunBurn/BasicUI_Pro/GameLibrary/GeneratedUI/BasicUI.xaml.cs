@@ -272,6 +272,8 @@ namespace EmptyKeys.UserInterface.Generated {
             e_9.ItemTemplate = new DataTemplate(e_9_dtFunc);
             Binding binding_e_9_ItemsSource = new Binding("ComboBoxSource");
             e_9.SetBinding(ListBox.ItemsSourceProperty, binding_e_9_ItemsSource);
+            Binding binding_e_9_SelectedIndex = new Binding("SelectedIndex");
+            e_9.SetBinding(ListBox.SelectedIndexProperty, binding_e_9_SelectedIndex);
             items.Add(e_7);
             // e_11 element
             TabItem e_11 = new TabItem();

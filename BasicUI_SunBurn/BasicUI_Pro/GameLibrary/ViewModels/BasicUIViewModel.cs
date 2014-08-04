@@ -16,6 +16,7 @@ namespace GameLibrary.ViewModels
         private string buttonResult;
         private string textBoxText;
         private float sliderValue;
+        private int selectedIndex;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -78,6 +79,21 @@ namespace GameLibrary.ViewModels
         }
 
         /// <summary>
+        /// Gets or sets the index of the selected.
+        /// </summary>
+        /// <value>
+        /// The index of the selected.
+        /// </value>
+        public int SelectedIndex
+        {
+            get { return this.selectedIndex; }
+            set
+            {
+                SetProperty<int>(ref this.selectedIndex, value);
+            }
+        } 
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
@@ -89,6 +105,8 @@ namespace GameLibrary.ViewModels
             ComboBoxSource.Add(new ExampleClass { Name = "Item 3" });
             ComboBoxSource.Add(new ExampleClass { Name = "Item 4" });
             ComboBoxSource.Add(new ExampleClass { Name = "Item 5" });
+
+            SelectedIndex = 2;
         }
 
         private void ButtonClick(object obj)
