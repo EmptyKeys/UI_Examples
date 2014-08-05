@@ -125,6 +125,8 @@ namespace EmptyKeys.UserInterface.Generated {
             this.combo.ItemTemplate = new DataTemplate(combo_dtFunc);
             Binding binding_combo_ItemsSource = new Binding("ComboBoxSource");
             this.combo.SetBinding(ComboBox.ItemsSourceProperty, binding_combo_ItemsSource);
+            Binding binding_combo_SelectedIndex = new Binding("SelectedIndex");
+            this.combo.SetBinding(ComboBox.SelectedIndexProperty, binding_combo_SelectedIndex);
             // button1 element
             this.button1 = new Button();
             this.e_3.Children.Add(this.button1);
@@ -272,8 +274,8 @@ namespace EmptyKeys.UserInterface.Generated {
             e_9.ItemTemplate = new DataTemplate(e_9_dtFunc);
             Binding binding_e_9_ItemsSource = new Binding("ComboBoxSource");
             e_9.SetBinding(ListBox.ItemsSourceProperty, binding_e_9_ItemsSource);
-            Binding binding_e_9_SelectedIndex = new Binding("SelectedIndex");
-            e_9.SetBinding(ListBox.SelectedIndexProperty, binding_e_9_SelectedIndex);
+            Binding binding_e_9_SelectedItem = new Binding("SelectedItem");
+            e_9.SetBinding(ListBox.SelectedItemProperty, binding_e_9_SelectedItem);
             items.Add(e_7);
             // e_11 element
             TabItem e_11 = new TabItem();
