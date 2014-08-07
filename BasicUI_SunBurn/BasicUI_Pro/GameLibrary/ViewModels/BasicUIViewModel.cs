@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Mvvm;
 
@@ -28,7 +29,19 @@ namespace GameLibrary.ViewModels
         public ICommand ButtonCommand
         {
             get;
-            set;
+            private set;
+        }
+
+        /// <summary>
+        /// Gets or sets the open message box.
+        /// </summary>
+        /// <value>
+        /// The open message box.
+        /// </value>
+        public ICommand OpenMessageBox
+        {
+            get;
+            private set;
         }
 
         /// <summary>
@@ -121,6 +134,26 @@ namespace GameLibrary.ViewModels
 
             SelectedIndex = 1;
             SelectedItem = ComboBoxSource[3];
+
+            OpenMessageBox = new RelayCommand(new Action<object>(OnOpenMessageBox));
+        }
+
+        private void OnOpenMessageBox(object obj)
+        {
+            var messageBoxService = base.GetService<IMessageBoxService>();
+            if (messageBoxService != null)
+            {
+                RelayCommand result = new RelayCommand(new Action<object>(OnMessageBoxResult));
+                messageBoxService.Show("Message box text", "Caption", MessageBoxButton.YesNoCancel, result);
+            }
+        }
+
+        private void OnMessageBoxResult(object obj)
+        {
+            if (obj != null)
+            {
+                ButtonResult = obj.ToString();
+            }
         }
 
         private void ButtonClick(object obj)

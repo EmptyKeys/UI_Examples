@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.4.1")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.5.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -161,7 +161,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.FontStyle = FontStyle.Bold;
             this.button3.Content = "3";
             this.button3.CommandParameter = "Click Button 3";
-            Binding binding_button3_Command = new Binding("ButtonCommand");
+            Binding binding_button3_Command = new Binding("OpenMessageBox");
             this.button3.SetBinding(Button.CommandProperty, binding_button3_Command);
             // buttonResult element
             this.buttonResult = new TextBlock();
