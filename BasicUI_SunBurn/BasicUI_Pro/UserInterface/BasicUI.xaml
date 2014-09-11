@@ -52,10 +52,10 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
+            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" ToolTip="Click Me!" />
             <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
             <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
-                    Command="{Binding OpenMessageBox}" CommandParameter="Click Button 3"/>
+                    Command="{Binding OpenMessageBox}" CommandParameter="Click Button 3" ToolTip="{DynamicResource ToolTipText}"/>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
             <StackPanel Orientation="Horizontal" Width="200">
                 <Slider Name="slider" Width="150" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />

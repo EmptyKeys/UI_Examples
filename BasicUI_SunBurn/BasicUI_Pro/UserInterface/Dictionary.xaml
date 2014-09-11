@@ -3,6 +3,7 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer">
     <system:String x:Key="TitleResource">Basic UI Example</system:String>
+    <system:String x:Key="ToolTipText">Click to open message box</system:String>
 
     <BitmapImage x:Key="logoSunburn" UriSource="Images/SunBurn.png" />
     <BitmapImage x:Key="logoEmptyKeys" UriSource="Images/EmptyKeysLogoTextSmall.png" />

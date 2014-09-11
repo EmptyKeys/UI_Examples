@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.7.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "0.9.8.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -134,6 +134,9 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button1.Height = 30F;
             this.button1.Width = 200F;
             this.button1.Margin = new Thickness(5F, 5F, 5F, 5F);
+            ToolTip tt_button1 = new ToolTip();
+            this.button1.ToolTip = tt_button1;
+            tt_button1.Content = "Click Me!";
             this.button1.Content = "1";
             this.button1.CommandParameter = "Click Button 1";
             Binding binding_button1_Command = new Binding("ButtonCommand");
@@ -163,6 +166,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.CommandParameter = "Click Button 3";
             Binding binding_button3_Command = new Binding("OpenMessageBox");
             this.button3.SetBinding(Button.CommandProperty, binding_button3_Command);
+            this.button3.SetResourceReference(Button.ToolTipProperty, "ToolTipText");
             // buttonResult element
             this.buttonResult = new TextBlock();
             this.e_3.Children.Add(this.buttonResult);
