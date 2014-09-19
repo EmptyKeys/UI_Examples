@@ -5,6 +5,8 @@
     <system:String x:Key="TitleResource">Basic UI Example</system:String>
     <system:String x:Key="ToolTipText">Click to open message box</system:String>
 
+    <system:String x:Key="MessageBoxButtonYes">Yes!</system:String>    
+
     <BitmapImage x:Key="logoSunburn" UriSource="Images/SunBurn.png" />
     <BitmapImage x:Key="logoEmptyKeys" UriSource="Images/EmptyKeysLogoTextSmall.png" />
 
