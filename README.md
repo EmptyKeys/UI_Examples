@@ -9,8 +9,10 @@ Note for MonoGame: Examples are using standalone version installed by installer 
 
 Note for SunBurn: SunBurn examples are using SunBurn Pro version. You will have to change references if you have different version.
 
-How to make them work - short video http://youtu.be/_oAN3_iRwPw
+How to make them work
 =====================
+
+Video: http://youtu.be/_oAN3_iRwPw
 
 1) Download latest release of examples https://github.com/EmptyKeys/UI_Examples/releases
 
