@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{DEC435F4-9E84-490B-9890-72E5F514B8D0}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BasicUI_MonoGame_iOS</RootNamespace>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>197690a1</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>IPHONE;DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <MtouchArch>i386</MtouchArch>
+    <AssemblyName>BasicUI_MonoGame_iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <DefineConstants>IPHONE;</DefineConstants>
+    <AssemblyName>BasicUI_MonoGame_iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>IPHONE;DEBUG;TEST1_1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>True</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchSdkVersion>8.0</MtouchSdkVersion>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <AssemblyName>BasicUI_MonoGame_iOS</AssemblyName>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchSdkVersion>4.0</MtouchSdkVersion>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <DefineConstants>IPHONE</DefineConstants>
+    <AssemblyName>BasicUI_MonoGame_iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <DefineConstants>IPHONE</DefineConstants>
+    <AssemblyName>Platformer2D</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <MtouchUseArmv7>false</MtouchUseArmv7>
+    <DefineConstants>IPHONE</DefineConstants>
+    <AssemblyName>Platformer2D</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Binaries.3.2.0\build\MonoTouch\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.UserInterface">
+      <HintPath>..\..\EmptyKeysUI\MonoGame\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Game1.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <None Include="monogameicon.png" />
+    <None Include="Info.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\..\..\packages\MonoGame.Binaries.3.2.0\build\MonoTouch\MonoGame.Binaries.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\MonoGame.Binaries.3.2.0\build\MonoTouch\MonoGame.Binaries.targets'))" />
+  </Target>
+  <Import Project="..\..\..\packages\MonoGame.Binaries.3.2.0\build\MonoTouch\MonoGame.Binaries.targets" Condition="Exists('..\..\..\packages\MonoGame.Binaries.3.2.0\build\MonoTouch\MonoGame.Binaries.targets')" />
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\EmptyKeysLogoTextSmall.xnb">
+      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\MonogameLogo.xnb">
+      <Link>Content\Images\MonogameLogo.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Click.xnb">
+      <Link>Content\Click.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\KeyPress.xnb">
+      <Link>Content\KeyPress.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Move.xnb">
+      <Link>Content\Move.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_10_Regular.xnb">
+      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_15_Bold.xnb">
+      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_9_Regular.xnb">
+      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Select.xnb">
+      <Link>Content\Select.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameUILibrary\GameUILibrary_iOS.csproj">
+      <Project>{556DEE67-1170-4F93-88DE-2175C97FCF3C}</Project>
+      <Name>GameUILibrary_iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
