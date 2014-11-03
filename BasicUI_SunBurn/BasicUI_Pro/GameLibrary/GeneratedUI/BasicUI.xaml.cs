@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.0.1.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.1.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
