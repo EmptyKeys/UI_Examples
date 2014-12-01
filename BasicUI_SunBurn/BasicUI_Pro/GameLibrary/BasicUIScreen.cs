@@ -74,7 +74,7 @@ namespace GameLibrary
         {
             GraphicsDevice device = Platform.Instance.GraphicsDevice;
             device.Clear(backgroundColor);
-
+            
             basicUI.Draw(gameTime);
         }
 

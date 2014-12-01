@@ -58,7 +58,7 @@
                     Command="{Binding OpenMessageBox}" CommandParameter="Click Button 3" ToolTip="{DynamicResource ToolTipText}"/>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
             <StackPanel Orientation="Horizontal" Width="200">
-                <Slider Name="slider" Width="150" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
+                <Slider Name="slider" Width="120" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
                 <TextBlock Name="sliderValue" Text="{Binding SliderValue}" Margin="5" />
             </StackPanel>
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>

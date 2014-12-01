@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.1.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.2.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -184,7 +184,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.slider = new Slider();
             this.e_5.Children.Add(this.slider);
             this.slider.Name = "slider";
-            this.slider.Width = 150F;
+            this.slider.Width = 120F;
             this.slider.Minimum = 5F;
             this.slider.Maximum = 20F;
             Binding binding_slider_Value = new Binding("SliderValue");
