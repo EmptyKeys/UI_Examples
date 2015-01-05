@@ -17,7 +17,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.2.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.3.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -103,6 +103,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_2.HorizontalAlignment = HorizontalAlignment.Center;
             this.e_2.VerticalAlignment = VerticalAlignment.Center;
             this.e_2.Foreground = new Color(211, 211, 211, 255);
+            this.e_2.TextWrapping = TextWrapping.Wrap;
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
             this.e_2.FontFamily = new FontFamily("Segoe UI");
             this.e_2.FontSize = 20F;
