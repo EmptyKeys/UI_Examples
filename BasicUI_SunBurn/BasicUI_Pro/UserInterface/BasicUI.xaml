@@ -37,8 +37,9 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Background="Black">
+        <StackPanel Background="Black" Grid.ColumnSpan="2">
             <Image Name="logo" Stretch="None" HorizontalAlignment="Center" Source="{DynamicResource logoEmptyKeys}">
             </Image>
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
@@ -57,23 +58,20 @@
             <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
                     Command="{Binding OpenMessageBox}" CommandParameter="Click Button 3" ToolTip="{DynamicResource ToolTipText}"/>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
-            <StackPanel Orientation="Horizontal" Width="200">
-                <Slider Name="slider" Width="120" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
-                <TextBlock Name="sliderValue" Text="{Binding SliderValue}" Margin="5" />
-            </StackPanel>
+
+            <Slider Name="slider" Width="200" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
+
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
-            <TabControl Width="400" Height="150">                
-                <TabItem Header="Tab 1">
-                    <StackPanel>
-                        <ListBox Height="100" ItemsSource="{Binding ComboBoxSource}" SelectedItem="{Binding SelectedItem}">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock HorizontalAlignment="Center" Margin="2" Text="{Binding Name}" />
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </StackPanel>
+            <TabControl Width="400" Height="150">
+                <TabItem Header="Tab 1" HorizontalContentAlignment="Stretch">
+                    <ListBox Height="100" ItemsSource="{Binding ComboBoxSource}" SelectedItem="{Binding SelectedItem}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock HorizontalAlignment="Center" Margin="2" Text="{Binding Name}" />
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </TabItem>
                 <TabItem Header="Tab 2">
                     <StackPanel>
@@ -94,6 +92,62 @@
                     <ImageBrush Stretch="None" ImageSource="{DynamicResource logoSunburn}" />
                 </Button.Background>
             </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button Name="animButton1" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
+            <Button Name="animButton2" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
+            <Button Name="animButton3" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
+            <Button Name="animButton4" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
+
+            <Grid>
+                <Border Name="animBorder1" Width="200" Height="100" Margin="0,10,0,10" >
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ek:SolidColorBrushAnimation
+                                Storyboard.TargetName="animBorder1" 
+                                Storyboard.TargetProperty="Background"                                
+                                From="Yellow" To="Blue" Duration="0:0:5" AutoReverse="True"
+                                RepeatBehavior="Forever">
+                                        <ek:SolidColorBrushAnimation.EasingFunction>
+                                            <ExponentialEase />
+                                        </ek:SolidColorBrushAnimation.EasingFunction>
+                                    </ek:SolidColorBrushAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Border.Triggers>
+                </Border>
+
+                <Border Name="animBorder2" Width="100" Height="50" Margin="50,35,50,35" >
+                    <Border.Triggers>
+                        <EventTrigger RoutedEvent="Border.Loaded">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <ek:SolidColorBrushAnimation
+                                Storyboard.TargetName="animBorder2" 
+                                Storyboard.TargetProperty="Background"                                
+                                From="Red" To="White" Duration="0:0:3" AutoReverse="True"
+                                RepeatBehavior="Forever">
+                                        <ek:SolidColorBrushAnimation.EasingFunction>
+                                            <CubicEase />
+                                        </ek:SolidColorBrushAnimation.EasingFunction>
+                                    </ek:SolidColorBrushAnimation>
+
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="animBorder2" 
+                                        Storyboard.TargetProperty="Opacity"                                
+                                        From="1" To="0" Duration="0:0:4" AutoReverse="True" RepeatBehavior="Forever">
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+
+                    </Border.Triggers>
+                </Border>
+            </Grid>
         </StackPanel>
     </Grid>
 </ek:UIRoot>
