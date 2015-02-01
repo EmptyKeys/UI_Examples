@@ -9,6 +9,59 @@
         <Setter Property="Background" Value="DarkOrange"/>
     </Style>
 
+    <Style x:Key="buttonAnimStyle" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Margin" Value="0,1,0,1" />
+        <Setter Property="SnapsToDevicePixels" Value="False" />
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="Button.MouseEnter">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ThicknessAnimation                                
+                                Storyboard.TargetProperty="Margin"                                
+                                From="0,1,0,1" To="0,5,0,5" Duration="0:0:0.5">
+                            <ThicknessAnimation.EasingFunction>
+                                <SineEase />
+                            </ThicknessAnimation.EasingFunction>
+                        </ThicknessAnimation>
+
+                        <DoubleAnimation
+                                Storyboard.TargetProperty="Width"
+                                To="220" Duration="0:0:0.5">
+                            <DoubleAnimation.EasingFunction>
+                                <SineEase />
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Button.MouseLeave">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <ThicknessAnimation                                
+                                Storyboard.TargetProperty="Margin"                                
+                                From="0,5,0,5" To="0,1,0,1" Duration="0:0:0.5">
+                            <ThicknessAnimation.EasingFunction>
+                                <SineEase />
+                            </ThicknessAnimation.EasingFunction>
+                        </ThicknessAnimation>
+
+                        <DoubleAnimation
+                                Storyboard.TargetProperty="Width"
+                                To="200" Duration="0:0:0.5">
+                            <DoubleAnimation.EasingFunction>
+                                <SineEase />
+                            </DoubleAnimation.EasingFunction>
+                        </DoubleAnimation>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+
+        </Style.Triggers>
+    </Style>
+
     <ek:SoundSourceCollection x:Key="Sounds">
         <ek:SoundSource SoundType="ButtonsClick" SoundAsset="Click" />
         <ek:SoundSource SoundType="TextBoxKeyPress" SoundAsset="KeyPress" />
