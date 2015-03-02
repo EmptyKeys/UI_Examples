@@ -18,7 +18,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.4.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.5.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -136,6 +136,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.combo.Name = "combo";
             this.combo.Width = 200F;
             this.combo.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             Func<UIElement, UIElement> combo_dtFunc = (parent) => {
             return this.combo_dtMethod(parent);
             };
@@ -154,6 +155,7 @@ namespace EmptyKeys.UserInterface.Generated {
             ToolTip tt_button1 = new ToolTip();
             this.button1.ToolTip = tt_button1;
             tt_button1.Content = "Click Me!";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.button1.Content = "1";
             this.button1.CommandParameter = "Click Button 1";
             Binding binding_button1_Command = new Binding("ButtonCommand");
@@ -164,6 +166,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button2.Name = "button2";
             this.button2.Height = 30F;
             this.button2.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.button2.Content = "2";
             this.button2.CommandParameter = "Click Button 2";
             Binding binding_button2_Command = new Binding("ButtonCommand");
@@ -176,6 +179,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.button3.Height = 30F;
             this.button3.Width = 200F;
             this.button3.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
             this.button3.FontFamily = new FontFamily("Segoe UI");
             this.button3.FontSize = 20F;
             this.button3.FontStyle = FontStyle.Bold;
@@ -189,6 +193,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_3.Children.Add(this.buttonResult);
             this.buttonResult.Name = "buttonResult";
             this.buttonResult.HorizontalAlignment = HorizontalAlignment.Center;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             Binding binding_buttonResult_Text = new Binding("ButtonResult");
             this.buttonResult.SetBinding(TextBlock.TextProperty, binding_buttonResult_Text);
             // slider element
@@ -196,6 +201,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_3.Children.Add(this.slider);
             this.slider.Name = "slider";
             this.slider.Width = 200F;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.slider.Minimum = 5F;
             this.slider.Maximum = 20F;
             Binding binding_slider_Value = new Binding("SliderValue");
@@ -206,6 +212,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.textBox.Name = "textBox";
             this.textBox.Width = 200F;
             this.textBox.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             Binding binding_textBox_Text = new Binding("TextBoxText");
             this.textBox.SetBinding(TextBox.TextProperty, binding_textBox_Text);
             // checkBox element
@@ -214,6 +221,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.checkBox.Name = "checkBox";
             this.checkBox.Margin = new Thickness(5F, 5F, 5F, 5F);
             this.checkBox.HorizontalAlignment = HorizontalAlignment.Center;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.checkBox.Content = "Check Box";
             // e_5 element
             this.e_5 = new TabControl();
@@ -221,6 +229,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_5.Name = "e_5";
             this.e_5.Height = 150F;
             this.e_5.Width = 400F;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.e_5.ItemsSource = this.Get_e_5_Items();
             // e_18 element
             this.e_18 = new ProgressBar();
@@ -229,6 +238,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_18.Height = 30F;
             this.e_18.Width = 400F;
             this.e_18.Margin = new Thickness(5F, 5F, 5F, 5F);
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.e_18.Value = 39F;
             // imageButton element
             this.imageButton = new Button();
@@ -243,6 +253,7 @@ namespace EmptyKeys.UserInterface.Generated {
             imageButton_Background.ImageSource = imageButton_Background_bm;
             imageButton_Background.Stretch = Stretch.None;
             this.imageButton.Background = imageButton_Background;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             // e_19 element
             this.e_19 = new StackPanel();
             this.e_0.Children.Add(this.e_19);
@@ -253,24 +264,28 @@ namespace EmptyKeys.UserInterface.Generated {
             this.animButton1 = new Button();
             this.e_19.Children.Add(this.animButton1);
             this.animButton1.Name = "animButton1";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.animButton1.Content = "Mouse Over me!";
             this.animButton1.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton2 element
             this.animButton2 = new Button();
             this.e_19.Children.Add(this.animButton2);
             this.animButton2.Name = "animButton2";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.animButton2.Content = "Mouse Over me!";
             this.animButton2.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton3 element
             this.animButton3 = new Button();
             this.e_19.Children.Add(this.animButton3);
             this.animButton3.Name = "animButton3";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.animButton3.Content = "Mouse Over me!";
             this.animButton3.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton4 element
             this.animButton4 = new Button();
             this.e_19.Children.Add(this.animButton4);
             this.animButton4.Name = "animButton4";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.animButton4.Content = "Mouse Over me!";
             this.animButton4.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // e_20 element
@@ -366,12 +381,14 @@ namespace EmptyKeys.UserInterface.Generated {
             TabItem e_6 = new TabItem();
             e_6.Name = "e_6";
             e_6.HorizontalContentAlignment = HorizontalAlignment.Stretch;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_6.Header = "Tab 1";
             // e_7 element
             ListBox e_7 = new ListBox();
             e_6.Content = e_7;
             e_7.Name = "e_7";
             e_7.Height = 100F;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             Func<UIElement, UIElement> e_7_dtFunc = (parent) => {
             return this.e_7_dtMethod(parent);
             };
@@ -384,6 +401,7 @@ namespace EmptyKeys.UserInterface.Generated {
             // e_9 element
             TabItem e_9 = new TabItem();
             e_9.Name = "e_9";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_9.Header = "Tab 2";
             // e_10 element
             StackPanel e_10 = new StackPanel();
@@ -394,17 +412,20 @@ namespace EmptyKeys.UserInterface.Generated {
             e_10.Children.Add(e_11);
             e_11.Name = "e_11";
             e_11.Height = 100F;
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_11.ItemsSource = this.Get_e_11_Items();
             items.Add(e_9);
             // e_16 element
             TabItem e_16 = new TabItem();
             e_16.Name = "e_16";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_16.Content = "Tab 3 Content";
             e_16.Header = "Tab 3";
             items.Add(e_16);
             // e_17 element
             TabItem e_17 = new TabItem();
             e_17.Name = "e_17";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_17.Content = "Tab 4 Content";
             e_17.Header = "Tab 4";
             items.Add(e_17);
@@ -418,6 +439,7 @@ namespace EmptyKeys.UserInterface.Generated {
             e_8.Name = "e_8";
             e_8.Margin = new Thickness(2F, 2F, 2F, 2F);
             e_8.HorizontalAlignment = HorizontalAlignment.Center;
+            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
             Binding binding_e_8_Text = new Binding("Name");
             e_8.SetBinding(TextBlock.TextProperty, binding_e_8_Text);
             return e_8;
@@ -428,21 +450,25 @@ namespace EmptyKeys.UserInterface.Generated {
             // e_12 element
             ListBoxItem e_12 = new ListBoxItem();
             e_12.Name = "e_12";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_12.Content = "Selection 1";
             items.Add(e_12);
             // e_13 element
             ListBoxItem e_13 = new ListBoxItem();
             e_13.Name = "e_13";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_13.Content = "Selection 2";
             items.Add(e_13);
             // e_14 element
             ListBoxItem e_14 = new ListBoxItem();
             e_14.Name = "e_14";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_14.Content = "Selection 3";
             items.Add(e_14);
             // e_15 element
             ListBoxItem e_15 = new ListBoxItem();
             e_15.Name = "e_15";
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             e_15.Content = "Selection 4";
             items.Add(e_15);
             return items;
