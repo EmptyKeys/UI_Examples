@@ -14,11 +14,12 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
+    using EmptyKeys.UserInterface.Shapes;
+    using EmptyKeys.UserInterface.Renderers;
     using EmptyKeys.UserInterface.Themes;
-    using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.5.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.6.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -99,7 +100,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_1 = new StackPanel();
             this.e_0.Children.Add(this.e_1);
             this.e_1.Name = "e_1";
-            this.e_1.Background = new SolidColorBrush(new Color(0, 0, 0, 255));
+            this.e_1.Background = new SolidColorBrush(new ColorW(0, 0, 0, 255));
             Grid.SetColumnSpan(this.e_1, 2);
             // logo element
             this.logo = new Image();
@@ -118,7 +119,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_2.Name = "e_2";
             this.e_2.HorizontalAlignment = HorizontalAlignment.Center;
             this.e_2.VerticalAlignment = VerticalAlignment.Center;
-            this.e_2.Foreground = new SolidColorBrush(new Color(211, 211, 211, 255));
+            this.e_2.Foreground = new SolidColorBrush(new ColorW(211, 211, 211, 255));
             this.e_2.TextWrapping = TextWrapping.Wrap;
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
             this.e_2.FontFamily = new FontFamily("Segoe UI");
@@ -312,8 +313,8 @@ namespace EmptyKeys.UserInterface.Generated {
             animBorder1_ET_0_AC_0_SB_TL_0.AutoReverse = true;
             animBorder1_ET_0_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 5, 0));
             animBorder1_ET_0_AC_0_SB_TL_0.RepeatBehavior = RepeatBehavior.Forever;
-            animBorder1_ET_0_AC_0_SB_TL_0.From = new Color(255, 255, 0, 255);
-            animBorder1_ET_0_AC_0_SB_TL_0.To = new Color(0, 0, 255, 255);
+            animBorder1_ET_0_AC_0_SB_TL_0.From = new ColorW(255, 255, 0, 255);
+            animBorder1_ET_0_AC_0_SB_TL_0.To = new ColorW(0, 0, 255, 255);
             ExponentialEase animBorder1_ET_0_AC_0_SB_TL_0_EA = new ExponentialEase();
             animBorder1_ET_0_AC_0_SB_TL_0.EasingFunction = animBorder1_ET_0_AC_0_SB_TL_0_EA;
             Storyboard.SetTargetName(animBorder1_ET_0_AC_0_SB_TL_0, "animBorder1");
@@ -339,8 +340,8 @@ namespace EmptyKeys.UserInterface.Generated {
             animBorder2_ET_0_AC_0_SB_TL_0.AutoReverse = true;
             animBorder2_ET_0_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 3, 0));
             animBorder2_ET_0_AC_0_SB_TL_0.RepeatBehavior = RepeatBehavior.Forever;
-            animBorder2_ET_0_AC_0_SB_TL_0.From = new Color(255, 0, 0, 255);
-            animBorder2_ET_0_AC_0_SB_TL_0.To = new Color(255, 255, 255, 255);
+            animBorder2_ET_0_AC_0_SB_TL_0.From = new ColorW(255, 0, 0, 255);
+            animBorder2_ET_0_AC_0_SB_TL_0.To = new ColorW(255, 255, 255, 255);
             CubicEase animBorder2_ET_0_AC_0_SB_TL_0_EA = new CubicEase();
             animBorder2_ET_0_AC_0_SB_TL_0.EasingFunction = animBorder2_ET_0_AC_0_SB_TL_0_EA;
             Storyboard.SetTargetName(animBorder2_ET_0_AC_0_SB_TL_0, "animBorder2");

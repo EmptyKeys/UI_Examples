@@ -31,11 +31,12 @@ namespace GameLibrary
             InputDevice input = Platform.Instance.InputDevice;
             input.MouseState.Visible = true;
 
-            FontManager.DefaultFont = BaseGameProgram.Instance.ContentDatabase.Load<Font>("Segoe_UI_10_Regular");            
+            Font font = BaseGameProgram.Instance.ContentDatabase.Load<Font>("Segoe_UI_10_Regular");
+            FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = Platform.Instance.GraphicsDevice.Viewport;
 
             basicUI = new BasicUI(viewport.Width, viewport.Height);
-            basicUI.DataContext = new BasicUIViewModel();            
+            basicUI.DataContext = new BasicUIViewModel();
 
             FontManager.Instance.LoadFonts(BaseGameProgram.Instance.ContentDatabase);
             ImageManager.Instance.LoadImages(BaseGameProgram.Instance.ContentDatabase);
@@ -43,7 +44,7 @@ namespace GameLibrary
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 
-            KeyBinding keyBinding = new KeyBinding(command, Keys.Escape, ModifierKeys.None);
+            KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
             basicUI.InputBindings.Add(keyBinding);
         }
 
@@ -62,8 +63,8 @@ namespace GameLibrary
         /// <param name="gameTime">Provides the time elapsed since the last screen draw / update.</param>
         public override void Update(GameTime gameTime)
         {
-            basicUI.UpdateInput(gameTime);
-            basicUI.UpdateLayout(gameTime);
+            basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+            basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
         }
 
         /// <summary>
@@ -74,8 +75,8 @@ namespace GameLibrary
         {
             GraphicsDevice device = Platform.Instance.GraphicsDevice;
             device.Clear(backgroundColor);
-            
-            basicUI.Draw(gameTime);
+
+            basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
         }
 
         private void StartGameEvent(object sender, RoutedEventArgs e)

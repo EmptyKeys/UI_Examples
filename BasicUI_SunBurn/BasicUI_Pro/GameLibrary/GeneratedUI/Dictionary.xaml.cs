@@ -14,11 +14,12 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
+    using EmptyKeys.UserInterface.Shapes;
+    using EmptyKeys.UserInterface.Renderers;
     using EmptyKeys.UserInterface.Themes;
-    using SynapseGaming.SunBurn.Framework.Primitives;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.5.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.6.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -46,7 +47,7 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [buttonStyle] Style
             var r_3_s_bo = this[typeof(Button)];
             Style r_3_s = new Style(typeof(Button), r_3_s_bo as Style);
-            Setter r_3_s_S_0 = new Setter(Button.BackgroundProperty, new SolidColorBrush(new Color(255, 140, 0, 255)));
+            Setter r_3_s_S_0 = new Setter(Button.BackgroundProperty, new SolidColorBrush(new ColorW(255, 140, 0, 255)));
             r_3_s.Setters.Add(r_3_s_S_0);
             Setter r_3_s_S_1 = new Setter(Button.WidthProperty, 200F);
             r_3_s.Setters.Add(r_3_s_S_1);

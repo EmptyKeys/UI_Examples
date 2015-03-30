@@ -3,7 +3,7 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer">
     <system:String x:Key="TitleResource">Basic UI Example</system:String>
-    <BitmapImage x:Key="Image" UriSource="Images/MonogameLogo.png" />
+    <BitmapImage x:Key="Image" UriSource="Images/MonoGameLogo.png" />
 
     <Style x:Key="buttonStyle" BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
         <Setter Property="Background" Value="DarkOrange"/>

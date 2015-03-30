@@ -8,6 +8,7 @@ using SynapseGaming.SunBurn.Framework.Graphics;
 using SynapseGaming.SunBurn.Framework.Models;
 using SynapseGaming.SunBurn.Engine.Core;
 using SynapseGaming.SunBurn.Engine.Rendering;
+using EmptyKeys.UserInterface;
 
 
 namespace GameLibrary
@@ -30,6 +31,8 @@ namespace GameLibrary
         public BaseGameProgram()
         {
             Instance = this;
+
+            Engine uiEngine = new SunBurnEngine();
 
             splashScreenGameScreen = new SplashScreenGameScreen();
             splashScreenGameScreen.DisplayCompleteEvent += new DisplayCompleteDelegate(OnSplashScreenDisplayCompleteEvent);

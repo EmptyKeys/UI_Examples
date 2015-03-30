@@ -28,6 +28,12 @@ namespace BasicUI_MonoGame_WinStore
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
+            graphics.DeviceCreated += graphics_DeviceCreated;
+        }
+
+        void graphics_DeviceCreated(object sender, EventArgs e)
+        {
+            Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
         }
 
         private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
@@ -62,9 +68,10 @@ namespace BasicUI_MonoGame_WinStore
         {
             this.IsMouseVisible = true;
 
-            FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
+            SpriteFont font = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
+            FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = GraphicsDevice.Viewport;
-            basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+            basicUI = new BasicUI(viewport.Width, viewport.Height);
             basicUI.DataContext = new BasicUIViewModel();
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
@@ -72,13 +79,12 @@ namespace BasicUI_MonoGame_WinStore
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 
-            KeyBinding keyBinding = new KeyBinding(command, Keys.Escape, ModifierKeys.None);
+            KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
             basicUI.InputBindings.Add(keyBinding);
         }
 
         private void ExitEvent(object parameter)
-        {
-            Exit();
+        {            
         }
 
         /// <summary>
@@ -97,8 +103,8 @@ namespace BasicUI_MonoGame_WinStore
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            basicUI.UpdateInput(gameTime);
-            basicUI.UpdateLayout(gameTime);
+            basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+            basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);
         }
@@ -111,7 +117,7 @@ namespace BasicUI_MonoGame_WinStore
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            basicUI.Draw(gameTime);
+            basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Draw(gameTime);
         }
