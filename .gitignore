@@ -240,3 +240,8 @@ EmptyKeysUI/MonoGameSDL2/AnyCPU/EmptyKeys.UserInterface.dll
 EmptyKeysUI/MonoGameSDL2/AnyCPU/Obfuscated/EmptyKeys.UserInterface.dll
 
 EmptyKeysUI/MonoGameSDL2/AnyCPU/Obfuscated/EmptyKeys.UserInterface.dll.xdb
+EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.Core.dll
+EmptyKeysUI/FNA/x86/EmptyKeys.UserInterface.FNA.dll
+EmptyKeysUI/SunBurn/AnyCPU/EmptyKeys.UserInterface.SunBurn.dll
+EmptyKeysUI/MonoGame/AnyCPU/EmptyKeys.UserInterface.MonoGame.dll
+EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.dll

@@ -6,7 +6,6 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
-using Microsoft.Xna.Framework.GamerServices;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Input;
@@ -34,7 +33,13 @@ namespace BasicUI_MonoGame_Android
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
+			graphics.DeviceCreated += graphics_DeviceCreated;
         }
+
+		void graphics_DeviceCreated(object sender, EventArgs e)
+		{
+			Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+		}
 
         private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
         {
@@ -66,20 +71,21 @@ namespace BasicUI_MonoGame_Android
         /// </summary>
         protected override void LoadContent()
         {
-            this.IsMouseVisible = true;
+			this.IsMouseVisible = true;
 
-            FontManager.DefaultFont = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
-            Viewport viewport = GraphicsDevice.Viewport;
-            basicUI = new BasicUI(viewport.Width, viewport.Height, this.GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
-            basicUI.DataContext = new BasicUIViewModel();
-            FontManager.Instance.LoadFonts(Content);
-            ImageManager.Instance.LoadImages(Content);
-            SoundManager.Instance.LoadSounds(Content);
+			SpriteFont font = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
+			FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
+			Viewport viewport = GraphicsDevice.Viewport;
+			basicUI = new BasicUI(viewport.Width, viewport.Height);
+			basicUI.DataContext = new BasicUIViewModel();
+			FontManager.Instance.LoadFonts(Content);
+			ImageManager.Instance.LoadImages(Content);
+			SoundManager.Instance.LoadSounds(Content);
 
-            RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
+			RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 
-            KeyBinding keyBinding = new KeyBinding(command, Keys.Escape, ModifierKeys.None);
-            basicUI.InputBindings.Add(keyBinding);
+			KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
+			basicUI.InputBindings.Add(keyBinding);
         }
 
         private void ExitEvent(object parameter)
@@ -96,30 +102,30 @@ namespace BasicUI_MonoGame_Android
             // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Update(GameTime gameTime)
-        {
-            basicUI.UpdateInput(gameTime);
-            basicUI.UpdateLayout(gameTime);
+		/// <summary>
+		/// Allows the game to run logic such as updating the world,
+		/// checking for collisions, gathering input, and playing audio.
+		/// </summary>
+		/// <param name="gameTime">Provides a snapshot of timing values.</param>
+		protected override void Update(GameTime gameTime)
+		{
+			basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+			basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
-            base.Update(gameTime);
-        }
+			base.Update(gameTime);
+		}
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+		/// <summary>
+		/// This is called when the game should draw itself.
+		/// </summary>
+		/// <param name="gameTime">Provides a snapshot of timing values.</param>
+		protected override void Draw(GameTime gameTime)
+		{
+			GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            basicUI.Draw(gameTime);
+			basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
 
-            base.Draw(gameTime);
-        }
+			base.Draw(gameTime);
+		}
     }
 }
