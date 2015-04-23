@@ -20,9 +20,9 @@ Video: http://youtu.be/_oAN3_iRwPw
 
 3) Extract examples
 
-4) Extract library zip to EmptyKeysUI directory (already created there) in examples directory
+4) Unblock library zip file (http://blogs.msdn.com/b/delay/p/unblockingdownloadedfile.aspx).
 
-5) Just to be sure, check if Nuclex.Fonts.Content.TrueTypeImporter.dll is not blocked by your OS. Unblock it by doing this - http://blogs.msdn.com/b/delay/p/unblockingdownloadedfile.aspx
+5) Extract library zip to EmptyKeysUI directory (already created there) in examples directory
 
 6) Load any solution in Visual Studio, select AnyCPU and run it
 
