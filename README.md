@@ -24,6 +24,6 @@ Video: http://youtu.be/_oAN3_iRwPw
 
 5) Extract library zip to EmptyKeysUI directory (already created there) in examples directory
 
-6) Load any solution in Visual Studio, select AnyCPU and run it
+6) Load BasicUI_MonoGame or BasicUI_Pro solution in Visual Studio, select AnyCPU and build/run it.
 
 
