@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -76,6 +76,42 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Content\bin\Android\Click.xnb">
+      <Link>Content\Click.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Images\EmptyKeysLogoTextSmall.xnb">
+      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Images\MonogameLogo.xnb">
+      <Link>Content\Images\MonogameLogo.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\KeyPress.xnb">
+      <Link>Content\KeyPress.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Move.xnb">
+      <Link>Content\Move.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Segoe_UI_10_Regular.xnb">
+      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Segoe_UI_15_Bold.xnb">
+      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Segoe_UI_9_Regular.xnb">
+      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Android\Select.xnb">
+      <Link>Content\Select.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +121,8 @@
     <AndroidResource Include="Resources\Drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\Layout\" />
-    <Folder Include="Content\" />
     <Folder Include="Assets\" />
+    <Folder Include="Resources\Layout\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Splash.png" />
@@ -111,43 +146,5 @@
       <Project>{556DEE67-1170-4F93-88DE-2175C97FCF3C}</Project>
       <Name>GameUILibrary_Android</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\EmptyKeysLogoTextSmall.xnb">
-      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\MonogameLogo.xnb">
-      <Link>Content\Images\MonogameLogo.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Click.xnb">
-      <Link>Content\Click.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\KeyPress.xnb">
-      <Link>Content\KeyPress.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Move.xnb">
-      <Link>Content\Move.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_10_Regular.xnb">
-      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_15_Bold.xnb">
-      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_9_Regular.xnb">
-      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
-    <AndroidAsset Include="..\ContentProject\ContentProject\bin\Windows\Content\Select.xnb">
-      <Link>Content\Select.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AndroidAsset>
   </ItemGroup>
 </Project>

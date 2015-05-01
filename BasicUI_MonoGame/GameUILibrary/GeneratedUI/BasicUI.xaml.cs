@@ -11,6 +11,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Data;
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
+    using EmptyKeys.UserInterface.Input;
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
@@ -83,7 +84,7 @@ namespace EmptyKeys.UserInterface.Generated {
         private void InitializeComponent() {
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
             this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
-            this.InitializeElementResources(this);
+            InitializeElementResources(this);
             // e_0 element
             this.e_0 = new Grid();
             this.Content = this.e_0;
@@ -364,7 +365,7 @@ namespace EmptyKeys.UserInterface.Generated {
             animBorder2_ET_0_AC_0_SB.Children.Add(animBorder2_ET_0_AC_0_SB_TL_1);
         }
         
-        private void InitializeElementResources(UIElement elem) {
+        private static void InitializeElementResources(UIElement elem) {
             elem.Resources.MergedDictionaries.Add(Dictionary.Instance);
         }
         

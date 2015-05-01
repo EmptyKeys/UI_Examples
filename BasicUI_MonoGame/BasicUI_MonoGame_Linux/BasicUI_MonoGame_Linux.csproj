@@ -109,41 +109,39 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\EmptyKeysLogoTextSmall.xnb">
-      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Images\MonogameLogo.xnb">
-      <Link>Content\Images\MonogameLogo.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_10_Regular.xnb">
-      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_15_Bold.xnb">
-      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Segoe_UI_9_Regular.xnb">
-      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Click.xnb">
+    <Content Include="..\Content\bin\Linux\Click.xnb">
       <Link>Content\Click.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\KeyPress.xnb">
+    <Content Include="..\Content\bin\Linux\Images\EmptyKeysLogoTextSmall.xnb">
+      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Linux\Images\MonogameLogo.xnb">
+      <Link>Content\Images\MonogameLogo.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Linux\KeyPress.xnb">
       <Link>Content\KeyPress.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Move.xnb">
+    <Content Include="..\Content\bin\Linux\Move.xnb">
       <Link>Content\Move.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\ContentProject\ContentProject\bin\Windows\Content\Select.xnb">
+    <Content Include="..\Content\bin\Linux\Segoe_UI_10_Regular.xnb">
+      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Linux\Segoe_UI_15_Bold.xnb">
+      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Linux\Segoe_UI_9_Regular.xnb">
+      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Linux\Select.xnb">
       <Link>Content\Select.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

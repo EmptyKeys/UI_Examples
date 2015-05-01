@@ -80,17 +80,47 @@
   <ItemGroup>
     <Content Include="Icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="..\Content\bin\Windows\Click.xnb">
+      <Link>Content\Click.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Images\EmptyKeysLogoTextSmall.xnb">
+      <Link>Content\Images\EmptyKeysLogoTextSmall.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Images\MonogameLogo.xnb">
+      <Link>Content\Images\MonogameLogo.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\KeyPress.xnb">
+      <Link>Content\KeyPress.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Move.xnb">
+      <Link>Content\Move.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Segoe_UI_10_Regular.xnb">
+      <Link>Content\Segoe_UI_10_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Segoe_UI_15_Bold.xnb">
+      <Link>Content\Segoe_UI_15_Bold.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Segoe_UI_9_Regular.xnb">
+      <Link>Content\Segoe_UI_9_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Content\bin\Windows\Select.xnb">
+      <Link>Content\Select.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ContentProject\ContentProject\ContentProject.csproj">
-      <Project>{75409693-8df3-4f17-8a94-50aeffaabbff}</Project>
-      <Name>ContentProject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GameUILibrary\GameUILibrary.csproj">
       <Project>{556dee67-1170-4f93-88de-2175c97fcf3c}</Project>
       <Name>GameUILibrary</Name>
