@@ -185,7 +185,8 @@ FakesAssemblies/
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -245,3 +246,6 @@ EmptyKeysUI/FNA/x86/EmptyKeys.UserInterface.FNA.dll
 EmptyKeysUI/SunBurn/AnyCPU/EmptyKeys.UserInterface.SunBurn.dll
 EmptyKeysUI/MonoGame/AnyCPU/EmptyKeys.UserInterface.MonoGame.dll
 EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.dll
+/EmptyKeysUI/Generator
+/EmptyKeysUI/CocosSharp/AnyCPU
+/EmptyKeysUI/Paradox/AnyCPU
