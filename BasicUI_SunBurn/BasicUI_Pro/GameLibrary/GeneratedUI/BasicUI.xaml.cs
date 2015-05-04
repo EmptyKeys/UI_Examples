@@ -11,6 +11,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Data;
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
+    using EmptyKeys.UserInterface.Input;
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
@@ -19,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.6.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.6.5.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -82,7 +83,7 @@ namespace EmptyKeys.UserInterface.Generated {
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             this.FontSize = 13.33333F;
             this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
-            this.InitializeElementResources(this);
+            InitializeElementResources(this);
             // e_0 element
             this.e_0 = new Grid();
             this.Content = this.e_0;
@@ -138,9 +139,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.combo.Width = 200F;
             this.combo.Margin = new Thickness(5F, 5F, 5F, 5F);
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
-            Func<UIElement, UIElement> combo_dtFunc = (parent) => {
-            return this.combo_dtMethod(parent);
-            };
+            Func<UIElement, UIElement> combo_dtFunc = combo_dtMethod;
             this.combo.ItemTemplate = new DataTemplate(combo_dtFunc);
             Binding binding_combo_ItemsSource = new Binding("ComboBoxSource");
             this.combo.SetBinding(ComboBox.ItemsSourceProperty, binding_combo_ItemsSource);
@@ -359,11 +358,11 @@ namespace EmptyKeys.UserInterface.Generated {
             animBorder2_ET_0_AC_0_SB.Children.Add(animBorder2_ET_0_AC_0_SB_TL_1);
         }
         
-        private void InitializeElementResources(UIElement elem) {
+        private static void InitializeElementResources(UIElement elem) {
             elem.Resources.MergedDictionaries.Add(Dictionary.Instance);
         }
         
-        private UIElement combo_dtMethod(UIElement parent) {
+        private static UIElement combo_dtMethod(UIElement parent) {
             // e_4 element
             TextBlock e_4 = new TextBlock();
             e_4.Parent = parent;
@@ -390,9 +389,7 @@ namespace EmptyKeys.UserInterface.Generated {
             e_7.Name = "e_7";
             e_7.Height = 100F;
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
-            Func<UIElement, UIElement> e_7_dtFunc = (parent) => {
-            return this.e_7_dtMethod(parent);
-            };
+            Func<UIElement, UIElement> e_7_dtFunc = e_7_dtMethod;
             e_7.ItemTemplate = new DataTemplate(e_7_dtFunc);
             Binding binding_e_7_ItemsSource = new Binding("ComboBoxSource");
             e_7.SetBinding(ListBox.ItemsSourceProperty, binding_e_7_ItemsSource);
@@ -433,7 +430,7 @@ namespace EmptyKeys.UserInterface.Generated {
             return items;
         }
         
-        private UIElement e_7_dtMethod(UIElement parent) {
+        private static UIElement e_7_dtMethod(UIElement parent) {
             // e_8 element
             TextBlock e_8 = new TextBlock();
             e_8.Parent = parent;
