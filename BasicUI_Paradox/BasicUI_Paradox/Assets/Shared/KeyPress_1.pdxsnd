@@ -1,0 +1,10 @@
+!SoundEffect
+Id: c2a3354c-828d-4bfa-be5f-8254b2eb47b3
+Tags: []
+Source: ../../Content/KeyPress.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

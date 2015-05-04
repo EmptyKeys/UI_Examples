@@ -1,0 +1,49 @@
+!Package
+Id: 650dfdf3-e237-4050-9753-c4c4776b0a90
+Tags: []
+Meta:
+    Name: BasicUI_Paradox
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: BasicUI_Paradox
+    Dependencies:
+        -   Name: Paradox
+            Version: 1.1.0-beta
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+                RawImports: []
+            -   Path: BasicUI_Paradox.Game/Effects
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            GameSettingsAsset.BackBufferHeight: 720
+            GameSettingsAsset.BackBufferWidth: 1280
+            GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
+            GameSettingsAsset.DefaultScene: 8c93517a-df0a-4e5f-9c48-af808ae868af:MainScene
+            Paradox.DisplayOrientation: LandscapeRight
+        ProjectReferences:
+            -   Id: 44547b06-90d6-477f-9348-cdd1915f980b
+                Location: BasicUI_Paradox.Game/BasicUI_Paradox.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+                RawImports: []
+        OutputGroupDirectories: {}
+        Properties:
+            Paradox.GraphicsPlatform: Direct3D11
+        ProjectReferences:
+            -   Id: e171415e-f63a-4adb-9f1d-35f83f00c484
+                Location: BasicUI_Paradox.Windows/BasicUI_Paradox.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []

@@ -1,0 +1,10 @@
+!SoundEffect
+Id: 4f5087d6-2774-4d77-8caf-fdf00b9851de
+Tags: []
+Source: ../../Content/Move.wav
+~Base:
+    Location: --import--
+    Asset: !SoundEffect
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 634842fa-d1db-45c2-b13d-bc11486dae4d

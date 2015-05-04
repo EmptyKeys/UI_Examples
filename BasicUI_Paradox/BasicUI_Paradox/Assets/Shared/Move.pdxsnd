@@ -1,0 +1,10 @@
+!SoundMusic
+Id: 734c90f6-466c-4dbf-bdea-1ba01c63b89d
+Tags: []
+Source: ../../Content/Move.wav
+~Base:
+    Location: --import--
+    Asset: !SoundMusic
+        Id: 00000000-0000-0000-0000-000000000000
+        Tags: []
+        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617
