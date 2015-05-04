@@ -101,15 +101,9 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Reference Include="EmptyKeys.UserInterface">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
-    </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="EmptyKeys.UserInterface.MonoGame">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
-    </Reference>
+    <Reference Include="EmptyKeys.UserInterface, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows8\MonoGame.Framework.dll</HintPath>
     </Reference>

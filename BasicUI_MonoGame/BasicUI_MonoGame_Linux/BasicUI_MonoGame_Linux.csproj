@@ -67,14 +67,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.MonoGame">
-      <HintPath>..\..\..\..\TFS\LogicMarbles\Modules\EmptyKeysUI\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EmptyKeysUI\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK">
       <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Linux\OpenTK.dll</HintPath>
