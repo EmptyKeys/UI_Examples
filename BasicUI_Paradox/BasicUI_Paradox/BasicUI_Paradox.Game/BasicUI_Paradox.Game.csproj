@@ -86,6 +86,9 @@
     <Reference Include="EmptyKeys.UserInterface.Core">
       <HintPath>..\..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EmptyKeys.UserInterface.Debug">
+      <HintPath>..\..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

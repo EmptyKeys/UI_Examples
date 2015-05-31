@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
 using SiliconStudio.Core.Mathematics;
@@ -18,6 +19,7 @@ namespace BasicUI_Paradox
     public class BasicUIScript : AsyncScript
     {
         private BasicUI uiRoot;
+        private DebugViewModel debug;
 
         public override async Task Execute()
         {
@@ -27,6 +29,7 @@ namespace BasicUI_Paradox
 
             Viewport viewport = GraphicsDevice.Viewport;
             uiRoot = new BasicUI((int)viewport.Width, (int)viewport.Height);
+            debug = new DebugViewModel(uiRoot);
             uiRoot.DataContext = new BasicUIViewModel();
             
             FontManager.Instance.LoadFonts(Asset);
@@ -40,7 +43,7 @@ namespace BasicUI_Paradox
             while (Game.IsRunning)
             {
                 await Script.NextFrame();
-
+                debug.Update();
                 uiRoot.UpdateInput(Game.UpdateTime.Elapsed.TotalMilliseconds);
                 uiRoot.UpdateLayout(Game.UpdateTime.Elapsed.TotalMilliseconds);
             }            
@@ -49,6 +52,7 @@ namespace BasicUI_Paradox
         private void Render(RenderContext arg1, RenderFrame arg2)
         {
             uiRoot.Draw(Game.UpdateTime.Elapsed.TotalMilliseconds);
+            debug.Draw();
         }
     }
 }
