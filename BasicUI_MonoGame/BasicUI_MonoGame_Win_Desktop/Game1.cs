@@ -1,17 +1,16 @@
-﻿#region Using Statements
-using System;
+﻿using System;
 using System.Collections.Generic;
+using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Debug;
+using EmptyKeys.UserInterface.Generated;
+using EmptyKeys.UserInterface.Input;
+using EmptyKeys.UserInterface.Media;
+using GameUILibrary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
-using EmptyKeys.UserInterface;
-using EmptyKeys.UserInterface.Generated;
-using EmptyKeys.UserInterface.Input;
-using GameUILibrary;
-using EmptyKeys.UserInterface.Media;
-#endregion
 
 namespace BasicUI_MonoGame_Win_Desktop
 {
@@ -26,6 +25,7 @@ namespace BasicUI_MonoGame_Win_Desktop
         private int nativeScreenHeight;
 
         private BasicUI basicUI;
+        private DebugViewModel debug;
 
         public Game1()
             : base()
@@ -78,6 +78,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height);
+            debug = new DebugViewModel(basicUI);
             basicUI.DataContext = new BasicUIViewModel();
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
@@ -110,6 +111,7 @@ namespace BasicUI_MonoGame_Win_Desktop
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            debug.Update();
             basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
@@ -125,7 +127,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
-
+            debug.Draw();
             base.Draw(gameTime);
         }
     }

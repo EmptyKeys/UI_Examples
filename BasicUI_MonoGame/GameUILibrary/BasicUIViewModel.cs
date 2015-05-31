@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Mvvm;
+using GameData;
 
 namespace GameUILibrary
 {
@@ -18,6 +19,8 @@ namespace GameUILibrary
         private bool buttonEnabled;
         private float progressValue;
         private float sliderValue;
+        private List<TestTreeDataItem> treeItems;
+        private List<TestDataGridModel> gridData;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -92,11 +95,48 @@ namespace GameUILibrary
         }
 
         /// <summary>
+        /// Gets or sets the tree items.
+        /// </summary>
+        /// <value>
+        /// The tree items.
+        /// </value>
+        public List<TestTreeDataItem> TreeItems
+        {
+            get { return treeItems; }
+            set { SetProperty(ref treeItems, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the grid data.
+        /// </summary>
+        /// <value>
+        /// The grid data.
+        /// </value>
+        public List<TestDataGridModel> GridData
+        {
+            get { return gridData; }
+            set { SetProperty(ref gridData, value); }
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
         {
             ButtonCommand = new RelayCommand(new Action<object>(OnButtonClick));
+            TreeItems = new List<TestTreeDataItem>
+            {
+                new TestTreeDataItem()
+            };
+
+            GridData = new List<TestDataGridModel>
+            {
+                new TestDataGridModel { Boolean = false, Number = 0, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 1, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = true, Number = 2, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = true, Number = 3, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 4, Text = "Lorem ipsum dolor sit amet" },
+            };
         }
 
         private void OnButtonClick(object obj)

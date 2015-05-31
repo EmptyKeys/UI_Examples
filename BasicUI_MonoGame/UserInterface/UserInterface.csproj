@@ -36,6 +36,14 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EmptyKeys.UserInterface, Version=1.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=1.6.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
+    </Reference>
     <Reference Include="EmptyKeys.UserInterface.Designer">
       <HintPath>..\..\EmptyKeysUI\Generator\EmptyKeys.UserInterface.Designer.dll</HintPath>
     </Reference>
@@ -95,6 +103,12 @@
     <Content Include="Images\MonoGameLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameData\GameData.csproj">
+      <Project>{650d2c89-daa1-45c4-a660-2bde693c1fb6}</Project>
+      <Name>GameData</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

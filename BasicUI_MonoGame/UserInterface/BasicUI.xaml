@@ -50,25 +50,32 @@
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
         </StackPanel>
         <StackPanel Grid.Row="1">
-            <ComboBox Name="combo" Width="200" Margin="5">
+            <ComboBox Name="combo" Width="200" Margin="5" SelectedIndex="2">
                 <ComboBoxItem Name="item1" Content="Item 1" />
                 <ComboBoxItem Name="item2" Content="Item 2" />
                 <ComboBoxItem Name="item3" Content="Item 3" />
             </ComboBox>
-            <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
-            <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
-            <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
+                <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
                     Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
-            <Button Name="button4" IsEnabled="{Binding ButtonEnabled}" Content="4" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 4" />
+                <Button Name="button4" IsEnabled="{Binding ButtonEnabled}" Content="4" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 4" />
+            </StackPanel>
             <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
+            <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="400"/>
 
             <Slider Name="slider" Width="200" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
 
-            <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
-            <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
-            <TabControl Width="360" Height="130">
-                <TabItem Header="Tab 1" HorizontalContentAlignment="Stretch">
-                    <ListBox Height="100">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
+                <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
+            </StackPanel>
+            <TabControl Height="300" Margin="5">
+                <TabItem Header="ListBox" HorizontalContentAlignment="Stretch">
+                    <ListBox>
                         <ListBoxItem>Selection 1</ListBoxItem>
                         <ListBoxItem>Selection 2</ListBoxItem>
                         <ListBoxItem>Selection 3</ListBoxItem>
@@ -77,16 +84,49 @@
                         <ListBoxItem>Selection 6</ListBoxItem>
                     </ListBox>
                 </TabItem>
-                <TabItem Header="Tab 2" Content="Tab 2 Content" />
-                <TabItem Header="Tab 3" Content="Tab 3 Content" />
+                <TabItem Header="TreeView" >
+                    <TreeView ItemsSource="{Binding TreeItems}" />
+                </TabItem>
+                <TabItem Header="DataGrid">
+                    <DataGrid ItemsSource="{Binding GridData}" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="#" Binding="{Binding Number}" />
+                            <DataGridTextColumn Header="Text" Binding="{Binding Text}">
+                                <DataGridTextColumn.ElementStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="Background" Value="Gray" />
+                                        <Setter Property="HorizontalAlignment" Value="Center" />
+                                        <Setter Property="VerticalAlignment" Value="Center" />
+                                    </Style>
+                                </DataGridTextColumn.ElementStyle>
+                            </DataGridTextColumn>
+                            <DataGridCheckBoxColumn Header="Bool" Binding="{Binding Boolean}" />
+                            <DataGridTemplateColumn Width="200">                                
+                                <DataGridTemplateColumn.Header>
+                                    <TextBlock Text="Template Column" />
+                                </DataGridTemplateColumn.Header>
+                                <DataGridTemplateColumn.HeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Foreground" Value="Orange" />
+                                    </Style>
+                                </DataGridTemplateColumn.HeaderStyle>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Text}" />
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="{Binding Boolean}" />
+                                                <TextBlock Text="{Binding Number}" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
                 <TabItem Header="Tab 4" Content="Tab 4 Content"/>
-            </TabControl>
-            <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="400"/>
-            <Button Name="imageButton" Width="96" Height="96">
-                <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
-                </Button.Background>
-            </Button>
+            </TabControl>                        
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
@@ -143,6 +183,15 @@
                     </Border.Triggers>
                 </Border>
             </Grid>
+            
+            <Rectangle Height="100" Width="200" RadiusX="10" RadiusY="10" Fill="Green" Stroke="Gray" StrokeThickness="5" Margin="5" />
+            <Ellipse Height="100" Width="200" Fill="Gray" Stroke="Green" StrokeThickness="10" Margin="5" />
+
+            <Button Name="imageButton" Width="48" Height="48">
+                <Button.Background>
+                    <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
+                </Button.Background>
+            </Button>
         </StackPanel>
     </Grid>
 </ek:UIRoot>
