@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CocosSharp;
 using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
 using Microsoft.Xna.Framework;
@@ -13,6 +14,7 @@ namespace BasicUI_CocosSharp
     public class IntroLayer : CCLayerColor
     {
         private BasicUI root;
+        private DebugViewModel debug;
         private float elapsedGameTime;
 
         public IntroLayer()
@@ -36,6 +38,7 @@ namespace BasicUI_CocosSharp
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);            
 
             root = new BasicUI((int)bounds.Size.Width, (int)bounds.Size.Height);
+            debug = new DebugViewModel(root);
             root.DataContext = new BasicUIViewModel();
 
             SoundManager.Instance.LoadSounds(content, "sounds");
@@ -53,6 +56,7 @@ namespace BasicUI_CocosSharp
         private void UpdateUI(float frameTimeInSeconds)
         {
             elapsedGameTime = frameTimeInSeconds * 1000;
+            debug.Update();
             root.UpdateInput(elapsedGameTime);
             root.UpdateLayout(elapsedGameTime);
 
@@ -63,6 +67,7 @@ namespace BasicUI_CocosSharp
             base.Visit();
 
             root.Draw(elapsedGameTime);
+            debug.Draw();
         }
 
         void OnTouchesEnded(List<CCTouch> touches, CCEvent touchEvent)
