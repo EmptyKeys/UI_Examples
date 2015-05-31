@@ -20,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.6.5.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.7.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -230,7 +230,7 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_5.Height = 150F;
             this.e_5.Width = 400F;
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
-            this.e_5.ItemsSource = this.Get_e_5_Items();
+            this.e_5.ItemsSource = Get_e_5_Items();
             // e_18 element
             this.e_18 = new ProgressBar();
             this.e_3.Children.Add(this.e_18);
@@ -375,7 +375,7 @@ namespace EmptyKeys.UserInterface.Generated {
             return e_4;
         }
         
-        private System.Collections.ObjectModel.ObservableCollection<object> Get_e_5_Items() {
+        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_5_Items() {
             System.Collections.ObjectModel.ObservableCollection<object> items = new System.Collections.ObjectModel.ObservableCollection<object>();
             // e_6 element
             TabItem e_6 = new TabItem();
@@ -411,7 +411,7 @@ namespace EmptyKeys.UserInterface.Generated {
             e_11.Name = "e_11";
             e_11.Height = 100F;
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
-            e_11.ItemsSource = this.Get_e_11_Items();
+            e_11.ItemsSource = Get_e_11_Items();
             items.Add(e_9);
             // e_16 element
             TabItem e_16 = new TabItem();
@@ -443,7 +443,7 @@ namespace EmptyKeys.UserInterface.Generated {
             return e_8;
         }
         
-        private System.Collections.ObjectModel.ObservableCollection<object> Get_e_11_Items() {
+        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_11_Items() {
             System.Collections.ObjectModel.ObservableCollection<object> items = new System.Collections.ObjectModel.ObservableCollection<object>();
             // e_12 element
             ListBoxItem e_12 = new ListBoxItem();

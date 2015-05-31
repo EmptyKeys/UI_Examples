@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Media;
@@ -21,6 +22,7 @@ namespace GameLibrary
         private Color backgroundColor = new Color(64, 64, 64);
 
         private BasicUI basicUI;
+        private DebugViewModel debug;
 
         /// <summary>
         /// Called when the program switches to the screen. This is
@@ -36,6 +38,7 @@ namespace GameLibrary
             Viewport viewport = Platform.Instance.GraphicsDevice.Viewport;
 
             basicUI = new BasicUI(viewport.Width, viewport.Height);
+            debug = new DebugViewModel(basicUI);
             basicUI.DataContext = new BasicUIViewModel();
 
             FontManager.Instance.LoadFonts(BaseGameProgram.Instance.ContentDatabase);
@@ -63,6 +66,7 @@ namespace GameLibrary
         /// <param name="gameTime">Provides the time elapsed since the last screen draw / update.</param>
         public override void Update(GameTime gameTime)
         {
+            debug.Update();
             basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
         }
@@ -77,6 +81,7 @@ namespace GameLibrary
             device.Clear(backgroundColor);
 
             basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
+            debug.Draw();
         }
 
         private void StartGameEvent(object sender, RoutedEventArgs e)
