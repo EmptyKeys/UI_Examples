@@ -93,6 +93,8 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private void InitializeComponent() {
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
+            Binding binding__OwnedWindowsContent = new Binding("Windows");
+            this.SetBinding(UIRoot.OwnedWindowsContentProperty, binding__OwnedWindowsContent);
             this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
             InitializeElementResources(this);
             // e_0 element

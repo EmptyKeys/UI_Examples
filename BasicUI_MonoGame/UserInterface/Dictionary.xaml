@@ -3,7 +3,7 @@
                     xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
                     xmlns:data="clr-namespace:GameData;assembly=GameData" >
-                    
+
     <system:String x:Key="TitleResource">Basic UI Example</system:String>
     <BitmapImage x:Key="Image" UriSource="Images/MonoGameLogo.png" />
 
@@ -70,9 +70,29 @@
         <ek:SoundSource SoundType="TabControlMove" SoundAsset="Move" />
         <ek:SoundSource SoundType="TabControlSelect" SoundAsset="Select" />
     </ek:SoundSourceCollection>
-    
+
     <DataTemplate DataType="{x:Type data:TestTreeDataItem}">
-        <TextBlock Text="{Binding Name}" Margin="2" />        
+        <TextBlock Text="{Binding Name}" Margin="2" />
     </DataTemplate>
-    
+
+    <ControlTemplate x:Key="CustomWindowTemplate">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Border Name="PART_WindowTitleBorder" Background="Black"/>
+            <ContentPresenter Grid.Row="1" Content="{Binding}" />
+        </Grid>
+    </ControlTemplate>
+
+    <DataTemplate DataType="{x:Type data:CustomWindow}">
+        <Border Background="Blue">
+            <StackPanel>
+                <TextBlock Text="{Binding TextData}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Button Content="Hide Window" Command="{Binding HideCommand}" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
 </ResourceDictionary>

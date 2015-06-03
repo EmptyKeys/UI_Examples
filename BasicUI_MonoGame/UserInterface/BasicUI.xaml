@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="800" ek:SoundManager.Sounds="{DynamicResource Sounds}">
+             d:DesignHeight="640" d:DesignWidth="800" ek:SoundManager.Sounds="{DynamicResource Sounds}" OwnedWindowsContent="{Binding Windows}">
 
     <!-- User can define style for his root control -->
     <!--ek:UIRoot.Style>

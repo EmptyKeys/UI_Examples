@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace GameUILibrary
         private float sliderValue;
         private List<TestTreeDataItem> treeItems;
         private List<TestDataGridModel> gridData;
+        private ObservableCollection<WindowViewModel> windows;
 
         /// <summary>
         /// Gets or sets the button command.
@@ -118,12 +120,19 @@ namespace GameUILibrary
             set { SetProperty(ref gridData, value); }
         }
 
+        public ObservableCollection<WindowViewModel> Windows
+        {
+            get { return windows; }
+            set { SetProperty(ref windows, value); }
+        }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
         {
             ButtonCommand = new RelayCommand(new Action<object>(OnButtonClick));
+
             TreeItems = new List<TestTreeDataItem>
             {
                 new TestTreeDataItem()
@@ -137,6 +146,9 @@ namespace GameUILibrary
                 new TestDataGridModel { Boolean = true, Number = 3, Text = "Lorem ipsum dolor sit amet" },
                 new TestDataGridModel { Boolean = false, Number = 4, Text = "Lorem ipsum dolor sit amet" },
             };
+
+            Windows = new ObservableCollection<WindowViewModel>();
+            Windows.Add(new CustomWindow());
         }
 
         private void OnButtonClick(object obj)
@@ -145,7 +157,7 @@ namespace GameUILibrary
             {
                 ButtonResult = obj.ToString();
                 ProgressValue += 0.5f;
-                ButtonEnabled = true;
+                ButtonEnabled = true;                
             }
         }
     }
