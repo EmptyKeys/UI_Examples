@@ -78,8 +78,8 @@ namespace BasicUI_MonoGame_Win_Desktop
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height);
-            debug = new DebugViewModel(basicUI);
             basicUI.DataContext = new BasicUIViewModel();
+            debug = new DebugViewModel(basicUI);
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);

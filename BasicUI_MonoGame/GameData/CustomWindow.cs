@@ -32,7 +32,7 @@ namespace GameData
             TextData = "Custom Window";
 
             Top = 250;
-            Left = 550;
+            Left = 750;
             Height = 100;
             Width = 200;
             Opacity = 0.9f;

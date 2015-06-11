@@ -133,70 +133,70 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private static UIElement r_3_dtMethod(UIElement parent) {
-            // e_32 element
-            Border e_32 = new Border();
-            e_32.Parent = parent;
-            e_32.Name = "e_32";
-            e_32.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
-            // e_33 element
-            StackPanel e_33 = new StackPanel();
-            e_32.Child = e_33;
-            e_33.Name = "e_33";
-            // e_34 element
-            TextBlock e_34 = new TextBlock();
-            e_33.Children.Add(e_34);
-            e_34.Name = "e_34";
-            e_34.HorizontalAlignment = HorizontalAlignment.Center;
-            e_34.VerticalAlignment = VerticalAlignment.Center;
+            // e_39 element
+            Border e_39 = new Border();
+            e_39.Parent = parent;
+            e_39.Name = "e_39";
+            e_39.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            // e_40 element
+            StackPanel e_40 = new StackPanel();
+            e_39.Child = e_40;
+            e_40.Name = "e_40";
+            // e_41 element
+            TextBlock e_41 = new TextBlock();
+            e_40.Children.Add(e_41);
+            e_41.Name = "e_41";
+            e_41.HorizontalAlignment = HorizontalAlignment.Center;
+            e_41.VerticalAlignment = VerticalAlignment.Center;
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_34_Text = new Binding("TextData");
-            e_34.SetBinding(TextBlock.TextProperty, binding_e_34_Text);
-            // e_35 element
-            Button e_35 = new Button();
-            e_33.Children.Add(e_35);
-            e_35.Name = "e_35";
+            Binding binding_e_41_Text = new Binding("TextData");
+            e_41.SetBinding(TextBlock.TextProperty, binding_e_41_Text);
+            // e_42 element
+            Button e_42 = new Button();
+            e_40.Children.Add(e_42);
+            e_42.Name = "e_42";
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            e_35.Content = "Hide Window";
-            Binding binding_e_35_Command = new Binding("HideCommand");
-            e_35.SetBinding(Button.CommandProperty, binding_e_35_Command);
-            return e_32;
+            e_42.Content = "Hide Window";
+            Binding binding_e_42_Command = new Binding("HideCommand");
+            e_42.SetBinding(Button.CommandProperty, binding_e_42_Command);
+            return e_39;
         }
         
         private static UIElement r_4_ctMethod(UIElement parent) {
-            // e_36 element
-            Grid e_36 = new Grid();
-            e_36.Parent = parent;
-            e_36.Name = "e_36";
-            RowDefinition row_e_36_0 = new RowDefinition();
-            row_e_36_0.Height = new GridLength(20F, GridUnitType.Pixel);
-            e_36.RowDefinitions.Add(row_e_36_0);
-            RowDefinition row_e_36_1 = new RowDefinition();
-            e_36.RowDefinitions.Add(row_e_36_1);
+            // e_43 element
+            Grid e_43 = new Grid();
+            e_43.Parent = parent;
+            e_43.Name = "e_43";
+            RowDefinition row_e_43_0 = new RowDefinition();
+            row_e_43_0.Height = new GridLength(20F, GridUnitType.Pixel);
+            e_43.RowDefinitions.Add(row_e_43_0);
+            RowDefinition row_e_43_1 = new RowDefinition();
+            e_43.RowDefinitions.Add(row_e_43_1);
             // PART_WindowTitleBorder element
             Border PART_WindowTitleBorder = new Border();
-            e_36.Children.Add(PART_WindowTitleBorder);
+            e_43.Children.Add(PART_WindowTitleBorder);
             PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
             PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(0, 0, 0, 255));
-            // e_37 element
-            ContentPresenter e_37 = new ContentPresenter();
-            e_36.Children.Add(e_37);
-            e_37.Name = "e_37";
-            Grid.SetRow(e_37, 1);
-            Binding binding_e_37_Content = new Binding();
-            e_37.SetBinding(ContentPresenter.ContentProperty, binding_e_37_Content);
-            return e_36;
+            // e_44 element
+            ContentPresenter e_44 = new ContentPresenter();
+            e_43.Children.Add(e_44);
+            e_44.Name = "e_44";
+            Grid.SetRow(e_44, 1);
+            Binding binding_e_44_Content = new Binding();
+            e_44.SetBinding(ContentPresenter.ContentProperty, binding_e_44_Content);
+            return e_43;
         }
         
         private static UIElement r_6_dtMethod(UIElement parent) {
-            // e_38 element
-            TextBlock e_38 = new TextBlock();
-            e_38.Parent = parent;
-            e_38.Name = "e_38";
-            e_38.Margin = new Thickness(2F, 2F, 2F, 2F);
+            // e_45 element
+            TextBlock e_45 = new TextBlock();
+            e_45.Parent = parent;
+            e_45.Name = "e_45";
+            e_45.Margin = new Thickness(2F, 2F, 2F, 2F);
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_38_Text = new Binding("Name");
-            e_38.SetBinding(TextBlock.TextProperty, binding_e_38_Text);
-            return e_38;
+            Binding binding_e_45_Text = new Binding("Name");
+            e_45.SetBinding(TextBlock.TextProperty, binding_e_45_Text);
+            return e_45;
         }
     }
 }

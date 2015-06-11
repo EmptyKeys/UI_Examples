@@ -38,9 +38,9 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Background="Black" Grid.ColumnSpan="2">
+
+        <StackPanel Background="Black">
             <Image Name="logo" Stretch="None" HorizontalAlignment="Center">
                 <Image.Source>
                     <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
@@ -49,33 +49,30 @@
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
         </StackPanel>
-        <StackPanel Grid.Row="1">
-            <ComboBox Name="combo" Width="200" Margin="5" SelectedIndex="2">
-                <ComboBoxItem Name="item1" Content="Item 1" />
-                <ComboBoxItem Name="item2" Content="Item 2" />
-                <ComboBoxItem Name="item3" Content="Item 3" />
-            </ComboBox>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Name="button1" Content="1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" />
-                <Button Name="button2" Style="{DynamicResource buttonStyle}" Content="2" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 2"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Name="button3" Content="3" Width="200" Height="30" Margin="5" FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI"
-                    Command="{Binding ButtonCommand}" CommandParameter="Click Button 3"/>
-                <Button Name="button4" IsEnabled="{Binding ButtonEnabled}" Content="4" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 4" />
-            </StackPanel>
-            <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
-            <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="400"/>
 
-            <Slider Name="slider" Width="200" Value="{Binding SliderValue}" Minimum="5" Maximum="20" />
+        <TabControl Grid.Row="1" Margin="10">
+            <TabItem Header="Controls" HorizontalContentAlignment="Stretch">
+                <StackPanel>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
-                <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
-            </StackPanel>
-            <TabControl Height="300" Margin="5">
-                <TabItem Header="ListBox" HorizontalContentAlignment="Stretch">
-                    <ListBox>
+                    <Button Name="button1" Content="Button 1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" TabIndex="1" />
+                    <Button Name="button2" IsEnabled="{Binding ButtonEnabled}" Content="Button 2" Width="200" Height="30" Margin="5" TabIndex="2"
+                            Command="{Binding ButtonCommand}" CommandParameter="Click Button 2" />
+
+                    <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
+                    <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" TabIndex="3"/>
+                    <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="200" />
+
+                    <Slider Name="slider" Width="200" Value="{Binding SliderValue}" Minimum="5" Maximum="20" TabIndex="4" />
+
+                    <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5" TabIndex="5"/>
+
+                    <ComboBox Name="combo" Width="200" Margin="5" SelectedIndex="2" TabIndex="6">
+                        <ComboBoxItem Name="item1" Content="Item 1" />
+                        <ComboBoxItem Name="item2" Content="Item 2" />
+                        <ComboBoxItem Name="item3" Content="Item 3" />
+                    </ComboBox>
+
+                    <ListBox TabIndex="7">
                         <ListBoxItem>Selection 1</ListBoxItem>
                         <ListBoxItem>Selection 2</ListBoxItem>
                         <ListBoxItem>Selection 3</ListBoxItem>
@@ -83,115 +80,170 @@
                         <ListBoxItem>Selection 5</ListBoxItem>
                         <ListBoxItem>Selection 6</ListBoxItem>
                     </ListBox>
-                </TabItem>
-                <TabItem Header="TreeView" >
-                    <TreeView ItemsSource="{Binding TreeItems}" />
-                </TabItem>
-                <TabItem Header="DataGrid">
-                    <DataGrid ItemsSource="{Binding GridData}" AutoGenerateColumns="False">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="#" Binding="{Binding Number}" />
-                            <DataGridTextColumn Header="Text" Binding="{Binding Text}">
-                                <DataGridTextColumn.ElementStyle>
-                                    <Style TargetType="DataGridCell">
-                                        <Setter Property="Background" Value="Gray" />
-                                        <Setter Property="HorizontalAlignment" Value="Center" />
-                                        <Setter Property="VerticalAlignment" Value="Center" />
-                                    </Style>
-                                </DataGridTextColumn.ElementStyle>
-                            </DataGridTextColumn>
-                            <DataGridCheckBoxColumn Header="Bool" Binding="{Binding Boolean}" />
-                            <DataGridTemplateColumn Width="200">                                
-                                <DataGridTemplateColumn.Header>
-                                    <TextBlock Text="Template Column" />
-                                </DataGridTemplateColumn.Header>
-                                <DataGridTemplateColumn.HeaderStyle>
-                                    <Style TargetType="DataGridColumnHeader">
-                                        <Setter Property="Foreground" Value="Orange" />
-                                    </Style>
-                                </DataGridTemplateColumn.HeaderStyle>
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel>
-                                            <TextBlock Text="{Binding Text}" />
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Boolean}" />
-                                                <TextBlock Text="{Binding Number}" />
-                                            </StackPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="DataGrid">
+                <DataGrid ItemsSource="{Binding GridData}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="#" Binding="{Binding Number}" />
+                        <DataGridTextColumn Header="Text" Binding="{Binding Text}">
+                            <DataGridTextColumn.ElementStyle>
+                                <Style TargetType="DataGridCell">
+                                    <Setter Property="Background" Value="Gray" />
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                    <Setter Property="VerticalAlignment" Value="Center" />
+                                </Style>
+                            </DataGridTextColumn.ElementStyle>
+                        </DataGridTextColumn>
+                        <DataGridCheckBoxColumn Header="Bool" Binding="{Binding Boolean}" />
+                        <DataGridTemplateColumn Width="200">
+                            <DataGridTemplateColumn.Header>
+                                <TextBlock Text="Template Column" />
+                            </DataGridTemplateColumn.Header>
+                            <DataGridTemplateColumn.HeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Foreground" Value="Orange" />
+                                </Style>
+                            </DataGridTemplateColumn.HeaderStyle>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Text}" />
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Boolean}" />
+                                            <TextBlock Text="{Binding Number}" />
                                         </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </TabItem>
-                <TabItem Header="Tab 4" Content="Tab 4 Content"/>
-            </TabControl>                        
-        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="TreeView">
+                <TreeView ItemsSource="{Binding TreeItems}" />
+            </TabItem>
+            <TabItem Header="Shapes">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
-            <Button Name="animButton1" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
-            <Button Name="animButton2" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
-            <Button Name="animButton3" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
-            <Button Name="animButton4" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" />
+                    <Rectangle Height="100" Width="200" RadiusX="10" RadiusY="10" Fill="Green" Stroke="Gray" StrokeThickness="5" Margin="5" />
+                    <Rectangle Height="100" Width="200" Fill="Orange" Margin="5" Grid.Column="1" />
+                    <Rectangle Height="100" Width="200" RadiusX="10" RadiusY="10" StrokeThickness="5" Margin="5" Grid.Column="2">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush >
+                                <GradientStop Color="Orange" Offset="0.5" />
+                                <GradientStop Color="#FF00A2FF"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                        <Rectangle.Stroke>
+                            <LinearGradientBrush >
+                                <GradientStop Color="#FF00A2FF" Offset="0.5" />
+                                <GradientStop Color="Orange"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Stroke>
+                    </Rectangle>
 
-            <Grid>
-                <Border Name="animBorder1" Width="200" Height="100" Margin="0,10,0,10" >
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="Border.Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ek:SolidColorBrushAnimation
+                    <Ellipse Height="100" Width="200" Fill="Gray" Stroke="Green" StrokeThickness="10" Margin="5" Grid.Row="1"/>
+                    <Ellipse Height="100" Width="200" Stroke="Orange" StrokeThickness="10" Margin="5" Grid.Row="1" Grid.Column="1"/>
+                    <Ellipse Height="100" Width="200" StrokeThickness="10" Margin="5" Grid.Row="1" Grid.Column="2">
+                        <Ellipse.Fill>
+                            <LinearGradientBrush >
+                                <GradientStop Color="Orange" Offset="0.5" />
+                                <GradientStop Color="#FF00A2FF"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Fill>
+                        <Ellipse.Stroke>
+                            <LinearGradientBrush >
+                                <GradientStop Color="#FF00A2FF" Offset="0.5" />
+                                <GradientStop Color="Orange"/>
+                            </LinearGradientBrush>
+                        </Ellipse.Stroke>
+                    </Ellipse>
+
+                    <Line X1="10" Y1="10" X2="150" Y2="150" Stroke="Gray" StrokeThickness="10" Grid.Row="2" />
+                    <Line X1="100" Y1="10" X2="100" Y2="100" Stroke="Gray" StrokeThickness="10" Grid.Row="2" />
+                    <Line X1="10" Y1="100" X2="100" Y2="100" Stroke="Gray" StrokeThickness="10" Grid.Row="2" />
+
+                    <Rectangle Height="100" Width="200" RadiusX="10" RadiusY="10" Margin="5" Grid.Row="2" Stroke="White" StrokeThickness="1" Grid.Column="1">
+                        <Rectangle.Fill>
+                            <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Animations">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel>
+                        <Button Name="animButton1" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" TabIndex="1"/>
+                        <Button Name="animButton2" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" TabIndex="2"/>
+                        <Button Name="animButton3" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" TabIndex="3"/>
+                        <Button Name="animButton4" Style="{DynamicResource buttonAnimStyle}" Content="Mouse Over me!" TabIndex="4"/>
+                    </StackPanel>
+
+
+                    <Border Name="animBorder1" Width="200" Height="100" Margin="0,10,0,10" Grid.Column="1" VerticalAlignment="Top">
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="Border.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ek:SolidColorBrushAnimation
                                 Storyboard.TargetName="animBorder1" 
                                 Storyboard.TargetProperty="Background"                                
                                 From="Yellow" To="Blue" Duration="0:0:5" AutoReverse="True"
                                 RepeatBehavior="Forever">
-                                        <ek:SolidColorBrushAnimation.EasingFunction>
-                                            <ExponentialEase />
-                                        </ek:SolidColorBrushAnimation.EasingFunction>
-                                    </ek:SolidColorBrushAnimation>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
-                    </Border.Triggers>
-                </Border>
+                                            <ek:SolidColorBrushAnimation.EasingFunction>
+                                                <ExponentialEase />
+                                            </ek:SolidColorBrushAnimation.EasingFunction>
+                                        </ek:SolidColorBrushAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Border.Triggers>
+                    </Border>
 
-                <Border Name="animBorder2" Width="100" Height="50" Margin="50,35,50,35" >
-                    <Border.Triggers>
-                        <EventTrigger RoutedEvent="Border.Loaded">
-                            <BeginStoryboard>
-                                <Storyboard>
-                                    <ek:SolidColorBrushAnimation
+                    <Border Name="animBorder2" Width="100" Height="50" Margin="50,35,50,35" Grid.Column="1" VerticalAlignment="Top">
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="Border.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ek:SolidColorBrushAnimation
                                 Storyboard.TargetName="animBorder2" 
                                 Storyboard.TargetProperty="Background"                                
                                 From="Red" To="White" Duration="0:0:3" AutoReverse="True"
                                 RepeatBehavior="Forever">
-                                        <ek:SolidColorBrushAnimation.EasingFunction>
-                                            <CubicEase />
-                                        </ek:SolidColorBrushAnimation.EasingFunction>
-                                    </ek:SolidColorBrushAnimation>
+                                            <ek:SolidColorBrushAnimation.EasingFunction>
+                                                <CubicEase />
+                                            </ek:SolidColorBrushAnimation.EasingFunction>
+                                        </ek:SolidColorBrushAnimation>
 
-                                    <DoubleAnimation
+                                        <DoubleAnimation
                                         Storyboard.TargetName="animBorder2" 
                                         Storyboard.TargetProperty="Opacity"                                
                                         From="1" To="0" Duration="0:0:4" AutoReverse="True" RepeatBehavior="Forever">
-                                    </DoubleAnimation>
-                                </Storyboard>
-                            </BeginStoryboard>
-                        </EventTrigger>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
 
-                    </Border.Triggers>
-                </Border>
-            </Grid>
-            
-            <Rectangle Height="100" Width="200" RadiusX="10" RadiusY="10" Fill="Green" Stroke="Gray" StrokeThickness="5" Margin="5" />
-            <Ellipse Height="100" Width="200" Fill="Gray" Stroke="Green" StrokeThickness="10" Margin="5" />
+                        </Border.Triggers>
+                    </Border>
 
-            <Button Name="imageButton" Width="48" Height="48">
-                <Button.Background>
-                    <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
-                </Button.Background>
-            </Button>
-        </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </ek:UIRoot>

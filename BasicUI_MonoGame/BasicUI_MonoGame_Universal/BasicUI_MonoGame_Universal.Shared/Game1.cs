@@ -47,8 +47,13 @@ namespace BasicUI_MonoGame_Universal
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
+#if !WINDOWS_PHONE_APP
             graphics.PreferredBackBufferWidth = 1920;
             graphics.PreferredBackBufferHeight = 1080;
+#else
+            graphics.PreferredBackBufferWidth = 480;
+            graphics.PreferredBackBufferHeight = 854;
+#endif
             graphics.PreferMultiSampling = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
         }
@@ -72,7 +77,9 @@ namespace BasicUI_MonoGame_Universal
         /// </summary>
         protected override void LoadContent()
         {
+#if !WINDOWS_PHONE_APP
             this.IsMouseVisible = true;
+#endif
 
             SpriteFont font = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
