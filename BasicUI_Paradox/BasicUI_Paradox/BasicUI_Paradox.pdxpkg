@@ -25,7 +25,7 @@ Profiles:
             GameSettingsAsset.BackBufferHeight: 720
             GameSettingsAsset.BackBufferWidth: 1280
             GameSettingsAsset.DefaultGraphicsProfile: Level_10_0
-            GameSettingsAsset.DefaultScene: 8c93517a-df0a-4e5f-9c48-af808ae868af:MainScene
+            GameSettingsAsset.DefaultScene: 93e10395-e88b-43fb-afb6-7cf233921934:MainScene
             Paradox.DisplayOrientation: LandscapeRight
         ProjectReferences:
             -   Id: 44547b06-90d6-477f-9348-cdd1915f980b

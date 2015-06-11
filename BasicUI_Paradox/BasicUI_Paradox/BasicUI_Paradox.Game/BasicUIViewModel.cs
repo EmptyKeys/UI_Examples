@@ -144,7 +144,7 @@ namespace BasicUI_Paradox
             if (messageBoxService != null)
             {
                 RelayCommand result = new RelayCommand(new Action<object>(OnMessageBoxResult));
-                messageBoxService.Show("Message box text", "Caption", MessageBoxButton.YesNoCancel, result);
+                messageBoxService.Show("Message box text", "Caption", MessageBoxButton.YesNoCancel, result, false);
             }
         }
 

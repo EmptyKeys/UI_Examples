@@ -249,3 +249,6 @@ EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.dll
 /EmptyKeysUI/Generator
 /EmptyKeysUI/CocosSharp/AnyCPU
 /EmptyKeysUI/Paradox/AnyCPU
+EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.Core.XML
+EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.Debug.dll
+EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.xml
