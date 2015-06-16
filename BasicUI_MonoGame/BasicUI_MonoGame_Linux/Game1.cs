@@ -11,6 +11,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Media;
 using GameUILibrary;
+using EmptyKeys.UserInterface.Debug;
 #endregion
 
 namespace BasicUI_MonoGame_Linux
@@ -26,6 +27,7 @@ namespace BasicUI_MonoGame_Linux
         private int nativeScreenHeight;
 
         private BasicUI basicUI;
+        private DebugViewModel debug;
 
         public Game1()
             : base()
@@ -34,6 +36,7 @@ namespace BasicUI_MonoGame_Linux
             Content.RootDirectory = "Content";
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
             graphics.DeviceCreated += graphics_DeviceCreated;
+
         }
 
         void graphics_DeviceCreated(object sender, EventArgs e)
@@ -78,6 +81,7 @@ namespace BasicUI_MonoGame_Linux
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height);
             basicUI.DataContext = new BasicUIViewModel();
+            debug = new DebugViewModel(basicUI);
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);
@@ -109,6 +113,7 @@ namespace BasicUI_MonoGame_Linux
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            debug.Update();
             basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
@@ -124,7 +129,7 @@ namespace BasicUI_MonoGame_Linux
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
-
+            debug.Draw();
             base.Draw(gameTime);
         }
     }

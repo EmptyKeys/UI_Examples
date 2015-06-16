@@ -49,9 +49,9 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("Image", r_1_bm);
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");
-            // Resource - [DataTemplateKey(GameData.CustomWindow)] DataTemplate
+            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
             Func<UIElement, UIElement> r_3_dtFunc = r_3_dtMethod;
-            this.Add(typeof(GameData.CustomWindow), new DataTemplate(typeof(GameData.CustomWindow), r_3_dtFunc));
+            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_3_dtFunc));
             // Resource - [CustomWindowTemplate] ControlTemplate
             Func<UIElement, UIElement> r_4_ctFunc = r_4_ctMethod;
             ControlTemplate r_4_ct = new ControlTemplate(r_4_ctFunc);
@@ -116,87 +116,87 @@ namespace EmptyKeys.UserInterface.Generated {
             Storyboard.SetTargetProperty(r_5_s_ET_1_AC_0_SB_TL_1, Button.WidthProperty);
             r_5_s_ET_1_AC_0_SB.Children.Add(r_5_s_ET_1_AC_0_SB_TL_1);
             this.Add("buttonAnimStyle", r_5_s);
-            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
-            Func<UIElement, UIElement> r_6_dtFunc = r_6_dtMethod;
-            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_6_dtFunc));
             // Resource - [Sounds] SoundSourceCollection
-            var r_7_sounds = new SoundSourceCollection();
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
+            var r_6_sounds = new SoundSourceCollection();
+            r_6_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
             SoundManager.Instance.AddSound("Click");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
             SoundManager.Instance.AddSound("KeyPress");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
             SoundManager.Instance.AddSound("Move");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
             SoundManager.Instance.AddSound("Select");
-            this.Add("Sounds", r_7_sounds);
+            this.Add("Sounds", r_6_sounds);
+            // Resource - [DataTemplateKey(GameData.CustomWindow)] DataTemplate
+            Func<UIElement, UIElement> r_7_dtFunc = r_7_dtMethod;
+            this.Add(typeof(GameData.CustomWindow), new DataTemplate(typeof(GameData.CustomWindow), r_7_dtFunc));
         }
         
         private static UIElement r_3_dtMethod(UIElement parent) {
             // e_39 element
-            Border e_39 = new Border();
+            TextBlock e_39 = new TextBlock();
             e_39.Parent = parent;
             e_39.Name = "e_39";
-            e_39.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
-            // e_40 element
-            StackPanel e_40 = new StackPanel();
-            e_39.Child = e_40;
-            e_40.Name = "e_40";
-            // e_41 element
-            TextBlock e_41 = new TextBlock();
-            e_40.Children.Add(e_41);
-            e_41.Name = "e_41";
-            e_41.HorizontalAlignment = HorizontalAlignment.Center;
-            e_41.VerticalAlignment = VerticalAlignment.Center;
+            e_39.Margin = new Thickness(2F, 2F, 2F, 2F);
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_41_Text = new Binding("TextData");
-            e_41.SetBinding(TextBlock.TextProperty, binding_e_41_Text);
-            // e_42 element
-            Button e_42 = new Button();
-            e_40.Children.Add(e_42);
-            e_42.Name = "e_42";
-            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            e_42.Content = "Hide Window";
-            Binding binding_e_42_Command = new Binding("HideCommand");
-            e_42.SetBinding(Button.CommandProperty, binding_e_42_Command);
+            Binding binding_e_39_Text = new Binding("Name");
+            e_39.SetBinding(TextBlock.TextProperty, binding_e_39_Text);
             return e_39;
         }
         
         private static UIElement r_4_ctMethod(UIElement parent) {
-            // e_43 element
-            Grid e_43 = new Grid();
-            e_43.Parent = parent;
-            e_43.Name = "e_43";
-            RowDefinition row_e_43_0 = new RowDefinition();
-            row_e_43_0.Height = new GridLength(20F, GridUnitType.Pixel);
-            e_43.RowDefinitions.Add(row_e_43_0);
-            RowDefinition row_e_43_1 = new RowDefinition();
-            e_43.RowDefinitions.Add(row_e_43_1);
+            // e_40 element
+            Grid e_40 = new Grid();
+            e_40.Parent = parent;
+            e_40.Name = "e_40";
+            RowDefinition row_e_40_0 = new RowDefinition();
+            row_e_40_0.Height = new GridLength(20F, GridUnitType.Pixel);
+            e_40.RowDefinitions.Add(row_e_40_0);
+            RowDefinition row_e_40_1 = new RowDefinition();
+            e_40.RowDefinitions.Add(row_e_40_1);
             // PART_WindowTitleBorder element
             Border PART_WindowTitleBorder = new Border();
-            e_43.Children.Add(PART_WindowTitleBorder);
+            e_40.Children.Add(PART_WindowTitleBorder);
             PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
             PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(0, 0, 0, 255));
-            // e_44 element
-            ContentPresenter e_44 = new ContentPresenter();
-            e_43.Children.Add(e_44);
-            e_44.Name = "e_44";
-            Grid.SetRow(e_44, 1);
-            Binding binding_e_44_Content = new Binding();
-            e_44.SetBinding(ContentPresenter.ContentProperty, binding_e_44_Content);
-            return e_43;
+            // e_41 element
+            ContentPresenter e_41 = new ContentPresenter();
+            e_40.Children.Add(e_41);
+            e_41.Name = "e_41";
+            Grid.SetRow(e_41, 1);
+            Binding binding_e_41_Content = new Binding();
+            e_41.SetBinding(ContentPresenter.ContentProperty, binding_e_41_Content);
+            return e_40;
         }
         
-        private static UIElement r_6_dtMethod(UIElement parent) {
-            // e_45 element
-            TextBlock e_45 = new TextBlock();
-            e_45.Parent = parent;
-            e_45.Name = "e_45";
-            e_45.Margin = new Thickness(2F, 2F, 2F, 2F);
+        private static UIElement r_7_dtMethod(UIElement parent) {
+            // e_42 element
+            Border e_42 = new Border();
+            e_42.Parent = parent;
+            e_42.Name = "e_42";
+            e_42.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            // e_43 element
+            StackPanel e_43 = new StackPanel();
+            e_42.Child = e_43;
+            e_43.Name = "e_43";
+            // e_44 element
+            TextBlock e_44 = new TextBlock();
+            e_43.Children.Add(e_44);
+            e_44.Name = "e_44";
+            e_44.HorizontalAlignment = HorizontalAlignment.Center;
+            e_44.VerticalAlignment = VerticalAlignment.Center;
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_45_Text = new Binding("Name");
-            e_45.SetBinding(TextBlock.TextProperty, binding_e_45_Text);
-            return e_45;
+            Binding binding_e_44_Text = new Binding("TextData");
+            e_44.SetBinding(TextBlock.TextProperty, binding_e_44_Text);
+            // e_45 element
+            Button e_45 = new Button();
+            e_43.Children.Add(e_45);
+            e_45.Name = "e_45";
+            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
+            e_45.Content = "Hide Window";
+            Binding binding_e_45_Command = new Binding("HideCommand");
+            e_45.SetBinding(Button.CommandProperty, binding_e_45_Command);
+            return e_42;
         }
     }
 }
