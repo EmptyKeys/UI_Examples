@@ -23,6 +23,19 @@ namespace GameUILibrary
         private List<TestTreeDataItem> treeItems;
         private List<TestDataGridModel> gridData;
         private ObservableCollection<WindowViewModel> windows;
+        private TetrisController tetris;
+
+        /// <summary>
+        /// Gets or sets the tetris.
+        /// </summary>
+        /// <value>
+        /// The tetris.
+        /// </value>
+        public TetrisController Tetris
+        {
+            get { return tetris; }
+            set { SetProperty(ref tetris, value); }
+        }        
 
         /// <summary>
         /// Gets or sets the button command.
@@ -45,8 +58,8 @@ namespace GameUILibrary
         public string ButtonResult
         {
             get { return buttonResult; }
-            set { SetProperty<string>(ref buttonResult, value); }
-        }        
+            set { SetProperty(ref buttonResult, value); }
+        }
 
         /// <summary>
         /// Gets or sets the text box text.
@@ -57,7 +70,7 @@ namespace GameUILibrary
         public string TextBoxText
         {
             get { return textBoxText; }
-            set { SetProperty<string>(ref textBoxText, value); }
+            set { SetProperty(ref textBoxText, value); }
         }
 
         /// <summary>
@@ -69,7 +82,7 @@ namespace GameUILibrary
         public bool ButtonEnabled
         {
             get { return buttonEnabled; }
-            set { SetProperty<bool>(ref buttonEnabled, value); }
+            set { SetProperty(ref buttonEnabled, value); }
         }
 
         /// <summary>
@@ -81,7 +94,7 @@ namespace GameUILibrary
         public float ProgressValue
         {
             get { return progressValue; }
-            set { SetProperty<float>(ref progressValue, value); }
+            set { SetProperty(ref progressValue, value); }
         }
 
         /// <summary>
@@ -93,7 +106,7 @@ namespace GameUILibrary
         public float SliderValue
         {
             get { return sliderValue; }
-            set { SetProperty<float>(ref sliderValue, value); }
+            set { SetProperty(ref sliderValue, value); }
         }
 
         /// <summary>
@@ -120,6 +133,12 @@ namespace GameUILibrary
             set { SetProperty(ref gridData, value); }
         }
 
+        /// <summary>
+        /// Gets or sets the windows.
+        /// </summary>
+        /// <value>
+        /// The windows.
+        /// </value>
         public ObservableCollection<WindowViewModel> Windows
         {
             get { return windows; }
@@ -145,10 +164,21 @@ namespace GameUILibrary
                 new TestDataGridModel { Boolean = true, Number = 2, Text = "Lorem ipsum dolor sit amet" },
                 new TestDataGridModel { Boolean = true, Number = 3, Text = "Lorem ipsum dolor sit amet" },
                 new TestDataGridModel { Boolean = false, Number = 4, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 5, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 6, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 7, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 8, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 9, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 10, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 11, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 12, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 13, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 14, Text = "Lorem ipsum dolor sit amet" },
+                new TestDataGridModel { Boolean = false, Number = 15, Text = "Lorem ipsum dolor sit amet" },
             };
 
             Windows = new ObservableCollection<WindowViewModel>();
-            Windows.Add(new CustomWindow());
+            Windows.Add(new CustomWindow());            
         }
 
         private void OnButtonClick(object obj)
@@ -158,6 +188,14 @@ namespace GameUILibrary
                 ButtonResult = obj.ToString();
                 ProgressValue += 0.5f;
                 ButtonEnabled = true;                
+            }
+        }
+
+        public void Update(double elapsedTime)
+        {
+            if (Tetris != null)
+            {
+                Tetris.Update(elapsedTime);
             }
         }
     }

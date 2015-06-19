@@ -42,8 +42,10 @@ namespace BasicUI_MonoGame_WinStore
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
             graphics.PreferredBackBufferWidth = 1920;
-            graphics.PreferredBackBufferHeight = 1080;
+            graphics.PreferredBackBufferHeight = 1080;            
             graphics.PreferMultiSampling = true;
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
+            graphics.SynchronizeWithVerticalRetrace = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
         }
 

@@ -26,20 +26,21 @@ namespace BasicUI_MonoGame_Win_Desktop
 
         private BasicUI basicUI;
         private DebugViewModel debug;
+        private BasicUIViewModel viewModel;
 
         public Game1()
             : base()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
+            graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;            
             graphics.DeviceCreated += graphics_DeviceCreated;
 
         }
 
         void graphics_DeviceCreated(object sender, EventArgs e)
         {
-            Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);
+            Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);                    
         }
 
         private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
@@ -49,8 +50,11 @@ namespace BasicUI_MonoGame_Win_Desktop
 
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
-            graphics.PreferMultiSampling = true;
+            graphics.PreferMultiSampling = true;            
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
+            graphics.SynchronizeWithVerticalRetrace = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
+            e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
         }
 
         /// <summary>
@@ -78,8 +82,11 @@ namespace BasicUI_MonoGame_Win_Desktop
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height);
-            basicUI.DataContext = new BasicUIViewModel();
-            debug = new DebugViewModel(basicUI);
+            viewModel = new BasicUIViewModel();
+            viewModel.Tetris = new TetrisController(basicUI.TetrisContainer, basicUI.TetrisNextContainer);
+            basicUI.DataContext = viewModel;
+            debug = new DebugViewModel(basicUI);           
+
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);
@@ -88,6 +95,42 @@ namespace BasicUI_MonoGame_Win_Desktop
 
             KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
             basicUI.InputBindings.Add(keyBinding);
+
+            RelayCommand tetrisLeft = new RelayCommand(new Action<object>(OnLeft));            
+            KeyBinding left = new KeyBinding(tetrisLeft, KeyCode.A, ModifierKeys.None);
+            basicUI.InputBindings.Add(left);
+
+            RelayCommand tetrisRight = new RelayCommand(new Action<object>(OnRight));
+            KeyBinding right = new KeyBinding(tetrisRight, KeyCode.D, ModifierKeys.None);
+            basicUI.InputBindings.Add(right);
+
+            RelayCommand tetrisDown = new RelayCommand(new Action<object>(OnDown));
+            KeyBinding down = new KeyBinding(tetrisDown, KeyCode.S, ModifierKeys.None);
+            basicUI.InputBindings.Add(down);
+
+            RelayCommand tetrisRotate = new RelayCommand(new Action<object>(OnRotate));
+            KeyBinding rotate = new KeyBinding(tetrisRotate, KeyCode.W, ModifierKeys.None);
+            basicUI.InputBindings.Add(rotate);
+        }
+
+        private void OnRotate(object obj)
+        {
+            viewModel.Tetris.Rotate();
+        }
+
+        private void OnDown(object obj)
+        {
+            viewModel.Tetris.MoveDown();
+        }
+
+        private void OnRight(object obj)
+        {            
+            viewModel.Tetris.MoveRight();
+        }
+
+        private void OnLeft(object obj)
+        {
+            viewModel.Tetris.MoveLeft();
         }
 
         private void ExitEvent(object parameter)
@@ -113,6 +156,8 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             debug.Update();
             basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+
+            viewModel.Update(gameTime.ElapsedGameTime.TotalMilliseconds);
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);

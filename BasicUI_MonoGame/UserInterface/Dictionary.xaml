@@ -81,7 +81,7 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Border Name="PART_WindowTitleBorder" Background="Black"/>
+            <Border Name="PART_WindowTitleBorder" Background="White"/>
             <ContentPresenter Grid.Row="1" Content="{Binding}" />
         </Grid>
     </ControlTemplate>
@@ -94,5 +94,17 @@
             </StackPanel>
         </Border>
     </DataTemplate>
+
+    <Style x:Key="TetrisBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Background" Value="{DynamicResource TetrisWindowBackground}" />
+        <Setter Property="BorderBrush" Value="{DynamicResource TetrisBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />        
+        <Setter Property="Opacity" Value="0.9" />
+    </Style>
+
+    <SolidColorBrush x:Key="TetrisWindowBackground" Color="Black" />
+    <SolidColorBrush x:Key="TetrisForeground" Color="White" />
+    <SolidColorBrush x:Key="TetrisBorderBrush" Color="#FF72B0DA" />
 
 </ResourceDictionary>

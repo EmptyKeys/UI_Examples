@@ -36,9 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BasicUIViewModel.cs" />
+    <Compile Include="CircularQueue.cs" />
+    <Compile Include="GeneratedUI\BasicUI.cs" />
     <Compile Include="GeneratedUI\BasicUI.xaml.cs" />
     <Compile Include="GeneratedUI\Dictionary.xaml.cs" />
+    <Compile Include="GeneratedUI\TetrisBlock.cs" />
+    <Compile Include="GeneratedUI\TetrisBlock.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tetris.cs" />
+    <Compile Include="TetrisController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EmptyKeys.UserInterface">

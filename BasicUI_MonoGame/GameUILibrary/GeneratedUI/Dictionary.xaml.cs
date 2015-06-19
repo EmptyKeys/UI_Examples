@@ -45,158 +45,176 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [Image] BitmapImage
             BitmapImage r_1_bm = new BitmapImage();
             r_1_bm.TextureAsset = "Images/MonoGameLogo";
-            ImageManager.Instance.AddImage("Images/MonoGameLogo");
             this.Add("Image", r_1_bm);
+            // Resource - [TetrisWindowBackground] SolidColorBrush
+            this.Add("TetrisWindowBackground", new SolidColorBrush(new ColorW(0, 0, 0, 255)));
+            // Resource - [TetrisForeground] SolidColorBrush
+            this.Add("TetrisForeground", new SolidColorBrush(new ColorW(255, 255, 255, 255)));
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");
-            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
-            Func<UIElement, UIElement> r_3_dtFunc = r_3_dtMethod;
-            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_3_dtFunc));
-            // Resource - [CustomWindowTemplate] ControlTemplate
-            Func<UIElement, UIElement> r_4_ctFunc = r_4_ctMethod;
-            ControlTemplate r_4_ct = new ControlTemplate(r_4_ctFunc);
-            this.Add("CustomWindowTemplate", r_4_ct);
-            // Resource - [buttonAnimStyle] Style
-            var r_5_s_bo = this[typeof(Button)];
-            Style r_5_s = new Style(typeof(Button), r_5_s_bo as Style);
-            Setter r_5_s_S_0 = new Setter(Button.WidthProperty, 200F);
+            // Resource - [TetrisBorderStyle] Style
+            Style r_5_s = new Style(typeof(Border));
+            Setter r_5_s_S_0 = new Setter(Border.SnapsToDevicePixelsProperty, true);
             r_5_s.Setters.Add(r_5_s_S_0);
-            Setter r_5_s_S_1 = new Setter(Button.MarginProperty, new Thickness(0F, 1F, 0F, 1F));
+            Setter r_5_s_S_1 = new Setter(Border.BackgroundProperty, new ResourceReferenceExpression("TetrisWindowBackground"));
             r_5_s.Setters.Add(r_5_s_S_1);
-            Setter r_5_s_S_2 = new Setter(Button.SnapsToDevicePixelsProperty, false);
+            Setter r_5_s_S_2 = new Setter(Border.BorderBrushProperty, new ResourceReferenceExpression("TetrisBorderBrush"));
             r_5_s.Setters.Add(r_5_s_S_2);
-            EventTrigger r_5_s_ET_0 = new EventTrigger(Button.MouseEnterEvent);
-            r_5_s.Triggers.Add(r_5_s_ET_0);
-            BeginStoryboard r_5_s_ET_0_AC_0 = new BeginStoryboard();
-            r_5_s_ET_0_AC_0.Name = "r_5_s_ET_0_AC_0";
-            r_5_s_ET_0.AddAction(r_5_s_ET_0_AC_0);
-            Storyboard r_5_s_ET_0_AC_0_SB = new Storyboard();
-            r_5_s_ET_0_AC_0.Storyboard = r_5_s_ET_0_AC_0_SB;
-            r_5_s_ET_0_AC_0_SB.Name = "r_5_s_ET_0_AC_0_SB";
-            ThicknessAnimation r_5_s_ET_0_AC_0_SB_TL_0 = new ThicknessAnimation();
-            r_5_s_ET_0_AC_0_SB_TL_0.Name = "r_5_s_ET_0_AC_0_SB_TL_0";
-            r_5_s_ET_0_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
-            r_5_s_ET_0_AC_0_SB_TL_0.From = new Thickness(0F, 1F, 0F, 1F);
-            r_5_s_ET_0_AC_0_SB_TL_0.To = new Thickness(0F, 5F, 0F, 5F);
-            SineEase r_5_s_ET_0_AC_0_SB_TL_0_EA = new SineEase();
-            r_5_s_ET_0_AC_0_SB_TL_0.EasingFunction = r_5_s_ET_0_AC_0_SB_TL_0_EA;
-            Storyboard.SetTargetProperty(r_5_s_ET_0_AC_0_SB_TL_0, Button.MarginProperty);
-            r_5_s_ET_0_AC_0_SB.Children.Add(r_5_s_ET_0_AC_0_SB_TL_0);
-            FloatAnimation r_5_s_ET_0_AC_0_SB_TL_1 = new FloatAnimation();
-            r_5_s_ET_0_AC_0_SB_TL_1.Name = "r_5_s_ET_0_AC_0_SB_TL_1";
-            r_5_s_ET_0_AC_0_SB_TL_1.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
-            r_5_s_ET_0_AC_0_SB_TL_1.To = 220F;
-            SineEase r_5_s_ET_0_AC_0_SB_TL_1_EA = new SineEase();
-            r_5_s_ET_0_AC_0_SB_TL_1.EasingFunction = r_5_s_ET_0_AC_0_SB_TL_1_EA;
-            Storyboard.SetTargetProperty(r_5_s_ET_0_AC_0_SB_TL_1, Button.WidthProperty);
-            r_5_s_ET_0_AC_0_SB.Children.Add(r_5_s_ET_0_AC_0_SB_TL_1);
-            EventTrigger r_5_s_ET_1 = new EventTrigger(Button.MouseLeaveEvent);
-            r_5_s.Triggers.Add(r_5_s_ET_1);
-            BeginStoryboard r_5_s_ET_1_AC_0 = new BeginStoryboard();
-            r_5_s_ET_1_AC_0.Name = "r_5_s_ET_1_AC_0";
-            r_5_s_ET_1.AddAction(r_5_s_ET_1_AC_0);
-            Storyboard r_5_s_ET_1_AC_0_SB = new Storyboard();
-            r_5_s_ET_1_AC_0.Storyboard = r_5_s_ET_1_AC_0_SB;
-            r_5_s_ET_1_AC_0_SB.Name = "r_5_s_ET_1_AC_0_SB";
-            ThicknessAnimation r_5_s_ET_1_AC_0_SB_TL_0 = new ThicknessAnimation();
-            r_5_s_ET_1_AC_0_SB_TL_0.Name = "r_5_s_ET_1_AC_0_SB_TL_0";
-            r_5_s_ET_1_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
-            r_5_s_ET_1_AC_0_SB_TL_0.From = new Thickness(0F, 5F, 0F, 5F);
-            r_5_s_ET_1_AC_0_SB_TL_0.To = new Thickness(0F, 1F, 0F, 1F);
-            SineEase r_5_s_ET_1_AC_0_SB_TL_0_EA = new SineEase();
-            r_5_s_ET_1_AC_0_SB_TL_0.EasingFunction = r_5_s_ET_1_AC_0_SB_TL_0_EA;
-            Storyboard.SetTargetProperty(r_5_s_ET_1_AC_0_SB_TL_0, Button.MarginProperty);
-            r_5_s_ET_1_AC_0_SB.Children.Add(r_5_s_ET_1_AC_0_SB_TL_0);
-            FloatAnimation r_5_s_ET_1_AC_0_SB_TL_1 = new FloatAnimation();
-            r_5_s_ET_1_AC_0_SB_TL_1.Name = "r_5_s_ET_1_AC_0_SB_TL_1";
-            r_5_s_ET_1_AC_0_SB_TL_1.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
-            r_5_s_ET_1_AC_0_SB_TL_1.To = 200F;
-            SineEase r_5_s_ET_1_AC_0_SB_TL_1_EA = new SineEase();
-            r_5_s_ET_1_AC_0_SB_TL_1.EasingFunction = r_5_s_ET_1_AC_0_SB_TL_1_EA;
-            Storyboard.SetTargetProperty(r_5_s_ET_1_AC_0_SB_TL_1, Button.WidthProperty);
-            r_5_s_ET_1_AC_0_SB.Children.Add(r_5_s_ET_1_AC_0_SB_TL_1);
-            this.Add("buttonAnimStyle", r_5_s);
+            Setter r_5_s_S_3 = new Setter(Border.BorderThicknessProperty, new Thickness(1F));
+            r_5_s.Setters.Add(r_5_s_S_3);
+            Setter r_5_s_S_4 = new Setter(Border.OpacityProperty, 0.9F);
+            r_5_s.Setters.Add(r_5_s_S_4);
+            this.Add("TetrisBorderStyle", r_5_s);
+            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
+            Func<UIElement, UIElement> r_6_dtFunc = r_6_dtMethod;
+            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_6_dtFunc));
+            // Resource - [CustomWindowTemplate] ControlTemplate
+            Func<UIElement, UIElement> r_7_ctFunc = r_7_ctMethod;
+            ControlTemplate r_7_ct = new ControlTemplate(r_7_ctFunc);
+            this.Add("CustomWindowTemplate", r_7_ct);
+            // Resource - [buttonAnimStyle] Style
+            var r_8_s_bo = this[typeof(Button)];
+            Style r_8_s = new Style(typeof(Button), r_8_s_bo as Style);
+            Setter r_8_s_S_0 = new Setter(Button.WidthProperty, 200F);
+            r_8_s.Setters.Add(r_8_s_S_0);
+            Setter r_8_s_S_1 = new Setter(Button.MarginProperty, new Thickness(0F, 1F, 0F, 1F));
+            r_8_s.Setters.Add(r_8_s_S_1);
+            Setter r_8_s_S_2 = new Setter(Button.SnapsToDevicePixelsProperty, false);
+            r_8_s.Setters.Add(r_8_s_S_2);
+            EventTrigger r_8_s_ET_0 = new EventTrigger(Button.MouseEnterEvent);
+            r_8_s.Triggers.Add(r_8_s_ET_0);
+            BeginStoryboard r_8_s_ET_0_AC_0 = new BeginStoryboard();
+            r_8_s_ET_0_AC_0.Name = "r_8_s_ET_0_AC_0";
+            r_8_s_ET_0.AddAction(r_8_s_ET_0_AC_0);
+            Storyboard r_8_s_ET_0_AC_0_SB = new Storyboard();
+            r_8_s_ET_0_AC_0.Storyboard = r_8_s_ET_0_AC_0_SB;
+            r_8_s_ET_0_AC_0_SB.Name = "r_8_s_ET_0_AC_0_SB";
+            ThicknessAnimation r_8_s_ET_0_AC_0_SB_TL_0 = new ThicknessAnimation();
+            r_8_s_ET_0_AC_0_SB_TL_0.Name = "r_8_s_ET_0_AC_0_SB_TL_0";
+            r_8_s_ET_0_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
+            r_8_s_ET_0_AC_0_SB_TL_0.From = new Thickness(0F, 1F, 0F, 1F);
+            r_8_s_ET_0_AC_0_SB_TL_0.To = new Thickness(0F, 5F, 0F, 5F);
+            SineEase r_8_s_ET_0_AC_0_SB_TL_0_EA = new SineEase();
+            r_8_s_ET_0_AC_0_SB_TL_0.EasingFunction = r_8_s_ET_0_AC_0_SB_TL_0_EA;
+            Storyboard.SetTargetProperty(r_8_s_ET_0_AC_0_SB_TL_0, Button.MarginProperty);
+            r_8_s_ET_0_AC_0_SB.Children.Add(r_8_s_ET_0_AC_0_SB_TL_0);
+            FloatAnimation r_8_s_ET_0_AC_0_SB_TL_1 = new FloatAnimation();
+            r_8_s_ET_0_AC_0_SB_TL_1.Name = "r_8_s_ET_0_AC_0_SB_TL_1";
+            r_8_s_ET_0_AC_0_SB_TL_1.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
+            r_8_s_ET_0_AC_0_SB_TL_1.To = 220F;
+            SineEase r_8_s_ET_0_AC_0_SB_TL_1_EA = new SineEase();
+            r_8_s_ET_0_AC_0_SB_TL_1.EasingFunction = r_8_s_ET_0_AC_0_SB_TL_1_EA;
+            Storyboard.SetTargetProperty(r_8_s_ET_0_AC_0_SB_TL_1, Button.WidthProperty);
+            r_8_s_ET_0_AC_0_SB.Children.Add(r_8_s_ET_0_AC_0_SB_TL_1);
+            EventTrigger r_8_s_ET_1 = new EventTrigger(Button.MouseLeaveEvent);
+            r_8_s.Triggers.Add(r_8_s_ET_1);
+            BeginStoryboard r_8_s_ET_1_AC_0 = new BeginStoryboard();
+            r_8_s_ET_1_AC_0.Name = "r_8_s_ET_1_AC_0";
+            r_8_s_ET_1.AddAction(r_8_s_ET_1_AC_0);
+            Storyboard r_8_s_ET_1_AC_0_SB = new Storyboard();
+            r_8_s_ET_1_AC_0.Storyboard = r_8_s_ET_1_AC_0_SB;
+            r_8_s_ET_1_AC_0_SB.Name = "r_8_s_ET_1_AC_0_SB";
+            ThicknessAnimation r_8_s_ET_1_AC_0_SB_TL_0 = new ThicknessAnimation();
+            r_8_s_ET_1_AC_0_SB_TL_0.Name = "r_8_s_ET_1_AC_0_SB_TL_0";
+            r_8_s_ET_1_AC_0_SB_TL_0.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
+            r_8_s_ET_1_AC_0_SB_TL_0.From = new Thickness(0F, 5F, 0F, 5F);
+            r_8_s_ET_1_AC_0_SB_TL_0.To = new Thickness(0F, 1F, 0F, 1F);
+            SineEase r_8_s_ET_1_AC_0_SB_TL_0_EA = new SineEase();
+            r_8_s_ET_1_AC_0_SB_TL_0.EasingFunction = r_8_s_ET_1_AC_0_SB_TL_0_EA;
+            Storyboard.SetTargetProperty(r_8_s_ET_1_AC_0_SB_TL_0, Button.MarginProperty);
+            r_8_s_ET_1_AC_0_SB.Children.Add(r_8_s_ET_1_AC_0_SB_TL_0);
+            FloatAnimation r_8_s_ET_1_AC_0_SB_TL_1 = new FloatAnimation();
+            r_8_s_ET_1_AC_0_SB_TL_1.Name = "r_8_s_ET_1_AC_0_SB_TL_1";
+            r_8_s_ET_1_AC_0_SB_TL_1.Duration = new Duration(new TimeSpan(0, 0, 0, 0, 500));
+            r_8_s_ET_1_AC_0_SB_TL_1.To = 200F;
+            SineEase r_8_s_ET_1_AC_0_SB_TL_1_EA = new SineEase();
+            r_8_s_ET_1_AC_0_SB_TL_1.EasingFunction = r_8_s_ET_1_AC_0_SB_TL_1_EA;
+            Storyboard.SetTargetProperty(r_8_s_ET_1_AC_0_SB_TL_1, Button.WidthProperty);
+            r_8_s_ET_1_AC_0_SB.Children.Add(r_8_s_ET_1_AC_0_SB_TL_1);
+            this.Add("buttonAnimStyle", r_8_s);
             // Resource - [Sounds] SoundSourceCollection
-            var r_6_sounds = new SoundSourceCollection();
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
+            var r_9_sounds = new SoundSourceCollection();
+            r_9_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
             SoundManager.Instance.AddSound("Click");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            r_9_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
             SoundManager.Instance.AddSound("KeyPress");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            r_9_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
             SoundManager.Instance.AddSound("Move");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            r_9_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
             SoundManager.Instance.AddSound("Select");
-            this.Add("Sounds", r_6_sounds);
+            this.Add("Sounds", r_9_sounds);
+            // Resource - [TetrisBorderBrush] SolidColorBrush
+            this.Add("TetrisBorderBrush", new SolidColorBrush(new ColorW(114, 176, 218, 255)));
             // Resource - [DataTemplateKey(GameData.CustomWindow)] DataTemplate
-            Func<UIElement, UIElement> r_7_dtFunc = r_7_dtMethod;
-            this.Add(typeof(GameData.CustomWindow), new DataTemplate(typeof(GameData.CustomWindow), r_7_dtFunc));
-        }
-        
-        private static UIElement r_3_dtMethod(UIElement parent) {
-            // e_39 element
-            TextBlock e_39 = new TextBlock();
-            e_39.Parent = parent;
-            e_39.Name = "e_39";
-            e_39.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Func<UIElement, UIElement> r_11_dtFunc = r_11_dtMethod;
+            this.Add(typeof(GameData.CustomWindow), new DataTemplate(typeof(GameData.CustomWindow), r_11_dtFunc));
+            ImageManager.Instance.AddImage("Images/MonoGameLogo");
             FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_39_Text = new Binding("Name");
-            e_39.SetBinding(TextBlock.TextProperty, binding_e_39_Text);
-            return e_39;
+            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
         
-        private static UIElement r_4_ctMethod(UIElement parent) {
-            // e_40 element
-            Grid e_40 = new Grid();
-            e_40.Parent = parent;
-            e_40.Name = "e_40";
-            RowDefinition row_e_40_0 = new RowDefinition();
-            row_e_40_0.Height = new GridLength(20F, GridUnitType.Pixel);
-            e_40.RowDefinitions.Add(row_e_40_0);
-            RowDefinition row_e_40_1 = new RowDefinition();
-            e_40.RowDefinitions.Add(row_e_40_1);
+        private static UIElement r_6_dtMethod(UIElement parent) {
+            // e_66 element
+            TextBlock e_66 = new TextBlock();
+            e_66.Parent = parent;
+            e_66.Name = "e_66";
+            e_66.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Binding binding_e_66_Text = new Binding("Name");
+            e_66.SetBinding(TextBlock.TextProperty, binding_e_66_Text);
+            return e_66;
+        }
+        
+        private static UIElement r_7_ctMethod(UIElement parent) {
+            // e_67 element
+            Grid e_67 = new Grid();
+            e_67.Parent = parent;
+            e_67.Name = "e_67";
+            RowDefinition row_e_67_0 = new RowDefinition();
+            row_e_67_0.Height = new GridLength(20F, GridUnitType.Pixel);
+            e_67.RowDefinitions.Add(row_e_67_0);
+            RowDefinition row_e_67_1 = new RowDefinition();
+            e_67.RowDefinitions.Add(row_e_67_1);
             // PART_WindowTitleBorder element
             Border PART_WindowTitleBorder = new Border();
-            e_40.Children.Add(PART_WindowTitleBorder);
+            e_67.Children.Add(PART_WindowTitleBorder);
             PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
-            PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(0, 0, 0, 255));
-            // e_41 element
-            ContentPresenter e_41 = new ContentPresenter();
-            e_40.Children.Add(e_41);
-            e_41.Name = "e_41";
-            Grid.SetRow(e_41, 1);
-            Binding binding_e_41_Content = new Binding();
-            e_41.SetBinding(ContentPresenter.ContentProperty, binding_e_41_Content);
-            return e_40;
+            PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            // e_68 element
+            ContentPresenter e_68 = new ContentPresenter();
+            e_67.Children.Add(e_68);
+            e_68.Name = "e_68";
+            Grid.SetRow(e_68, 1);
+            Binding binding_e_68_Content = new Binding();
+            e_68.SetBinding(ContentPresenter.ContentProperty, binding_e_68_Content);
+            return e_67;
         }
         
-        private static UIElement r_7_dtMethod(UIElement parent) {
-            // e_42 element
-            Border e_42 = new Border();
-            e_42.Parent = parent;
-            e_42.Name = "e_42";
-            e_42.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
-            // e_43 element
-            StackPanel e_43 = new StackPanel();
-            e_42.Child = e_43;
-            e_43.Name = "e_43";
-            // e_44 element
-            TextBlock e_44 = new TextBlock();
-            e_43.Children.Add(e_44);
-            e_44.Name = "e_44";
-            e_44.HorizontalAlignment = HorizontalAlignment.Center;
-            e_44.VerticalAlignment = VerticalAlignment.Center;
-            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            Binding binding_e_44_Text = new Binding("TextData");
-            e_44.SetBinding(TextBlock.TextProperty, binding_e_44_Text);
-            // e_45 element
-            Button e_45 = new Button();
-            e_43.Children.Add(e_45);
-            e_45.Name = "e_45";
-            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
-            e_45.Content = "Hide Window";
-            Binding binding_e_45_Command = new Binding("HideCommand");
-            e_45.SetBinding(Button.CommandProperty, binding_e_45_Command);
-            return e_42;
+        private static UIElement r_11_dtMethod(UIElement parent) {
+            // e_69 element
+            Border e_69 = new Border();
+            e_69.Parent = parent;
+            e_69.Name = "e_69";
+            e_69.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            // e_70 element
+            StackPanel e_70 = new StackPanel();
+            e_69.Child = e_70;
+            e_70.Name = "e_70";
+            // e_71 element
+            TextBlock e_71 = new TextBlock();
+            e_70.Children.Add(e_71);
+            e_71.Name = "e_71";
+            e_71.HorizontalAlignment = HorizontalAlignment.Center;
+            e_71.VerticalAlignment = VerticalAlignment.Center;
+            Binding binding_e_71_Text = new Binding("TextData");
+            e_71.SetBinding(TextBlock.TextProperty, binding_e_71_Text);
+            // e_72 element
+            Button e_72 = new Button();
+            e_70.Children.Add(e_72);
+            e_72.Name = "e_72";
+            e_72.Content = "Hide Window";
+            Binding binding_e_72_Command = new Binding("HideCommand");
+            e_72.SetBinding(Button.CommandProperty, binding_e_72_Command);
+            return e_69;
         }
     }
 }

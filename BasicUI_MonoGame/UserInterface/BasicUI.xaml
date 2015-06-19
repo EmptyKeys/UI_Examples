@@ -50,29 +50,62 @@
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
         </StackPanel>
 
-        <TabControl Grid.Row="1" Margin="10">
+        <TabControl Grid.Row="1" Margin="10" Name="TabControl">
             <TabItem Header="Controls" HorizontalContentAlignment="Stretch">
-                <StackPanel>
-
-                    <Button Name="button1" Content="Button 1" Width="200" Height="30" Margin="5" Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" TabIndex="1" />
-                    <Button Name="button2" IsEnabled="{Binding ButtonEnabled}" Content="Button 2" Width="200" Height="30" Margin="5" TabIndex="2"
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock Text="Button" VerticalAlignment="Center" />
+                    <Button Name="button1" Grid.Row="0" Grid.Column="1" Content="Button 1" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"
+                            Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" TabIndex="1" />
+                    
+                    <Button Name="button2" Grid.Row="1" Grid.Column="1" IsEnabled="{Binding ButtonEnabled}" HorizontalAlignment="Left"
+                            Content="Button 2" Width="200" Height="30" Margin="5" TabIndex="2"
                             Command="{Binding ButtonCommand}" CommandParameter="Click Button 2" />
+                    
+                    <TextBlock Name="buttonResult" Grid.Row="2" Grid.Column="1" Text="{Binding ButtonResult}" HorizontalAlignment="Left" />
+                    
+                    <TextBlock Text="CheckBox" VerticalAlignment="Center" Grid.Row="3" />
+                    <CheckBox Name="checkBox" Grid.Row="3" Grid.Column="1" Margin="5" Content="Check Box" HorizontalAlignment="Left" TabIndex="3"/>
 
-                    <TextBlock Name="buttonResult" Text="{Binding ButtonResult}" HorizontalAlignment="Center" />
-                    <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" TabIndex="3"/>
-                    <ProgressBar Value="{Binding ProgressValue}" Height="30" Margin="5" Width="200" />
+                    <TextBlock Text="ProgressBar" VerticalAlignment="Center" Grid.Row="4" />
+                    <ProgressBar Grid.Row="4" Grid.Column="1" Value="{Binding ProgressValue}" Height="30" Margin="5" Width="200" HorizontalAlignment="Left"/>
 
-                    <Slider Name="slider" Width="200" Value="{Binding SliderValue}" Minimum="5" Maximum="20" TabIndex="4" />
+                    <TextBlock Text="Slider" VerticalAlignment="Center" Grid.Row="5" />
+                    <Slider Name="slider" Grid.Row="5" Grid.Column="1" Width="200" Value="{Binding SliderValue}" HorizontalAlignment="Left"
+                            Minimum="5" Maximum="20" TabIndex="4" />
 
-                    <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5" TabIndex="5"/>
+                    <TextBlock Text="TextBox" VerticalAlignment="Center" Grid.Row="6" />
+                    <TextBox Name="textBox" Grid.Row="6" Grid.Column="1" Width="200" Text="{Binding TextBoxText}" 
+                              HorizontalAlignment="Left" Margin="5" TabIndex="5"/>
+                    
+                    <TextBlock Text="PasswordBox" VerticalAlignment="Center" Grid.Row="7" />
+                    <PasswordBox Grid.Row="7" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6"/>                    
 
-                    <ComboBox Name="combo" Width="200" Margin="5" SelectedIndex="2" TabIndex="6">
+                    <TextBlock Text="ComboBox" VerticalAlignment="Center" Grid.Row="8" />
+                    <ComboBox Name="combo" Grid.Row="8" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="7" HorizontalAlignment="Left">
                         <ComboBoxItem Name="item1" Content="Item 1" />
                         <ComboBoxItem Name="item2" Content="Item 2" />
                         <ComboBoxItem Name="item3" Content="Item 3" />
                     </ComboBox>
 
-                    <ListBox TabIndex="7">
+                    <TextBlock Text="ListBox" VerticalAlignment="Center" Grid.Row="9" />
+                    <ListBox TabIndex="8" Grid.Row="9" Grid.Column="1">
                         <ListBoxItem>Selection 1</ListBoxItem>
                         <ListBoxItem>Selection 2</ListBoxItem>
                         <ListBoxItem>Selection 3</ListBoxItem>
@@ -80,8 +113,9 @@
                         <ListBoxItem>Selection 5</ListBoxItem>
                         <ListBoxItem>Selection 6</ListBoxItem>
                     </ListBox>
-                </StackPanel>
+                </Grid>
             </TabItem>
+            
             <TabItem Header="DataGrid">
                 <DataGrid ItemsSource="{Binding GridData}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
@@ -243,6 +277,74 @@
                     </Border>
 
                 </Grid>
+            </TabItem>
+
+            <TabItem Header="Tetris">
+                <Border>
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="420" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Right">
+                            <TextBlock Text="Next" />
+                            <Border BorderBrush="White" BorderThickness="0,0,1,1" Width="81" Height="81">
+                                <Canvas Name="tetrisNextContainer1" Width="80" Height="80" />
+                            </Border>
+                        </StackPanel>
+
+                        <Border BorderBrush="White" BorderThickness="0,0,1,1" Grid.Row="1" Grid.Column="1" Width="201" Height="401">
+                            <Canvas Name="tetrisContainer1" Width="200" Height="400" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        </Border>
+
+                        <Grid Grid.ColumnSpan="3" DataContext="{Binding Tetris}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <Button Content="Start" Command="{Binding StartCommand}" Grid.ColumnSpan="3" Height="30" />
+
+                            <Grid Grid.Row="1" Grid.Column="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <StackPanel Name="spPlayer1" Orientation="Vertical" HorizontalAlignment="Right">
+                                    <TextBlock Text="{Binding Score}" />
+                                    <TextBlock Text="{Binding Lines}" />
+                                    <TextBlock Text="{Binding Level}" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Grid.Column="1">
+                                    <TextBlock Text="SCORE" />
+                                    <TextBlock Text="LINES" />
+                                    <TextBlock Text="LEVEL" />
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <TextBlock Text="Use A,S,D,W for left, down, right, rotate" />                                    
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Border>
             </TabItem>
         </TabControl>
     </Grid>
