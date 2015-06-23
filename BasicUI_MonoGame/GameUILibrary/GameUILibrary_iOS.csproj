@@ -39,6 +39,12 @@
     <Compile Include="GeneratedUI\BasicUI.xaml.cs" />
     <Compile Include="GeneratedUI\Dictionary.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CircularQueue.cs" />
+    <Compile Include="Tetris.cs" />
+    <Compile Include="TetrisController.cs" />
+    <Compile Include="GeneratedUI\BasicUI.cs" />
+    <Compile Include="GeneratedUI\TetrisBlock.cs" />
+    <Compile Include="GeneratedUI\TetrisBlock.xaml.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
@@ -57,5 +63,11 @@
     <Reference Include="EmptyKeys.UserInterface">
       <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameData\GameData.csproj">
+      <Project>{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}</Project>
+      <Name>GameData</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>
