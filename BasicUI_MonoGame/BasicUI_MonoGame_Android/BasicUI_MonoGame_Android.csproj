@@ -60,11 +60,14 @@
     <Reference Include="EmptyKeys.UserInterface.Core">
       <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>..\packages\MonoGame.Framework.Android.3.3.0.0\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="EmptyKeys.UserInterface.MonoGame">
       <HintPath>..\..\EmptyKeysUI\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\packages\MonoGame.Framework.Android.3.4.0.459\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="EmptyKeys.UserInterface.Debug">
+      <HintPath>..\..\EmptyKeysUI\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -112,7 +115,6 @@
       <Link>Content\Select.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -146,5 +148,8 @@
       <Project>{556DEE67-1170-4F93-88DE-2175C97FCF3C}</Project>
       <Name>GameUILibrary_Android</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
