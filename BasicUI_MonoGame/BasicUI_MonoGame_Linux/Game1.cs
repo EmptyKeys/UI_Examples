@@ -1,18 +1,16 @@
-﻿#region Using Statements
-using System;
+﻿using System;
 using System.Collections.Generic;
+using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Debug;
+using EmptyKeys.UserInterface.Generated;
+using EmptyKeys.UserInterface.Input;
+using EmptyKeys.UserInterface.Media;
+using GameUILibrary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
-using EmptyKeys.UserInterface.Generated;
-using EmptyKeys.UserInterface;
-using EmptyKeys.UserInterface.Input;
-using EmptyKeys.UserInterface.Media;
-using GameUILibrary;
-using EmptyKeys.UserInterface.Debug;
-#endregion
 
 namespace BasicUI_MonoGame_Linux
 {
@@ -28,6 +26,7 @@ namespace BasicUI_MonoGame_Linux
 
         private BasicUI basicUI;
         private DebugViewModel debug;
+        private BasicUIViewModel viewModel;
 
         public Game1()
             : base()
@@ -52,7 +51,10 @@ namespace BasicUI_MonoGame_Linux
             graphics.PreferredBackBufferWidth = 1280;
             graphics.PreferredBackBufferHeight = 720;
             graphics.PreferMultiSampling = true;
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
+            graphics.SynchronizeWithVerticalRetrace = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
+            e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
         }
 
         /// <summary>
@@ -80,8 +82,11 @@ namespace BasicUI_MonoGame_Linux
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
             Viewport viewport = GraphicsDevice.Viewport;
             basicUI = new BasicUI(viewport.Width, viewport.Height);
-            basicUI.DataContext = new BasicUIViewModel();
+            viewModel = new BasicUIViewModel();
+            viewModel.Tetris = new TetrisController(basicUI.TetrisContainer, basicUI.TetrisNextContainer);
+            basicUI.DataContext = viewModel;
             debug = new DebugViewModel(basicUI);
+
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);
@@ -90,6 +95,42 @@ namespace BasicUI_MonoGame_Linux
 
             KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
             basicUI.InputBindings.Add(keyBinding);
+
+            RelayCommand tetrisLeft = new RelayCommand(new Action<object>(OnLeft));
+            KeyBinding left = new KeyBinding(tetrisLeft, KeyCode.A, ModifierKeys.None);
+            basicUI.InputBindings.Add(left);
+
+            RelayCommand tetrisRight = new RelayCommand(new Action<object>(OnRight));
+            KeyBinding right = new KeyBinding(tetrisRight, KeyCode.D, ModifierKeys.None);
+            basicUI.InputBindings.Add(right);
+
+            RelayCommand tetrisDown = new RelayCommand(new Action<object>(OnDown));
+            KeyBinding down = new KeyBinding(tetrisDown, KeyCode.S, ModifierKeys.None);
+            basicUI.InputBindings.Add(down);
+
+            RelayCommand tetrisRotate = new RelayCommand(new Action<object>(OnRotate));
+            KeyBinding rotate = new KeyBinding(tetrisRotate, KeyCode.W, ModifierKeys.None);
+            basicUI.InputBindings.Add(rotate);
+        }
+
+        private void OnRotate(object obj)
+        {
+            viewModel.Tetris.Rotate();
+        }
+
+        private void OnDown(object obj)
+        {
+            viewModel.Tetris.MoveDown();
+        }
+
+        private void OnRight(object obj)
+        {
+            viewModel.Tetris.MoveRight();
+        }
+
+        private void OnLeft(object obj)
+        {
+            viewModel.Tetris.MoveLeft();
         }
 
         private void ExitEvent(object parameter)
@@ -115,6 +156,8 @@ namespace BasicUI_MonoGame_Linux
         {
             debug.Update();
             basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+
+            viewModel.Update(gameTime.ElapsedGameTime.TotalMilliseconds);
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);
