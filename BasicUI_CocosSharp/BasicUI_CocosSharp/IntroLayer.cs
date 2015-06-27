@@ -18,7 +18,7 @@ namespace BasicUI_CocosSharp
         private float elapsedGameTime;
 
         public IntroLayer()
-        {            
+        {
             // setup our color for the background
             Color = new CCColor3B(CCColor4B.Blue);
             Opacity = 255;
@@ -35,7 +35,7 @@ namespace BasicUI_CocosSharp
             content.RootDirectory = Application.ContentRootDirectory;
 
             SpriteFont font = content.Load<SpriteFont>("fonts/Segoe_UI_10_Regular");
-            FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);            
+            FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
 
             root = new BasicUI((int)bounds.Size.Width, (int)bounds.Size.Height);
             debug = new DebugViewModel(root);
@@ -62,10 +62,9 @@ namespace BasicUI_CocosSharp
 
         }
 
-        public override void Visit()
+        protected override void VisitRenderer(ref CCAffineTransform worldTransform)
         {
-            base.Visit();
-
+            base.VisitRenderer(ref worldTransform);
             root.Draw(elapsedGameTime);
             debug.Draw();
         }
