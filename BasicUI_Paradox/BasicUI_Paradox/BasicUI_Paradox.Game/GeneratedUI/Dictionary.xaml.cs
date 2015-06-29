@@ -20,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.7.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.7.5.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -51,7 +51,6 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [logoEmptyKeys] BitmapImage
             BitmapImage r_2_bm = new BitmapImage();
             r_2_bm.TextureAsset = "Images/EmptyKeysLogoTextSmall";
-            ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             this.Add("logoEmptyKeys", r_2_bm);
             // Resource - [buttonAnimStyle] Style
             var r_3_s_bo = this[typeof(Button)];
@@ -128,6 +127,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("Sounds", r_5_sounds);
             // Resource - [ToolTipText] String
             this.Add("ToolTipText", "Click to open message box");
+            ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
+            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
+            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
+            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
         }
     }
 }
