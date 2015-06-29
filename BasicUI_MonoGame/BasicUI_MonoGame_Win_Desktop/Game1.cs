@@ -48,8 +48,8 @@ namespace BasicUI_MonoGame_Win_Desktop
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
-            graphics.PreferredBackBufferWidth = 1280;
-            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1366;
+            graphics.PreferredBackBufferHeight = 768;
             graphics.PreferMultiSampling = true;            
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             graphics.SynchronizeWithVerticalRetrace = true;
