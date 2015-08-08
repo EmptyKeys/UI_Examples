@@ -9,7 +9,7 @@ Meta:
     RootNamespace: BasicUI_Paradox
     Dependencies:
         -   Name: Paradox
-            Version: 1.1.0-beta
+            Version: 1.2.0-beta
 LocalDependencies: []
 Profiles:
     -   Name: Shared
