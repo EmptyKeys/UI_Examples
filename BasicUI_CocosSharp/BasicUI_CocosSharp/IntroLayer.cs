@@ -16,13 +16,15 @@ namespace BasicUI_CocosSharp
         private BasicUI root;
         private DebugViewModel debug;
         private float elapsedGameTime;
+        private CCCustomCommand renderCommand;
 
         public IntroLayer()
         {
             // setup our color for the background
-            Color = new CCColor3B(CCColor4B.Blue);
-            Opacity = 255;
-        }
+            Color = new CCColor3B(CCColor4B.Red);
+            Opacity = 0;
+            renderCommand = new CCCustomCommand(RenderUI);
+        }        
 
         protected override void AddedToScene()
         {
@@ -65,6 +67,12 @@ namespace BasicUI_CocosSharp
         protected override void VisitRenderer(ref CCAffineTransform worldTransform)
         {
             base.VisitRenderer(ref worldTransform);
+
+            Renderer.AddCommand(renderCommand);
+        }
+
+        private void RenderUI()
+        {
             root.Draw(elapsedGameTime);
             debug.Draw();
         }
@@ -75,7 +83,7 @@ namespace BasicUI_CocosSharp
             {
                 // Perform touch handling here
             }
-        }
+        }        
     }
 }
 

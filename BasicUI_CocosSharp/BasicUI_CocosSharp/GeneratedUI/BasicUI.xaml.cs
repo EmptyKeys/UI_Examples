@@ -78,6 +78,7 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private void InitializeComponent() {
+            this.Background = new SolidColorBrush(new ColorW(255, 255, 255, 0));
             this.FontSize = 13.33333F;
             this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
             InitializeElementResources(this);

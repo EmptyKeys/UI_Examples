@@ -42,7 +42,9 @@ namespace BasicUI_CocosSharp
 
             var scene = new CCScene(mainWindow);
             var introLayer = new IntroLayer();
+            var testLayer = new TestLayer();
 
+            scene.AddChild(testLayer);
             scene.AddChild(introLayer);
 
             mainWindow.RunWithScene(scene);
