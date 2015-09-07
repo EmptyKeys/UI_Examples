@@ -20,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.8.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.9.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -69,8 +69,17 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private Border animBorder2;
         
+        public BasicUI() : 
+                base() {
+            this.Initialize();
+        }
+        
         public BasicUI(int width, int height) : 
                 base(width, height) {
+            this.Initialize();
+        }
+        
+        private void Initialize() {
             Style style = RootStyle.CreateRootStyle();
             style.TargetType = this.GetType();
             this.Style = style;
