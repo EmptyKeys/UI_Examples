@@ -68,6 +68,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     
                     <TextBlock Text="Button" VerticalAlignment="Center" />
@@ -93,19 +94,22 @@
                     <TextBlock Text="TextBox" VerticalAlignment="Center" Grid.Row="6" />
                     <TextBox Name="textBox" Grid.Row="6" Grid.Column="1" Width="200" Text="{Binding TextBoxText}" 
                               HorizontalAlignment="Left" Margin="5" TabIndex="5"/>
-                    
-                    <TextBlock Text="PasswordBox" VerticalAlignment="Center" Grid.Row="7" />
-                    <PasswordBox Grid.Row="7" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6"/>                    
 
-                    <TextBlock Text="ComboBox" VerticalAlignment="Center" Grid.Row="8" />
-                    <ComboBox Name="combo" Grid.Row="8" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="7" HorizontalAlignment="Left">
+                    <TextBlock Text="Numeric" VerticalAlignment="Center" Grid.Row="7" />
+                    <ek:NumericTextBox Name="numTextBox" Grid.Row="7" Grid.Column="1" Width="200"  HorizontalAlignment="Left" Margin="5" TabIndex="5"/>
+
+                    <TextBlock Text="PasswordBox" VerticalAlignment="Center" Grid.Row="8" />
+                    <PasswordBox Grid.Row="8" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6"/>                    
+
+                    <TextBlock Text="ComboBox" VerticalAlignment="Center" Grid.Row="9" />
+                    <ComboBox Name="combo" Grid.Row="9" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="7" HorizontalAlignment="Left">
                         <ComboBoxItem Name="item1" Content="Item 1" />
                         <ComboBoxItem Name="item2" Content="Item 2" />
                         <ComboBoxItem Name="item3" Content="Item 3" />
                     </ComboBox>
 
-                    <TextBlock Text="ListBox" VerticalAlignment="Center" Grid.Row="9" />
-                    <ListBox TabIndex="8" Grid.Row="9" Grid.Column="1">
+                    <TextBlock Text="ListBox" VerticalAlignment="Center" Grid.Row="10" />
+                    <ListBox TabIndex="8" Grid.Row="10" Grid.Column="1">
                         <ListBoxItem>Selection 1</ListBoxItem>
                         <ListBoxItem>Selection 2</ListBoxItem>
                         <ListBoxItem>Selection 3</ListBoxItem>
@@ -113,6 +117,7 @@
                         <ListBoxItem>Selection 5</ListBoxItem>
                         <ListBoxItem>Selection 6</ListBoxItem>
                     </ListBox>
+                                        
                 </Grid>
             </TabItem>
             

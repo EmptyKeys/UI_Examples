@@ -20,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.8.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.9.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -154,67 +154,67 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private static UIElement r_6_dtMethod(UIElement parent) {
-            // e_66 element
-            TextBlock e_66 = new TextBlock();
-            e_66.Parent = parent;
-            e_66.Name = "e_66";
-            e_66.Margin = new Thickness(2F, 2F, 2F, 2F);
-            Binding binding_e_66_Text = new Binding("Name");
-            e_66.SetBinding(TextBlock.TextProperty, binding_e_66_Text);
-            return e_66;
-        }
-        
-        private static UIElement r_7_ctMethod(UIElement parent) {
             // e_67 element
-            Grid e_67 = new Grid();
+            TextBlock e_67 = new TextBlock();
             e_67.Parent = parent;
             e_67.Name = "e_67";
-            RowDefinition row_e_67_0 = new RowDefinition();
-            row_e_67_0.Height = new GridLength(20F, GridUnitType.Pixel);
-            e_67.RowDefinitions.Add(row_e_67_0);
-            RowDefinition row_e_67_1 = new RowDefinition();
-            e_67.RowDefinitions.Add(row_e_67_1);
-            // PART_WindowTitleBorder element
-            Border PART_WindowTitleBorder = new Border();
-            e_67.Children.Add(PART_WindowTitleBorder);
-            PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
-            PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            // e_68 element
-            ContentPresenter e_68 = new ContentPresenter();
-            e_67.Children.Add(e_68);
-            e_68.Name = "e_68";
-            Grid.SetRow(e_68, 1);
-            Binding binding_e_68_Content = new Binding();
-            e_68.SetBinding(ContentPresenter.ContentProperty, binding_e_68_Content);
+            e_67.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Binding binding_e_67_Text = new Binding("Name");
+            e_67.SetBinding(TextBlock.TextProperty, binding_e_67_Text);
             return e_67;
         }
         
-        private static UIElement r_11_dtMethod(UIElement parent) {
+        private static UIElement r_7_ctMethod(UIElement parent) {
+            // e_68 element
+            Grid e_68 = new Grid();
+            e_68.Parent = parent;
+            e_68.Name = "e_68";
+            RowDefinition row_e_68_0 = new RowDefinition();
+            row_e_68_0.Height = new GridLength(20F, GridUnitType.Pixel);
+            e_68.RowDefinitions.Add(row_e_68_0);
+            RowDefinition row_e_68_1 = new RowDefinition();
+            e_68.RowDefinitions.Add(row_e_68_1);
+            // PART_WindowTitleBorder element
+            Border PART_WindowTitleBorder = new Border();
+            e_68.Children.Add(PART_WindowTitleBorder);
+            PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
+            PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(255, 255, 255, 255));
             // e_69 element
-            Border e_69 = new Border();
-            e_69.Parent = parent;
+            ContentPresenter e_69 = new ContentPresenter();
+            e_68.Children.Add(e_69);
             e_69.Name = "e_69";
-            e_69.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            Grid.SetRow(e_69, 1);
+            Binding binding_e_69_Content = new Binding();
+            e_69.SetBinding(ContentPresenter.ContentProperty, binding_e_69_Content);
+            return e_68;
+        }
+        
+        private static UIElement r_11_dtMethod(UIElement parent) {
             // e_70 element
-            StackPanel e_70 = new StackPanel();
-            e_69.Child = e_70;
+            Border e_70 = new Border();
+            e_70.Parent = parent;
             e_70.Name = "e_70";
+            e_70.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
             // e_71 element
-            TextBlock e_71 = new TextBlock();
-            e_70.Children.Add(e_71);
+            StackPanel e_71 = new StackPanel();
+            e_70.Child = e_71;
             e_71.Name = "e_71";
-            e_71.HorizontalAlignment = HorizontalAlignment.Center;
-            e_71.VerticalAlignment = VerticalAlignment.Center;
-            Binding binding_e_71_Text = new Binding("TextData");
-            e_71.SetBinding(TextBlock.TextProperty, binding_e_71_Text);
             // e_72 element
-            Button e_72 = new Button();
-            e_70.Children.Add(e_72);
+            TextBlock e_72 = new TextBlock();
+            e_71.Children.Add(e_72);
             e_72.Name = "e_72";
-            e_72.Content = "Hide Window";
-            Binding binding_e_72_Command = new Binding("HideCommand");
-            e_72.SetBinding(Button.CommandProperty, binding_e_72_Command);
-            return e_69;
+            e_72.HorizontalAlignment = HorizontalAlignment.Center;
+            e_72.VerticalAlignment = VerticalAlignment.Center;
+            Binding binding_e_72_Text = new Binding("TextData");
+            e_72.SetBinding(TextBlock.TextProperty, binding_e_72_Text);
+            // e_73 element
+            Button e_73 = new Button();
+            e_71.Children.Add(e_73);
+            e_73.Name = "e_73";
+            e_73.Content = "Hide Window";
+            Binding binding_e_73_Command = new Binding("HideCommand");
+            e_73.SetBinding(Button.CommandProperty, binding_e_73_Command);
+            return e_70;
         }
     }
 }
