@@ -48,8 +48,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("Image", r_1_bm);
             // Resource - [TetrisWindowBackground] SolidColorBrush
             this.Add("TetrisWindowBackground", new SolidColorBrush(new ColorW(0, 0, 0, 255)));
-            // Resource - [TetrisForeground] SolidColorBrush
-            this.Add("TetrisForeground", new SolidColorBrush(new ColorW(255, 255, 255, 255)));
+            // Resource - [CustomWindowTemplate] ControlTemplate
+            Func<UIElement, UIElement> r_3_ctFunc = r_3_ctMethod;
+            ControlTemplate r_3_ct = new ControlTemplate(r_3_ctFunc);
+            this.Add("CustomWindowTemplate", r_3_ct);
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");
             // Resource - [TetrisBorderStyle] Style
@@ -68,10 +70,8 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
             Func<UIElement, UIElement> r_6_dtFunc = r_6_dtMethod;
             this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_6_dtFunc));
-            // Resource - [CustomWindowTemplate] ControlTemplate
-            Func<UIElement, UIElement> r_7_ctFunc = r_7_ctMethod;
-            ControlTemplate r_7_ct = new ControlTemplate(r_7_ctFunc);
-            this.Add("CustomWindowTemplate", r_7_ct);
+            // Resource - [TetrisForeground] SolidColorBrush
+            this.Add("TetrisForeground", new SolidColorBrush(new ColorW(255, 255, 255, 255)));
             // Resource - [buttonAnimStyle] Style
             var r_8_s_bo = this[typeof(Button)];
             Style r_8_s = new Style(typeof(Button), r_8_s_bo as Style);
@@ -153,68 +153,68 @@ namespace EmptyKeys.UserInterface.Generated {
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
         
-        private static UIElement r_6_dtMethod(UIElement parent) {
-            // e_67 element
-            TextBlock e_67 = new TextBlock();
-            e_67.Parent = parent;
-            e_67.Name = "e_67";
-            e_67.Margin = new Thickness(2F, 2F, 2F, 2F);
-            Binding binding_e_67_Text = new Binding("Name");
-            e_67.SetBinding(TextBlock.TextProperty, binding_e_67_Text);
-            return e_67;
-        }
-        
-        private static UIElement r_7_ctMethod(UIElement parent) {
-            // e_68 element
-            Grid e_68 = new Grid();
-            e_68.Parent = parent;
-            e_68.Name = "e_68";
-            RowDefinition row_e_68_0 = new RowDefinition();
-            row_e_68_0.Height = new GridLength(20F, GridUnitType.Pixel);
-            e_68.RowDefinitions.Add(row_e_68_0);
-            RowDefinition row_e_68_1 = new RowDefinition();
-            e_68.RowDefinitions.Add(row_e_68_1);
+        private static UIElement r_3_ctMethod(UIElement parent) {
+            // e_75 element
+            Grid e_75 = new Grid();
+            e_75.Parent = parent;
+            e_75.Name = "e_75";
+            RowDefinition row_e_75_0 = new RowDefinition();
+            row_e_75_0.Height = new GridLength(20F, GridUnitType.Pixel);
+            e_75.RowDefinitions.Add(row_e_75_0);
+            RowDefinition row_e_75_1 = new RowDefinition();
+            e_75.RowDefinitions.Add(row_e_75_1);
             // PART_WindowTitleBorder element
             Border PART_WindowTitleBorder = new Border();
-            e_68.Children.Add(PART_WindowTitleBorder);
+            e_75.Children.Add(PART_WindowTitleBorder);
             PART_WindowTitleBorder.Name = "PART_WindowTitleBorder";
             PART_WindowTitleBorder.Background = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            // e_69 element
-            ContentPresenter e_69 = new ContentPresenter();
-            e_68.Children.Add(e_69);
-            e_69.Name = "e_69";
-            Grid.SetRow(e_69, 1);
-            Binding binding_e_69_Content = new Binding();
-            e_69.SetBinding(ContentPresenter.ContentProperty, binding_e_69_Content);
-            return e_68;
+            // e_76 element
+            ContentPresenter e_76 = new ContentPresenter();
+            e_75.Children.Add(e_76);
+            e_76.Name = "e_76";
+            Grid.SetRow(e_76, 1);
+            Binding binding_e_76_Content = new Binding();
+            e_76.SetBinding(ContentPresenter.ContentProperty, binding_e_76_Content);
+            return e_75;
+        }
+        
+        private static UIElement r_6_dtMethod(UIElement parent) {
+            // e_77 element
+            TextBlock e_77 = new TextBlock();
+            e_77.Parent = parent;
+            e_77.Name = "e_77";
+            e_77.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Binding binding_e_77_Text = new Binding("Name");
+            e_77.SetBinding(TextBlock.TextProperty, binding_e_77_Text);
+            return e_77;
         }
         
         private static UIElement r_11_dtMethod(UIElement parent) {
-            // e_70 element
-            Border e_70 = new Border();
-            e_70.Parent = parent;
-            e_70.Name = "e_70";
-            e_70.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
-            // e_71 element
-            StackPanel e_71 = new StackPanel();
-            e_70.Child = e_71;
-            e_71.Name = "e_71";
-            // e_72 element
-            TextBlock e_72 = new TextBlock();
-            e_71.Children.Add(e_72);
-            e_72.Name = "e_72";
-            e_72.HorizontalAlignment = HorizontalAlignment.Center;
-            e_72.VerticalAlignment = VerticalAlignment.Center;
-            Binding binding_e_72_Text = new Binding("TextData");
-            e_72.SetBinding(TextBlock.TextProperty, binding_e_72_Text);
-            // e_73 element
-            Button e_73 = new Button();
-            e_71.Children.Add(e_73);
-            e_73.Name = "e_73";
-            e_73.Content = "Hide Window";
-            Binding binding_e_73_Command = new Binding("HideCommand");
-            e_73.SetBinding(Button.CommandProperty, binding_e_73_Command);
-            return e_70;
+            // e_78 element
+            Border e_78 = new Border();
+            e_78.Parent = parent;
+            e_78.Name = "e_78";
+            e_78.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            // e_79 element
+            StackPanel e_79 = new StackPanel();
+            e_78.Child = e_79;
+            e_79.Name = "e_79";
+            // e_80 element
+            TextBlock e_80 = new TextBlock();
+            e_79.Children.Add(e_80);
+            e_80.Name = "e_80";
+            e_80.HorizontalAlignment = HorizontalAlignment.Center;
+            e_80.VerticalAlignment = VerticalAlignment.Center;
+            Binding binding_e_80_Text = new Binding("TextData");
+            e_80.SetBinding(TextBlock.TextProperty, binding_e_80_Text);
+            // e_81 element
+            Button e_81 = new Button();
+            e_79.Children.Add(e_81);
+            e_81.Name = "e_81";
+            e_81.Content = "Hide Window";
+            Binding binding_e_81_Command = new Binding("HideCommand");
+            e_81.SetBinding(Button.CommandProperty, binding_e_81_Command);
+            return e_78;
         }
     }
 }
