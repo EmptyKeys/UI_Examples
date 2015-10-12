@@ -20,7 +20,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.9.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.10.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -49,11 +49,19 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private CheckBox checkBox;
         
-        private TabControl e_5;
+        private StackPanel e_5;
         
-        private ProgressBar e_18;
+        private RadioButton e_6;
         
-        private StackPanel e_19;
+        private RadioButton e_7;
+        
+        private RadioButton e_8;
+        
+        private TabControl e_9;
+        
+        private ProgressBar e_22;
+        
+        private StackPanel e_23;
         
         private Button animButton1;
         
@@ -63,7 +71,7 @@ namespace EmptyKeys.UserInterface.Generated {
         
         private Button animButton4;
         
-        private Grid e_20;
+        private Grid e_24;
         
         private Border animBorder1;
         
@@ -87,7 +95,6 @@ namespace EmptyKeys.UserInterface.Generated {
         }
         
         private void InitializeComponent() {
-            this.Background = new SolidColorBrush(new ColorW(255, 255, 255, 0));
             this.FontSize = 13.33333F;
             this.SetResourceReference(SoundManager.SoundsProperty, "Sounds");
             InitializeElementResources(this);
@@ -221,57 +228,84 @@ namespace EmptyKeys.UserInterface.Generated {
             this.checkBox.HorizontalAlignment = HorizontalAlignment.Center;
             this.checkBox.Content = "Check Box";
             // e_5 element
-            this.e_5 = new TabControl();
+            this.e_5 = new StackPanel();
             this.e_3.Children.Add(this.e_5);
             this.e_5.Name = "e_5";
-            this.e_5.Height = 150F;
-            this.e_5.Width = 400F;
-            this.e_5.ItemsSource = Get_e_5_Items();
-            // e_18 element
-            this.e_18 = new ProgressBar();
-            this.e_3.Children.Add(this.e_18);
-            this.e_18.Name = "e_18";
-            this.e_18.Height = 30F;
-            this.e_18.Width = 400F;
-            this.e_18.Margin = new Thickness(5F, 5F, 5F, 5F);
-            this.e_18.Value = 39F;
-            // e_19 element
-            this.e_19 = new StackPanel();
-            this.e_0.Children.Add(this.e_19);
-            this.e_19.Name = "e_19";
-            Grid.SetColumn(this.e_19, 1);
-            Grid.SetRow(this.e_19, 1);
+            this.e_5.HorizontalAlignment = HorizontalAlignment.Center;
+            this.e_5.Orientation = Orientation.Horizontal;
+            // e_6 element
+            this.e_6 = new RadioButton();
+            this.e_5.Children.Add(this.e_6);
+            this.e_6.Name = "e_6";
+            this.e_6.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_6.Content = "Radio Button 1";
+            this.e_6.GroupName = "testGroup1";
+            // e_7 element
+            this.e_7 = new RadioButton();
+            this.e_5.Children.Add(this.e_7);
+            this.e_7.Name = "e_7";
+            this.e_7.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_7.Content = "Radio Button 2";
+            this.e_7.GroupName = "testGroup1";
+            // e_8 element
+            this.e_8 = new RadioButton();
+            this.e_5.Children.Add(this.e_8);
+            this.e_8.Name = "e_8";
+            this.e_8.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_8.Content = "Radio Button 3";
+            this.e_8.GroupName = "testGroup1";
+            // e_9 element
+            this.e_9 = new TabControl();
+            this.e_3.Children.Add(this.e_9);
+            this.e_9.Name = "e_9";
+            this.e_9.Height = 150F;
+            this.e_9.Width = 400F;
+            this.e_9.ItemsSource = Get_e_9_Items();
+            // e_22 element
+            this.e_22 = new ProgressBar();
+            this.e_3.Children.Add(this.e_22);
+            this.e_22.Name = "e_22";
+            this.e_22.Height = 30F;
+            this.e_22.Width = 400F;
+            this.e_22.Margin = new Thickness(5F, 5F, 5F, 5F);
+            this.e_22.Value = 39F;
+            // e_23 element
+            this.e_23 = new StackPanel();
+            this.e_0.Children.Add(this.e_23);
+            this.e_23.Name = "e_23";
+            Grid.SetColumn(this.e_23, 1);
+            Grid.SetRow(this.e_23, 1);
             // animButton1 element
             this.animButton1 = new Button();
-            this.e_19.Children.Add(this.animButton1);
+            this.e_23.Children.Add(this.animButton1);
             this.animButton1.Name = "animButton1";
             this.animButton1.Content = "Mouse Over me!";
             this.animButton1.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton2 element
             this.animButton2 = new Button();
-            this.e_19.Children.Add(this.animButton2);
+            this.e_23.Children.Add(this.animButton2);
             this.animButton2.Name = "animButton2";
             this.animButton2.Content = "Mouse Over me!";
             this.animButton2.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton3 element
             this.animButton3 = new Button();
-            this.e_19.Children.Add(this.animButton3);
+            this.e_23.Children.Add(this.animButton3);
             this.animButton3.Name = "animButton3";
             this.animButton3.Content = "Mouse Over me!";
             this.animButton3.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton4 element
             this.animButton4 = new Button();
-            this.e_19.Children.Add(this.animButton4);
+            this.e_23.Children.Add(this.animButton4);
             this.animButton4.Name = "animButton4";
             this.animButton4.Content = "Mouse Over me!";
             this.animButton4.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
-            // e_20 element
-            this.e_20 = new Grid();
-            this.e_19.Children.Add(this.e_20);
-            this.e_20.Name = "e_20";
+            // e_24 element
+            this.e_24 = new Grid();
+            this.e_23.Children.Add(this.e_24);
+            this.e_24.Name = "e_24";
             // animBorder1 element
             this.animBorder1 = new Border();
-            this.e_20.Children.Add(this.animBorder1);
+            this.e_24.Children.Add(this.animBorder1);
             this.animBorder1.Name = "animBorder1";
             this.animBorder1.Height = 100F;
             this.animBorder1.Width = 200F;
@@ -298,7 +332,7 @@ namespace EmptyKeys.UserInterface.Generated {
             animBorder1_ET_0_AC_0_SB.Children.Add(animBorder1_ET_0_AC_0_SB_TL_0);
             // animBorder2 element
             this.animBorder2 = new Border();
-            this.e_20.Children.Add(this.animBorder2);
+            this.e_24.Children.Add(this.animBorder2);
             this.animBorder2.Name = "animBorder2";
             this.animBorder2.Height = 50F;
             this.animBorder2.Width = 100F;
@@ -355,89 +389,89 @@ namespace EmptyKeys.UserInterface.Generated {
             return e_4;
         }
         
-        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_5_Items() {
+        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_9_Items() {
             System.Collections.ObjectModel.ObservableCollection<object> items = new System.Collections.ObjectModel.ObservableCollection<object>();
-            // e_6 element
-            TabItem e_6 = new TabItem();
-            e_6.Name = "e_6";
-            e_6.HorizontalContentAlignment = HorizontalAlignment.Stretch;
-            e_6.Header = "Tab 1";
-            // e_7 element
-            ListBox e_7 = new ListBox();
-            e_6.Content = e_7;
-            e_7.Name = "e_7";
-            e_7.Height = 100F;
-            Func<UIElement, UIElement> e_7_dtFunc = e_7_dtMethod;
-            e_7.ItemTemplate = new DataTemplate(e_7_dtFunc);
-            Binding binding_e_7_ItemsSource = new Binding("ComboBoxSource");
-            e_7.SetBinding(ListBox.ItemsSourceProperty, binding_e_7_ItemsSource);
-            Binding binding_e_7_SelectedItem = new Binding("SelectedItem");
-            e_7.SetBinding(ListBox.SelectedItemProperty, binding_e_7_SelectedItem);
-            items.Add(e_6);
-            // e_9 element
-            TabItem e_9 = new TabItem();
-            e_9.Name = "e_9";
-            e_9.Header = "Tab 2";
             // e_10 element
-            StackPanel e_10 = new StackPanel();
-            e_9.Content = e_10;
+            TabItem e_10 = new TabItem();
             e_10.Name = "e_10";
+            e_10.HorizontalContentAlignment = HorizontalAlignment.Stretch;
+            e_10.Header = "Tab 1";
             // e_11 element
             ListBox e_11 = new ListBox();
-            e_10.Children.Add(e_11);
+            e_10.Content = e_11;
             e_11.Name = "e_11";
             e_11.Height = 100F;
-            e_11.ItemsSource = Get_e_11_Items();
-            items.Add(e_9);
-            // e_16 element
-            TabItem e_16 = new TabItem();
-            e_16.Name = "e_16";
-            e_16.Content = "Tab 3 Content";
-            e_16.Header = "Tab 3";
-            items.Add(e_16);
-            // e_17 element
-            TabItem e_17 = new TabItem();
-            e_17.Name = "e_17";
-            e_17.Content = "Tab 4 Content";
-            e_17.Header = "Tab 4";
-            items.Add(e_17);
+            Func<UIElement, UIElement> e_11_dtFunc = e_11_dtMethod;
+            e_11.ItemTemplate = new DataTemplate(e_11_dtFunc);
+            Binding binding_e_11_ItemsSource = new Binding("ComboBoxSource");
+            e_11.SetBinding(ListBox.ItemsSourceProperty, binding_e_11_ItemsSource);
+            Binding binding_e_11_SelectedItem = new Binding("SelectedItem");
+            e_11.SetBinding(ListBox.SelectedItemProperty, binding_e_11_SelectedItem);
+            items.Add(e_10);
+            // e_13 element
+            TabItem e_13 = new TabItem();
+            e_13.Name = "e_13";
+            e_13.Header = "Tab 2";
+            // e_14 element
+            StackPanel e_14 = new StackPanel();
+            e_13.Content = e_14;
+            e_14.Name = "e_14";
+            // e_15 element
+            ListBox e_15 = new ListBox();
+            e_14.Children.Add(e_15);
+            e_15.Name = "e_15";
+            e_15.Height = 100F;
+            e_15.ItemsSource = Get_e_15_Items();
+            items.Add(e_13);
+            // e_20 element
+            TabItem e_20 = new TabItem();
+            e_20.Name = "e_20";
+            e_20.Content = "Tab 3 Content";
+            e_20.Header = "Tab 3";
+            items.Add(e_20);
+            // e_21 element
+            TabItem e_21 = new TabItem();
+            e_21.Name = "e_21";
+            e_21.Content = "Tab 4 Content";
+            e_21.Header = "Tab 4";
+            items.Add(e_21);
             return items;
         }
         
-        private static UIElement e_7_dtMethod(UIElement parent) {
-            // e_8 element
-            TextBlock e_8 = new TextBlock();
-            e_8.Parent = parent;
-            e_8.Name = "e_8";
-            e_8.Margin = new Thickness(2F, 2F, 2F, 2F);
-            e_8.HorizontalAlignment = HorizontalAlignment.Center;
-            Binding binding_e_8_Text = new Binding("Name");
-            e_8.SetBinding(TextBlock.TextProperty, binding_e_8_Text);
-            return e_8;
+        private static UIElement e_11_dtMethod(UIElement parent) {
+            // e_12 element
+            TextBlock e_12 = new TextBlock();
+            e_12.Parent = parent;
+            e_12.Name = "e_12";
+            e_12.Margin = new Thickness(2F, 2F, 2F, 2F);
+            e_12.HorizontalAlignment = HorizontalAlignment.Center;
+            Binding binding_e_12_Text = new Binding("Name");
+            e_12.SetBinding(TextBlock.TextProperty, binding_e_12_Text);
+            return e_12;
         }
         
-        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_11_Items() {
+        private static System.Collections.ObjectModel.ObservableCollection<object> Get_e_15_Items() {
             System.Collections.ObjectModel.ObservableCollection<object> items = new System.Collections.ObjectModel.ObservableCollection<object>();
-            // e_12 element
-            ListBoxItem e_12 = new ListBoxItem();
-            e_12.Name = "e_12";
-            e_12.Content = "Selection 1";
-            items.Add(e_12);
-            // e_13 element
-            ListBoxItem e_13 = new ListBoxItem();
-            e_13.Name = "e_13";
-            e_13.Content = "Selection 2";
-            items.Add(e_13);
-            // e_14 element
-            ListBoxItem e_14 = new ListBoxItem();
-            e_14.Name = "e_14";
-            e_14.Content = "Selection 3";
-            items.Add(e_14);
-            // e_15 element
-            ListBoxItem e_15 = new ListBoxItem();
-            e_15.Name = "e_15";
-            e_15.Content = "Selection 4";
-            items.Add(e_15);
+            // e_16 element
+            ListBoxItem e_16 = new ListBoxItem();
+            e_16.Name = "e_16";
+            e_16.Content = "Selection 1";
+            items.Add(e_16);
+            // e_17 element
+            ListBoxItem e_17 = new ListBoxItem();
+            e_17.Name = "e_17";
+            e_17.Content = "Selection 2";
+            items.Add(e_17);
+            // e_18 element
+            ListBoxItem e_18 = new ListBoxItem();
+            e_18.Name = "e_18";
+            e_18.Content = "Selection 3";
+            items.Add(e_18);
+            // e_19 element
+            ListBoxItem e_19 = new ListBoxItem();
+            e_19.Name = "e_19";
+            e_19.Content = "Selection 4";
+            items.Add(e_19);
             return items;
         }
     }

@@ -4,7 +4,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
-             d:DesignHeight="640" d:DesignWidth="800" FontSize="10pt" ek:SoundManager.Sounds="{DynamicResource Sounds}" Background="Transparent">
+             d:DesignHeight="640" d:DesignWidth="800" FontSize="10pt" ek:SoundManager.Sounds="{DynamicResource Sounds}">
 
     <!-- User can define style for his root control -->
     <!--ek:UIRoot.Style>
@@ -63,6 +63,13 @@
 
             <TextBox Name="textBox" Width="200" Text="{Binding TextBoxText}" Margin="5"/>
             <CheckBox Name="checkBox" Margin="5" Content="Check Box" HorizontalAlignment="Center" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton GroupName="testGroup1" Content="Radio Button 1" Margin="5" />
+                <RadioButton GroupName="testGroup1" Content="Radio Button 2" Margin="5" />
+                <RadioButton GroupName="testGroup1" Content="Radio Button 3" Margin="5" />
+            </StackPanel>
+
             <TabControl Width="400" Height="150">
                 <TabItem Header="Tab 1" HorizontalContentAlignment="Stretch">
                     <ListBox Height="100" ItemsSource="{Binding ComboBoxSource}" SelectedItem="{Binding SelectedItem}">

@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameUILibrary", "GameUILibrary\GameUILibrary.csproj", "{556DEE67-1170-4F93-88DE-2175C97FCF3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUI_MonoGame_Linux", "BasicUI_MonoGame_Linux\BasicUI_MonoGame_Linux.csproj", "{E6428FB1-FF9E-4A0E-B40B-1BDDCF7913BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameData", "GameData\GameData.csproj", "{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -29,6 +33,15 @@ Global
 		{E6428FB1-FF9E-4A0E-B40B-1BDDCF7913BB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6428FB1-FF9E-4A0E-B40B-1BDDCF7913BB}.Release|x86.ActiveCfg = Release|x86
 		{E6428FB1-FF9E-4A0E-B40B-1BDDCF7913BB}.Release|x86.Build.0 = Release|x86
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{650D2C89-DAA1-45C4-A660-2BDE693C1FB6}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = BasicUI_MonoGame_Linux\BasicUI_MonoGame_Linux.csproj

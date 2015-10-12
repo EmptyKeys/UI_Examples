@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicUI_Paradox", "BasicUI_Paradox", "{650DFDF3-E237-4050-9753-C4C4776B0A90}"
 	ProjectSection(SiliconStudioPackage) = preProject
@@ -9,13 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicUI_Paradox", "BasicUI_
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUI_Paradox.Windows", "BasicUI_Paradox\BasicUI_Paradox.Windows\BasicUI_Paradox.Windows.csproj", "{E171415E-F63A-4ADB-9F1D-35F83F00C484}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7B998320-FA99-4F92-8A6F-7BA0538C353C} = {7B998320-FA99-4F92-8A6F-7BA0538C353C}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUI_Paradox.Game", "BasicUI_Paradox\BasicUI_Paradox.Game\BasicUI_Paradox.Game.csproj", "{44547B06-90D6-477F-9348-CDD1915F980B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserInterface", "UserInterface\UserInterface.csproj", "{7B998320-FA99-4F92-8A6F-7BA0538C353C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicUI_Paradox.UserInterface", "BasicUI_Paradox\BasicUI_Paradox.UserInterface\BasicUI_Paradox.UserInterface.csproj", "{412255AD-EE65-45C6-8921-82C8F156C92C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B998320-FA99-4F92-8A6F-7BA0538C353C} = {7B998320-FA99-4F92-8A6F-7BA0538C353C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,30 @@ Global
 		{7B998320-FA99-4F92-8A6F-7BA0538C353C}.Testing|Mixed Platforms.Build.0 = Release|Any CPU
 		{7B998320-FA99-4F92-8A6F-7BA0538C353C}.Testing|Windows.ActiveCfg = Release|Any CPU
 		{7B998320-FA99-4F92-8A6F-7BA0538C353C}.Testing|Windows.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Mixed Platforms.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Windows.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.AppStore|Windows.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Windows.ActiveCfg = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Debug|Windows.Build.0 = Debug|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Windows.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Release|Windows.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Any CPU.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Any CPU.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Mixed Platforms.Build.0 = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Windows.ActiveCfg = Release|Any CPU
+		{412255AD-EE65-45C6-8921-82C8F156C92C}.Testing|Windows.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -124,5 +150,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E171415E-F63A-4ADB-9F1D-35F83F00C484} = {650DFDF3-E237-4050-9753-C4C4776B0A90}
 		{44547B06-90D6-477F-9348-CDD1915F980B} = {650DFDF3-E237-4050-9753-C4C4776B0A90}
+		{412255AD-EE65-45C6-8921-82C8F156C92C} = {650DFDF3-E237-4050-9753-C4C4776B0A90}
 	EndGlobalSection
 EndGlobal
