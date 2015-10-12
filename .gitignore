@@ -220,7 +220,6 @@ EmptyKeysUI/Generator/ekUiGen.exe
 EmptyKeysUI/Generator/ekUiGen.exe.config
 *.userprefs
 *.info
-*.txt
 /BasicUI_SunBurn/BasicUI_Pro/GameContent/bin-content
 *.sbsln
 EmptyKeysUI/Generator/EmptyKeys.UserInterface.Generator.xml
