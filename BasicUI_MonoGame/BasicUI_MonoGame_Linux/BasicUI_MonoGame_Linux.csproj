@@ -141,9 +141,10 @@
       <Link>Content\Select.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="..\Content\bin\Linux\Images\MonoGameLogo.xnb">
+    <Content Include="..\Content\bin\Linux\Images\MonoGameLogo.xnb">
       <Link>Content\Images\MonoGameLogo.xnb</Link>
-    </None>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="OpenTK.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
