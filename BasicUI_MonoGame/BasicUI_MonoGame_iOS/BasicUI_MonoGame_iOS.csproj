@@ -142,6 +142,9 @@
     <None Include="..\Content\bin\iOS\Select.xnb">
       <Link>Content\Select.xnb</Link>
     </None>
+	<None Include="..\Content\bin\Windows\Times_New_Roman_9_Regular.xnb">
+      <Link>Content\Times_New_Roman_9_Regular.xnb</Link>
+    </None>
     <None Include="monogameicon.png" />
     <None Include="Info.plist" />
     <None Include="packages.config" />

@@ -125,6 +125,10 @@
       <Link>Content\Select.xnb</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\Content\bin\Windows\Times_New_Roman_9_Regular.xnb">
+      <Link>Content\Times_New_Roman_9_Regular.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
