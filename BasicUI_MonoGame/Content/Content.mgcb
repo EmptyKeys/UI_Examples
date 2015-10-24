@@ -77,3 +77,9 @@
 /processorParam:Quality=Best
 /build:Select.wav
 
+#begin Times_New_Roman_9_Regular.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:TextureFormat=Compressed
+/build:Times_New_Roman_9_Regular.spritefont
+
