@@ -8,6 +8,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using System.CodeDom.Compiler;
     using System.Collections.ObjectModel;
     using EmptyKeys.UserInterface;
+    using EmptyKeys.UserInterface.Charts;
     using EmptyKeys.UserInterface.Data;
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
@@ -20,7 +21,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.10.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.11.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -101,7 +102,6 @@ namespace EmptyKeys.UserInterface.Generated {
             Grid.SetRow(this.TabControl, 1);
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             ImageManager.Instance.AddImage("Images/MonoGameLogo");
-            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
         
@@ -298,11 +298,12 @@ namespace EmptyKeys.UserInterface.Generated {
             numTextBox.Margin = new Thickness(5F, 5F, 5F, 5F);
             numTextBox.HorizontalAlignment = HorizontalAlignment.Left;
             numTextBox.TabIndex = 5;
-            numTextBox.Value = 0F;
             numTextBox.ValueFormat = "F0";
             numTextBox.ValueStyle = ((System.Globalization.NumberStyles)(7));
             Grid.SetColumn(numTextBox, 1);
             Grid.SetRow(numTextBox, 7);
+            Binding binding_numTextBox_Value = new Binding("NumericTextBoxValue");
+            numTextBox.SetBinding(NumericTextBox.ValueProperty, binding_numTextBox_Value);
             // e_12 element
             TextBlock e_12 = new TextBlock();
             e_4.Children.Add(e_12);
@@ -320,6 +321,8 @@ namespace EmptyKeys.UserInterface.Generated {
             e_13.TabIndex = 6;
             Grid.SetColumn(e_13, 1);
             Grid.SetRow(e_13, 8);
+            Binding binding_e_13_Password = new Binding("Password");
+            e_13.SetBinding(PasswordBox.PasswordProperty, binding_e_13_Password);
             // e_14 element
             TextBlock e_14 = new TextBlock();
             e_4.Children.Add(e_14);
@@ -476,215 +479,272 @@ namespace EmptyKeys.UserInterface.Generated {
             // e_41 element
             TabItem e_41 = new TabItem();
             e_41.Name = "e_41";
-            e_41.Header = "Shapes";
+            e_41.Header = "Chart";
             // e_42 element
-            Grid e_42 = new Grid();
+            Chart e_42 = new Chart();
             e_41.Content = e_42;
             e_42.Name = "e_42";
-            RowDefinition row_e_42_0 = new RowDefinition();
-            e_42.RowDefinitions.Add(row_e_42_0);
-            RowDefinition row_e_42_1 = new RowDefinition();
-            e_42.RowDefinitions.Add(row_e_42_1);
-            RowDefinition row_e_42_2 = new RowDefinition();
-            e_42.RowDefinitions.Add(row_e_42_2);
-            ColumnDefinition col_e_42_0 = new ColumnDefinition();
-            e_42.ColumnDefinitions.Add(col_e_42_0);
-            ColumnDefinition col_e_42_1 = new ColumnDefinition();
-            e_42.ColumnDefinitions.Add(col_e_42_1);
-            ColumnDefinition col_e_42_2 = new ColumnDefinition();
-            e_42.ColumnDefinitions.Add(col_e_42_2);
+            e_42.AxisYMajorUnit = 50F;
             // e_43 element
-            Rectangle e_43 = new Rectangle();
-            e_42.Children.Add(e_43);
+            LineSeries2D e_43 = new LineSeries2D();
+            e_42.Series.Add(e_43);
             e_43.Name = "e_43";
-            e_43.Height = 100F;
-            e_43.Width = 200F;
-            e_43.Margin = new Thickness(5F, 5F, 5F, 5F);
-            e_43.Fill = new SolidColorBrush(new ColorW(0, 128, 0, 255));
-            e_43.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
-            e_43.StrokeThickness = 5F;
-            e_43.RadiusX = 10F;
-            e_43.RadiusY = 10F;
-            // e_44 element
-            Rectangle e_44 = new Rectangle();
-            e_42.Children.Add(e_44);
-            e_44.Name = "e_44";
-            e_44.Height = 100F;
-            e_44.Width = 200F;
-            e_44.Margin = new Thickness(5F, 5F, 5F, 5F);
-            e_44.Fill = new SolidColorBrush(new ColorW(255, 165, 0, 255));
-            Grid.SetColumn(e_44, 1);
-            // e_45 element
-            Rectangle e_45 = new Rectangle();
-            e_42.Children.Add(e_45);
-            e_45.Name = "e_45";
-            e_45.Height = 100F;
-            e_45.Width = 200F;
-            e_45.Margin = new Thickness(5F, 5F, 5F, 5F);
-            LinearGradientBrush e_45_Fill = new LinearGradientBrush();
-            e_45_Fill.StartPoint = new PointF(0F, 0F);
-            e_45_Fill.EndPoint = new PointF(1F, 1F);
-            e_45_Fill.SpreadMethod = GradientSpreadMethod.Pad;
-            e_45_Fill.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0.5F));
-            e_45_Fill.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0F));
-            e_45.Fill = e_45_Fill;
-            LinearGradientBrush e_45_Stroke = new LinearGradientBrush();
-            e_45_Stroke.StartPoint = new PointF(0F, 0F);
-            e_45_Stroke.EndPoint = new PointF(1F, 1F);
-            e_45_Stroke.SpreadMethod = GradientSpreadMethod.Pad;
-            e_45_Stroke.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0.5F));
-            e_45_Stroke.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0F));
-            e_45.Stroke = e_45_Stroke;
-            e_45.StrokeThickness = 5F;
-            e_45.RadiusX = 10F;
-            e_45.RadiusY = 10F;
-            Grid.SetColumn(e_45, 2);
-            // e_46 element
-            Ellipse e_46 = new Ellipse();
-            e_42.Children.Add(e_46);
-            e_46.Name = "e_46";
-            e_46.Height = 100F;
-            e_46.Width = 200F;
-            e_46.Margin = new Thickness(5F, 5F, 5F, 5F);
-            e_46.Fill = new SolidColorBrush(new ColorW(128, 128, 128, 255));
-            e_46.Stroke = new SolidColorBrush(new ColorW(0, 128, 0, 255));
-            e_46.StrokeThickness = 10F;
-            Grid.SetRow(e_46, 1);
-            // e_47 element
-            Ellipse e_47 = new Ellipse();
-            e_42.Children.Add(e_47);
-            e_47.Name = "e_47";
-            e_47.Height = 100F;
-            e_47.Width = 200F;
-            e_47.Margin = new Thickness(5F, 5F, 5F, 5F);
-            e_47.Stroke = new SolidColorBrush(new ColorW(255, 165, 0, 255));
-            e_47.StrokeThickness = 10F;
-            Grid.SetColumn(e_47, 1);
-            Grid.SetRow(e_47, 1);
-            // e_48 element
-            Ellipse e_48 = new Ellipse();
-            e_42.Children.Add(e_48);
-            e_48.Name = "e_48";
-            e_48.Height = 100F;
-            e_48.Width = 200F;
-            e_48.Margin = new Thickness(5F, 5F, 5F, 5F);
-            LinearGradientBrush e_48_Fill = new LinearGradientBrush();
-            e_48_Fill.StartPoint = new PointF(0F, 0F);
-            e_48_Fill.EndPoint = new PointF(1F, 1F);
-            e_48_Fill.SpreadMethod = GradientSpreadMethod.Pad;
-            e_48_Fill.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0.5F));
-            e_48_Fill.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0F));
-            e_48.Fill = e_48_Fill;
-            LinearGradientBrush e_48_Stroke = new LinearGradientBrush();
-            e_48_Stroke.StartPoint = new PointF(0F, 0F);
-            e_48_Stroke.EndPoint = new PointF(1F, 1F);
-            e_48_Stroke.SpreadMethod = GradientSpreadMethod.Pad;
-            e_48_Stroke.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0.5F));
-            e_48_Stroke.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0F));
-            e_48.Stroke = e_48_Stroke;
-            e_48.StrokeThickness = 10F;
-            Grid.SetColumn(e_48, 2);
-            Grid.SetRow(e_48, 1);
-            // e_49 element
-            Line e_49 = new Line();
-            e_42.Children.Add(e_49);
-            e_49.Name = "e_49";
-            e_49.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
-            e_49.StrokeThickness = 10F;
-            e_49.X1 = 10F;
-            e_49.X2 = 150F;
-            e_49.Y1 = 10F;
-            e_49.Y2 = 150F;
-            Grid.SetRow(e_49, 2);
-            // e_50 element
-            Line e_50 = new Line();
-            e_42.Children.Add(e_50);
-            e_50.Name = "e_50";
-            e_50.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
-            e_50.StrokeThickness = 10F;
-            e_50.X1 = 100F;
-            e_50.X2 = 100F;
-            e_50.Y1 = 10F;
-            e_50.Y2 = 100F;
-            Grid.SetRow(e_50, 2);
+            // p_44 point
+            SeriesPoint p_44 = new SeriesPoint();
+            e_43.Points.Add(p_44);
+            p_44.Argument = 0F;
+            p_44.Value = 0F;
+            // p_45 point
+            SeriesPoint p_45 = new SeriesPoint();
+            e_43.Points.Add(p_45);
+            p_45.Argument = 1F;
+            p_45.Value = 10F;
+            // p_46 point
+            SeriesPoint p_46 = new SeriesPoint();
+            e_43.Points.Add(p_46);
+            p_46.Argument = 2F;
+            p_46.Value = 20F;
+            // p_47 point
+            SeriesPoint p_47 = new SeriesPoint();
+            e_43.Points.Add(p_47);
+            p_47.Argument = 3F;
+            p_47.Value = 50F;
+            // p_48 point
+            SeriesPoint p_48 = new SeriesPoint();
+            e_43.Points.Add(p_48);
+            p_48.Argument = 4F;
+            p_48.Value = 100F;
+            // p_49 point
+            SeriesPoint p_49 = new SeriesPoint();
+            e_43.Points.Add(p_49);
+            p_49.Argument = 5F;
+            p_49.Value = 200F;
+            // p_50 point
+            SeriesPoint p_50 = new SeriesPoint();
+            e_43.Points.Add(p_50);
+            p_50.Argument = 6F;
+            p_50.Value = 500F;
             // e_51 element
-            Line e_51 = new Line();
-            e_42.Children.Add(e_51);
+            LineSeries2D e_51 = new LineSeries2D();
+            e_42.Series.Add(e_51);
             e_51.Name = "e_51";
-            e_51.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
-            e_51.StrokeThickness = 10F;
-            e_51.X1 = 10F;
-            e_51.X2 = 100F;
-            e_51.Y1 = 100F;
-            e_51.Y2 = 100F;
-            Grid.SetRow(e_51, 2);
-            // e_52 element
-            Rectangle e_52 = new Rectangle();
-            e_42.Children.Add(e_52);
-            e_52.Name = "e_52";
-            e_52.Height = 100F;
-            e_52.Width = 200F;
-            e_52.Margin = new Thickness(5F, 5F, 5F, 5F);
-            ImageBrush e_52_Fill = new ImageBrush();
-            BitmapImage e_52_Fill_bm = new BitmapImage();
-            e_52_Fill_bm.TextureAsset = "Images/MonoGameLogo";
-            e_52_Fill.ImageSource = e_52_Fill_bm;
-            e_52_Fill.Stretch = Stretch.None;
-            e_52.Fill = e_52_Fill;
-            e_52.Stroke = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            e_52.StrokeThickness = 1F;
-            e_52.RadiusX = 10F;
-            e_52.RadiusY = 10F;
-            Grid.SetColumn(e_52, 1);
-            Grid.SetRow(e_52, 2);
+            e_51.Foreground = new SolidColorBrush(new ColorW(255, 165, 0, 255));
+            e_51.LineThickness = 1F;
+            Binding binding_e_51_DataSource = new Binding("ChartData");
+            e_51.SetBinding(LineSeries2D.DataSourceProperty, binding_e_51_DataSource);
             items.Add(e_41);
+            // e_52 element
+            TabItem e_52 = new TabItem();
+            e_52.Name = "e_52";
+            e_52.Header = "Shapes";
             // e_53 element
-            TabItem e_53 = new TabItem();
+            Grid e_53 = new Grid();
+            e_52.Content = e_53;
             e_53.Name = "e_53";
-            e_53.Header = "Animations";
+            RowDefinition row_e_53_0 = new RowDefinition();
+            e_53.RowDefinitions.Add(row_e_53_0);
+            RowDefinition row_e_53_1 = new RowDefinition();
+            e_53.RowDefinitions.Add(row_e_53_1);
+            RowDefinition row_e_53_2 = new RowDefinition();
+            e_53.RowDefinitions.Add(row_e_53_2);
+            ColumnDefinition col_e_53_0 = new ColumnDefinition();
+            e_53.ColumnDefinitions.Add(col_e_53_0);
+            ColumnDefinition col_e_53_1 = new ColumnDefinition();
+            e_53.ColumnDefinitions.Add(col_e_53_1);
+            ColumnDefinition col_e_53_2 = new ColumnDefinition();
+            e_53.ColumnDefinitions.Add(col_e_53_2);
             // e_54 element
-            Grid e_54 = new Grid();
-            e_53.Content = e_54;
+            Rectangle e_54 = new Rectangle();
+            e_53.Children.Add(e_54);
             e_54.Name = "e_54";
-            ColumnDefinition col_e_54_0 = new ColumnDefinition();
-            e_54.ColumnDefinitions.Add(col_e_54_0);
-            ColumnDefinition col_e_54_1 = new ColumnDefinition();
-            e_54.ColumnDefinitions.Add(col_e_54_1);
+            e_54.Height = 100F;
+            e_54.Width = 200F;
+            e_54.Margin = new Thickness(5F, 5F, 5F, 5F);
+            e_54.Fill = new SolidColorBrush(new ColorW(0, 128, 0, 255));
+            e_54.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_54.StrokeThickness = 5F;
+            e_54.RadiusX = 10F;
+            e_54.RadiusY = 10F;
             // e_55 element
-            StackPanel e_55 = new StackPanel();
-            e_54.Children.Add(e_55);
+            Rectangle e_55 = new Rectangle();
+            e_53.Children.Add(e_55);
             e_55.Name = "e_55";
+            e_55.Height = 100F;
+            e_55.Width = 200F;
+            e_55.Margin = new Thickness(5F, 5F, 5F, 5F);
+            e_55.Fill = new SolidColorBrush(new ColorW(255, 165, 0, 255));
+            Grid.SetColumn(e_55, 1);
+            // e_56 element
+            Rectangle e_56 = new Rectangle();
+            e_53.Children.Add(e_56);
+            e_56.Name = "e_56";
+            e_56.Height = 100F;
+            e_56.Width = 200F;
+            e_56.Margin = new Thickness(5F, 5F, 5F, 5F);
+            LinearGradientBrush e_56_Fill = new LinearGradientBrush();
+            e_56_Fill.StartPoint = new PointF(0F, 0F);
+            e_56_Fill.EndPoint = new PointF(1F, 1F);
+            e_56_Fill.SpreadMethod = GradientSpreadMethod.Pad;
+            e_56_Fill.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0.5F));
+            e_56_Fill.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0F));
+            e_56.Fill = e_56_Fill;
+            LinearGradientBrush e_56_Stroke = new LinearGradientBrush();
+            e_56_Stroke.StartPoint = new PointF(0F, 0F);
+            e_56_Stroke.EndPoint = new PointF(1F, 1F);
+            e_56_Stroke.SpreadMethod = GradientSpreadMethod.Pad;
+            e_56_Stroke.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0.5F));
+            e_56_Stroke.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0F));
+            e_56.Stroke = e_56_Stroke;
+            e_56.StrokeThickness = 5F;
+            e_56.RadiusX = 10F;
+            e_56.RadiusY = 10F;
+            Grid.SetColumn(e_56, 2);
+            // e_57 element
+            Ellipse e_57 = new Ellipse();
+            e_53.Children.Add(e_57);
+            e_57.Name = "e_57";
+            e_57.Height = 100F;
+            e_57.Width = 200F;
+            e_57.Margin = new Thickness(5F, 5F, 5F, 5F);
+            e_57.Fill = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_57.Stroke = new SolidColorBrush(new ColorW(0, 128, 0, 255));
+            e_57.StrokeThickness = 10F;
+            Grid.SetRow(e_57, 1);
+            // e_58 element
+            Ellipse e_58 = new Ellipse();
+            e_53.Children.Add(e_58);
+            e_58.Name = "e_58";
+            e_58.Height = 100F;
+            e_58.Width = 200F;
+            e_58.Margin = new Thickness(5F, 5F, 5F, 5F);
+            e_58.Stroke = new SolidColorBrush(new ColorW(255, 165, 0, 255));
+            e_58.StrokeThickness = 10F;
+            Grid.SetColumn(e_58, 1);
+            Grid.SetRow(e_58, 1);
+            // e_59 element
+            Ellipse e_59 = new Ellipse();
+            e_53.Children.Add(e_59);
+            e_59.Name = "e_59";
+            e_59.Height = 100F;
+            e_59.Width = 200F;
+            e_59.Margin = new Thickness(5F, 5F, 5F, 5F);
+            LinearGradientBrush e_59_Fill = new LinearGradientBrush();
+            e_59_Fill.StartPoint = new PointF(0F, 0F);
+            e_59_Fill.EndPoint = new PointF(1F, 1F);
+            e_59_Fill.SpreadMethod = GradientSpreadMethod.Pad;
+            e_59_Fill.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0.5F));
+            e_59_Fill.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0F));
+            e_59.Fill = e_59_Fill;
+            LinearGradientBrush e_59_Stroke = new LinearGradientBrush();
+            e_59_Stroke.StartPoint = new PointF(0F, 0F);
+            e_59_Stroke.EndPoint = new PointF(1F, 1F);
+            e_59_Stroke.SpreadMethod = GradientSpreadMethod.Pad;
+            e_59_Stroke.GradientStops.Add(new GradientStop(new ColorW(0, 162, 255, 255), 0.5F));
+            e_59_Stroke.GradientStops.Add(new GradientStop(new ColorW(255, 165, 0, 255), 0F));
+            e_59.Stroke = e_59_Stroke;
+            e_59.StrokeThickness = 10F;
+            Grid.SetColumn(e_59, 2);
+            Grid.SetRow(e_59, 1);
+            // e_60 element
+            Line e_60 = new Line();
+            e_53.Children.Add(e_60);
+            e_60.Name = "e_60";
+            e_60.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_60.StrokeThickness = 10F;
+            e_60.X1 = 10F;
+            e_60.X2 = 150F;
+            e_60.Y1 = 10F;
+            e_60.Y2 = 150F;
+            Grid.SetRow(e_60, 2);
+            // e_61 element
+            Line e_61 = new Line();
+            e_53.Children.Add(e_61);
+            e_61.Name = "e_61";
+            e_61.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_61.StrokeThickness = 10F;
+            e_61.X1 = 100F;
+            e_61.X2 = 100F;
+            e_61.Y1 = 10F;
+            e_61.Y2 = 100F;
+            Grid.SetRow(e_61, 2);
+            // e_62 element
+            Line e_62 = new Line();
+            e_53.Children.Add(e_62);
+            e_62.Name = "e_62";
+            e_62.Stroke = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_62.StrokeThickness = 10F;
+            e_62.X1 = 10F;
+            e_62.X2 = 100F;
+            e_62.Y1 = 100F;
+            e_62.Y2 = 100F;
+            Grid.SetRow(e_62, 2);
+            // e_63 element
+            Rectangle e_63 = new Rectangle();
+            e_53.Children.Add(e_63);
+            e_63.Name = "e_63";
+            e_63.Height = 100F;
+            e_63.Width = 200F;
+            e_63.Margin = new Thickness(5F, 5F, 5F, 5F);
+            ImageBrush e_63_Fill = new ImageBrush();
+            BitmapImage e_63_Fill_bm = new BitmapImage();
+            e_63_Fill_bm.TextureAsset = "Images/MonoGameLogo";
+            e_63_Fill.ImageSource = e_63_Fill_bm;
+            e_63_Fill.Stretch = Stretch.None;
+            e_63.Fill = e_63_Fill;
+            e_63.Stroke = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            e_63.StrokeThickness = 1F;
+            e_63.RadiusX = 10F;
+            e_63.RadiusY = 10F;
+            Grid.SetColumn(e_63, 1);
+            Grid.SetRow(e_63, 2);
+            items.Add(e_52);
+            // e_64 element
+            TabItem e_64 = new TabItem();
+            e_64.Name = "e_64";
+            e_64.Header = "Animations";
+            // e_65 element
+            Grid e_65 = new Grid();
+            e_64.Content = e_65;
+            e_65.Name = "e_65";
+            ColumnDefinition col_e_65_0 = new ColumnDefinition();
+            e_65.ColumnDefinitions.Add(col_e_65_0);
+            ColumnDefinition col_e_65_1 = new ColumnDefinition();
+            e_65.ColumnDefinitions.Add(col_e_65_1);
+            // e_66 element
+            StackPanel e_66 = new StackPanel();
+            e_65.Children.Add(e_66);
+            e_66.Name = "e_66";
             // animButton1 element
             Button animButton1 = new Button();
-            e_55.Children.Add(animButton1);
+            e_66.Children.Add(animButton1);
             animButton1.Name = "animButton1";
             animButton1.TabIndex = 1;
             animButton1.Content = "Mouse Over me!";
             animButton1.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton2 element
             Button animButton2 = new Button();
-            e_55.Children.Add(animButton2);
+            e_66.Children.Add(animButton2);
             animButton2.Name = "animButton2";
             animButton2.TabIndex = 2;
             animButton2.Content = "Mouse Over me!";
             animButton2.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton3 element
             Button animButton3 = new Button();
-            e_55.Children.Add(animButton3);
+            e_66.Children.Add(animButton3);
             animButton3.Name = "animButton3";
             animButton3.TabIndex = 3;
             animButton3.Content = "Mouse Over me!";
             animButton3.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton4 element
             Button animButton4 = new Button();
-            e_55.Children.Add(animButton4);
+            e_66.Children.Add(animButton4);
             animButton4.Name = "animButton4";
             animButton4.TabIndex = 4;
             animButton4.Content = "Mouse Over me!";
             animButton4.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animBorder1 element
             Border animBorder1 = new Border();
-            e_54.Children.Add(animBorder1);
+            e_65.Children.Add(animBorder1);
             animBorder1.Name = "animBorder1";
             animBorder1.Height = 100F;
             animBorder1.Width = 200F;
@@ -713,7 +773,7 @@ namespace EmptyKeys.UserInterface.Generated {
             Grid.SetColumn(animBorder1, 1);
             // animBorder2 element
             Border animBorder2 = new Border();
-            e_54.Children.Add(animBorder2);
+            e_65.Children.Add(animBorder2);
             animBorder2.Name = "animBorder2";
             animBorder2.Height = 50F;
             animBorder2.Width = 100F;
@@ -750,181 +810,181 @@ namespace EmptyKeys.UserInterface.Generated {
             Storyboard.SetTargetProperty(animBorder2_ET_0_AC_0_SB_TL_1, Border.OpacityProperty);
             animBorder2_ET_0_AC_0_SB.Children.Add(animBorder2_ET_0_AC_0_SB_TL_1);
             Grid.SetColumn(animBorder2, 1);
-            items.Add(e_53);
-            // e_56 element
-            TabItem e_56 = new TabItem();
-            e_56.Name = "e_56";
-            e_56.Header = "Tetris";
-            // e_57 element
-            Border e_57 = new Border();
-            e_56.Content = e_57;
-            e_57.Name = "e_57";
-            // e_58 element
-            Grid e_58 = new Grid();
-            e_57.Child = e_58;
-            e_58.Name = "e_58";
-            e_58.Margin = new Thickness(10F, 10F, 10F, 10F);
-            RowDefinition row_e_58_0 = new RowDefinition();
-            row_e_58_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_58.RowDefinitions.Add(row_e_58_0);
-            RowDefinition row_e_58_1 = new RowDefinition();
-            row_e_58_1.Height = new GridLength(420F, GridUnitType.Pixel);
-            e_58.RowDefinitions.Add(row_e_58_1);
-            ColumnDefinition col_e_58_0 = new ColumnDefinition();
-            e_58.ColumnDefinitions.Add(col_e_58_0);
-            ColumnDefinition col_e_58_1 = new ColumnDefinition();
-            e_58.ColumnDefinitions.Add(col_e_58_1);
-            ColumnDefinition col_e_58_2 = new ColumnDefinition();
-            e_58.ColumnDefinitions.Add(col_e_58_2);
-            // e_59 element
-            StackPanel e_59 = new StackPanel();
-            e_58.Children.Add(e_59);
-            e_59.Name = "e_59";
-            e_59.HorizontalAlignment = HorizontalAlignment.Right;
-            e_59.Orientation = Orientation.Vertical;
-            Grid.SetRow(e_59, 1);
-            // e_60 element
-            TextBlock e_60 = new TextBlock();
-            e_59.Children.Add(e_60);
-            e_60.Name = "e_60";
-            e_60.Text = "Next";
-            // e_61 element
-            Border e_61 = new Border();
-            e_59.Children.Add(e_61);
-            e_61.Name = "e_61";
-            e_61.Height = 81F;
-            e_61.Width = 81F;
-            e_61.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            e_61.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
+            items.Add(e_64);
+            // e_67 element
+            TabItem e_67 = new TabItem();
+            e_67.Name = "e_67";
+            e_67.Header = "Tetris";
+            // e_68 element
+            Border e_68 = new Border();
+            e_67.Content = e_68;
+            e_68.Name = "e_68";
+            // e_69 element
+            Grid e_69 = new Grid();
+            e_68.Child = e_69;
+            e_69.Name = "e_69";
+            e_69.Margin = new Thickness(10F, 10F, 10F, 10F);
+            RowDefinition row_e_69_0 = new RowDefinition();
+            row_e_69_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_69.RowDefinitions.Add(row_e_69_0);
+            RowDefinition row_e_69_1 = new RowDefinition();
+            row_e_69_1.Height = new GridLength(420F, GridUnitType.Pixel);
+            e_69.RowDefinitions.Add(row_e_69_1);
+            ColumnDefinition col_e_69_0 = new ColumnDefinition();
+            e_69.ColumnDefinitions.Add(col_e_69_0);
+            ColumnDefinition col_e_69_1 = new ColumnDefinition();
+            e_69.ColumnDefinitions.Add(col_e_69_1);
+            ColumnDefinition col_e_69_2 = new ColumnDefinition();
+            e_69.ColumnDefinitions.Add(col_e_69_2);
+            // e_70 element
+            StackPanel e_70 = new StackPanel();
+            e_69.Children.Add(e_70);
+            e_70.Name = "e_70";
+            e_70.HorizontalAlignment = HorizontalAlignment.Right;
+            e_70.Orientation = Orientation.Vertical;
+            Grid.SetRow(e_70, 1);
+            // e_71 element
+            TextBlock e_71 = new TextBlock();
+            e_70.Children.Add(e_71);
+            e_71.Name = "e_71";
+            e_71.Text = "Next";
+            // e_72 element
+            Border e_72 = new Border();
+            e_70.Children.Add(e_72);
+            e_72.Name = "e_72";
+            e_72.Height = 81F;
+            e_72.Width = 81F;
+            e_72.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            e_72.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
             // tetrisNextContainer1 element
             Canvas tetrisNextContainer1 = new Canvas();
-            e_61.Child = tetrisNextContainer1;
+            e_72.Child = tetrisNextContainer1;
             tetrisNextContainer1.Name = "tetrisNextContainer1";
             tetrisNextContainer1.Height = 80F;
             tetrisNextContainer1.Width = 80F;
-            // e_62 element
-            Border e_62 = new Border();
-            e_58.Children.Add(e_62);
-            e_62.Name = "e_62";
-            e_62.Height = 401F;
-            e_62.Width = 201F;
-            e_62.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            e_62.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
-            Grid.SetColumn(e_62, 1);
-            Grid.SetRow(e_62, 1);
+            // e_73 element
+            Border e_73 = new Border();
+            e_69.Children.Add(e_73);
+            e_73.Name = "e_73";
+            e_73.Height = 401F;
+            e_73.Width = 201F;
+            e_73.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            e_73.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
+            Grid.SetColumn(e_73, 1);
+            Grid.SetRow(e_73, 1);
             // tetrisContainer1 element
             Canvas tetrisContainer1 = new Canvas();
-            e_62.Child = tetrisContainer1;
+            e_73.Child = tetrisContainer1;
             tetrisContainer1.Name = "tetrisContainer1";
             tetrisContainer1.Height = 400F;
             tetrisContainer1.Width = 200F;
             tetrisContainer1.HorizontalAlignment = HorizontalAlignment.Left;
             tetrisContainer1.VerticalAlignment = VerticalAlignment.Top;
-            // e_63 element
-            Grid e_63 = new Grid();
-            e_58.Children.Add(e_63);
-            e_63.Name = "e_63";
-            RowDefinition row_e_63_0 = new RowDefinition();
-            row_e_63_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_63.RowDefinitions.Add(row_e_63_0);
-            RowDefinition row_e_63_1 = new RowDefinition();
-            row_e_63_1.Height = new GridLength(1F, GridUnitType.Auto);
-            e_63.RowDefinitions.Add(row_e_63_1);
-            ColumnDefinition col_e_63_0 = new ColumnDefinition();
-            col_e_63_0.Width = new GridLength(1F, GridUnitType.Auto);
-            e_63.ColumnDefinitions.Add(col_e_63_0);
-            ColumnDefinition col_e_63_1 = new ColumnDefinition();
-            col_e_63_1.Width = new GridLength(1F, GridUnitType.Star);
-            e_63.ColumnDefinitions.Add(col_e_63_1);
-            ColumnDefinition col_e_63_2 = new ColumnDefinition();
-            col_e_63_2.Width = new GridLength(1F, GridUnitType.Auto);
-            e_63.ColumnDefinitions.Add(col_e_63_2);
-            Grid.SetColumnSpan(e_63, 3);
-            Binding binding_e_63_DataContext = new Binding("Tetris");
-            e_63.SetBinding(Grid.DataContextProperty, binding_e_63_DataContext);
-            // e_64 element
-            Button e_64 = new Button();
-            e_63.Children.Add(e_64);
-            e_64.Name = "e_64";
-            e_64.Height = 30F;
-            e_64.Content = "Start";
-            Grid.SetColumnSpan(e_64, 3);
-            Binding binding_e_64_Command = new Binding("StartCommand");
-            e_64.SetBinding(Button.CommandProperty, binding_e_64_Command);
-            // e_65 element
-            Grid e_65 = new Grid();
-            e_63.Children.Add(e_65);
-            e_65.Name = "e_65";
-            RowDefinition row_e_65_0 = new RowDefinition();
-            row_e_65_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_65.RowDefinitions.Add(row_e_65_0);
-            ColumnDefinition col_e_65_0 = new ColumnDefinition();
-            e_65.ColumnDefinitions.Add(col_e_65_0);
-            ColumnDefinition col_e_65_1 = new ColumnDefinition();
-            col_e_65_1.Width = new GridLength(70F, GridUnitType.Pixel);
-            e_65.ColumnDefinitions.Add(col_e_65_1);
-            ColumnDefinition col_e_65_2 = new ColumnDefinition();
-            e_65.ColumnDefinitions.Add(col_e_65_2);
-            Grid.SetColumn(e_65, 1);
-            Grid.SetRow(e_65, 1);
+            // e_74 element
+            Grid e_74 = new Grid();
+            e_69.Children.Add(e_74);
+            e_74.Name = "e_74";
+            RowDefinition row_e_74_0 = new RowDefinition();
+            row_e_74_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_74.RowDefinitions.Add(row_e_74_0);
+            RowDefinition row_e_74_1 = new RowDefinition();
+            row_e_74_1.Height = new GridLength(1F, GridUnitType.Auto);
+            e_74.RowDefinitions.Add(row_e_74_1);
+            ColumnDefinition col_e_74_0 = new ColumnDefinition();
+            col_e_74_0.Width = new GridLength(1F, GridUnitType.Auto);
+            e_74.ColumnDefinitions.Add(col_e_74_0);
+            ColumnDefinition col_e_74_1 = new ColumnDefinition();
+            col_e_74_1.Width = new GridLength(1F, GridUnitType.Star);
+            e_74.ColumnDefinitions.Add(col_e_74_1);
+            ColumnDefinition col_e_74_2 = new ColumnDefinition();
+            col_e_74_2.Width = new GridLength(1F, GridUnitType.Auto);
+            e_74.ColumnDefinitions.Add(col_e_74_2);
+            Grid.SetColumnSpan(e_74, 3);
+            Binding binding_e_74_DataContext = new Binding("Tetris");
+            e_74.SetBinding(Grid.DataContextProperty, binding_e_74_DataContext);
+            // e_75 element
+            Button e_75 = new Button();
+            e_74.Children.Add(e_75);
+            e_75.Name = "e_75";
+            e_75.Height = 30F;
+            e_75.Content = "Start";
+            Grid.SetColumnSpan(e_75, 3);
+            Binding binding_e_75_Command = new Binding("StartCommand");
+            e_75.SetBinding(Button.CommandProperty, binding_e_75_Command);
+            // e_76 element
+            Grid e_76 = new Grid();
+            e_74.Children.Add(e_76);
+            e_76.Name = "e_76";
+            RowDefinition row_e_76_0 = new RowDefinition();
+            row_e_76_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_76.RowDefinitions.Add(row_e_76_0);
+            ColumnDefinition col_e_76_0 = new ColumnDefinition();
+            e_76.ColumnDefinitions.Add(col_e_76_0);
+            ColumnDefinition col_e_76_1 = new ColumnDefinition();
+            col_e_76_1.Width = new GridLength(70F, GridUnitType.Pixel);
+            e_76.ColumnDefinitions.Add(col_e_76_1);
+            ColumnDefinition col_e_76_2 = new ColumnDefinition();
+            e_76.ColumnDefinitions.Add(col_e_76_2);
+            Grid.SetColumn(e_76, 1);
+            Grid.SetRow(e_76, 1);
             // spPlayer1 element
             StackPanel spPlayer1 = new StackPanel();
-            e_65.Children.Add(spPlayer1);
+            e_76.Children.Add(spPlayer1);
             spPlayer1.Name = "spPlayer1";
             spPlayer1.HorizontalAlignment = HorizontalAlignment.Right;
             spPlayer1.Orientation = Orientation.Vertical;
-            // e_66 element
-            TextBlock e_66 = new TextBlock();
-            spPlayer1.Children.Add(e_66);
-            e_66.Name = "e_66";
-            Binding binding_e_66_Text = new Binding("Score");
-            e_66.SetBinding(TextBlock.TextProperty, binding_e_66_Text);
-            // e_67 element
-            TextBlock e_67 = new TextBlock();
-            spPlayer1.Children.Add(e_67);
-            e_67.Name = "e_67";
-            Binding binding_e_67_Text = new Binding("Lines");
-            e_67.SetBinding(TextBlock.TextProperty, binding_e_67_Text);
-            // e_68 element
-            TextBlock e_68 = new TextBlock();
-            spPlayer1.Children.Add(e_68);
-            e_68.Name = "e_68";
-            Binding binding_e_68_Text = new Binding("Level");
-            e_68.SetBinding(TextBlock.TextProperty, binding_e_68_Text);
-            // e_69 element
-            StackPanel e_69 = new StackPanel();
-            e_65.Children.Add(e_69);
-            e_69.Name = "e_69";
-            e_69.HorizontalAlignment = HorizontalAlignment.Center;
-            e_69.Orientation = Orientation.Vertical;
-            Grid.SetColumn(e_69, 1);
-            // e_70 element
-            TextBlock e_70 = new TextBlock();
-            e_69.Children.Add(e_70);
-            e_70.Name = "e_70";
-            e_70.Text = "SCORE";
-            // e_71 element
-            TextBlock e_71 = new TextBlock();
-            e_69.Children.Add(e_71);
-            e_71.Name = "e_71";
-            e_71.Text = "LINES";
-            // e_72 element
-            TextBlock e_72 = new TextBlock();
-            e_69.Children.Add(e_72);
-            e_72.Name = "e_72";
-            e_72.Text = "LEVEL";
-            // e_73 element
-            StackPanel e_73 = new StackPanel();
-            e_65.Children.Add(e_73);
-            e_73.Name = "e_73";
-            e_73.HorizontalAlignment = HorizontalAlignment.Left;
-            e_73.Orientation = Orientation.Horizontal;
-            // e_74 element
-            TextBlock e_74 = new TextBlock();
-            e_73.Children.Add(e_74);
-            e_74.Name = "e_74";
-            e_74.Text = "Use A,S,D,W for left, down, right, rotate";
-            items.Add(e_56);
+            // e_77 element
+            TextBlock e_77 = new TextBlock();
+            spPlayer1.Children.Add(e_77);
+            e_77.Name = "e_77";
+            Binding binding_e_77_Text = new Binding("Score");
+            e_77.SetBinding(TextBlock.TextProperty, binding_e_77_Text);
+            // e_78 element
+            TextBlock e_78 = new TextBlock();
+            spPlayer1.Children.Add(e_78);
+            e_78.Name = "e_78";
+            Binding binding_e_78_Text = new Binding("Lines");
+            e_78.SetBinding(TextBlock.TextProperty, binding_e_78_Text);
+            // e_79 element
+            TextBlock e_79 = new TextBlock();
+            spPlayer1.Children.Add(e_79);
+            e_79.Name = "e_79";
+            Binding binding_e_79_Text = new Binding("Level");
+            e_79.SetBinding(TextBlock.TextProperty, binding_e_79_Text);
+            // e_80 element
+            StackPanel e_80 = new StackPanel();
+            e_76.Children.Add(e_80);
+            e_80.Name = "e_80";
+            e_80.HorizontalAlignment = HorizontalAlignment.Center;
+            e_80.Orientation = Orientation.Vertical;
+            Grid.SetColumn(e_80, 1);
+            // e_81 element
+            TextBlock e_81 = new TextBlock();
+            e_80.Children.Add(e_81);
+            e_81.Name = "e_81";
+            e_81.Text = "SCORE";
+            // e_82 element
+            TextBlock e_82 = new TextBlock();
+            e_80.Children.Add(e_82);
+            e_82.Name = "e_82";
+            e_82.Text = "LINES";
+            // e_83 element
+            TextBlock e_83 = new TextBlock();
+            e_80.Children.Add(e_83);
+            e_83.Name = "e_83";
+            e_83.Text = "LEVEL";
+            // e_84 element
+            StackPanel e_84 = new StackPanel();
+            e_76.Children.Add(e_84);
+            e_84.Name = "e_84";
+            e_84.HorizontalAlignment = HorizontalAlignment.Left;
+            e_84.Orientation = Orientation.Horizontal;
+            // e_85 element
+            TextBlock e_85 = new TextBlock();
+            e_84.Children.Add(e_85);
+            e_85.Name = "e_85";
+            e_85.Text = "Use A,S,D,W for left, down, right, rotate";
+            items.Add(e_67);
             return items;
         }
         

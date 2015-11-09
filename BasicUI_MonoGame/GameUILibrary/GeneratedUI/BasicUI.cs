@@ -14,7 +14,7 @@ namespace EmptyKeys.UserInterface.Generated
         {
             get
             {
-                TabItem item = TabControl.Items[5] as TabItem;
+                TabItem item = TabControl.Items[6] as TabItem;
                 Canvas canvas = VisualTreeHelper.Instance.FindElementByName(item, "tetrisNextContainer1") as Canvas;
                 return canvas;                
             }            
@@ -24,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated
         {
             get
             {
-                TabItem item = TabControl.Items[5] as TabItem;
+                TabItem item = TabControl.Items[6] as TabItem;
                 Canvas canvas = VisualTreeHelper.Instance.FindElementByName(item, "tetrisContainer1") as Canvas;
                 return canvas;
             }

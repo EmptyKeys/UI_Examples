@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Mvvm;
 using GameData;
@@ -24,6 +25,9 @@ namespace GameUILibrary
         private List<TestDataGridModel> gridData;
         private ObservableCollection<WindowViewModel> windows;
         private TetrisController tetris;
+        private float numericTextBoxValue;
+        private string password;
+        private List<PointF> chartData;
 
         /// <summary>
         /// Gets or sets the tetris.
@@ -146,6 +150,42 @@ namespace GameUILibrary
         }
 
         /// <summary>
+        /// Gets or sets the numeric text box value.
+        /// </summary>
+        /// <value>
+        /// The numeric text box value.
+        /// </value>
+        public float NumericTextBoxValue
+        {
+            get { return numericTextBoxValue; }
+            set { SetProperty(ref numericTextBoxValue, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the password.
+        /// </summary>
+        /// <value>
+        /// The password.
+        /// </value>
+        public string Password
+        {
+            get { return password; }
+            set { SetProperty(ref password, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the chart data.
+        /// </summary>
+        /// <value>
+        /// The chart data.
+        /// </value>
+        public List<PointF> ChartData
+        {
+            get { return chartData; }
+            set { SetProperty(ref chartData, value); }
+        }        
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
         /// </summary>
         public BasicUIViewModel()
@@ -178,7 +218,13 @@ namespace GameUILibrary
             };
 
             Windows = new ObservableCollection<WindowViewModel>();
-            Windows.Add(new CustomWindow());            
+            Windows.Add(new CustomWindow());
+
+            ChartData = new List<PointF>();            
+            for (int i = 0; i < 10; i++)
+            {
+                ChartData.Add(new PointF(i, i * 40));
+            }
         }
 
         private void OnButtonClick(object obj)
@@ -187,7 +233,9 @@ namespace GameUILibrary
             {
                 ButtonResult = obj.ToString();
                 ProgressValue += 0.5f;
-                ButtonEnabled = true;                
+                ButtonEnabled = true;
+                NumericTextBoxValue = 100;
+                Password = string.Empty;
             }
         }
 

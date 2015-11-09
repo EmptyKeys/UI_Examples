@@ -3,6 +3,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
+             xmlns:c="clr-namespace:EmptyKeys.UserInterface.Designer.Charts;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="800" ek:SoundManager.Sounds="{DynamicResource Sounds}" OwnedWindowsContent="{Binding Windows}">
 
@@ -98,10 +99,10 @@
 
                     <TextBlock Text="Numeric" VerticalAlignment="Center" Grid.Row="7" />
                     <ek:NumericTextBox Name="numTextBox" Grid.Row="7" Grid.Column="1" Width="200" ValueFormat="F0" ValueStyle="Integer"
-                                       HorizontalAlignment="Left" Margin="5" TabIndex="5" Value="0" />
+                                       HorizontalAlignment="Left" Margin="5" TabIndex="5" Value="{Binding NumericTextBoxValue}" />
 
                     <TextBlock Text="PasswordBox" VerticalAlignment="Center" Grid.Row="8" />
-                    <PasswordBox Grid.Row="8" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6"/>
+                    <ek:PasswordBox Grid.Row="8" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6" Password="{Binding Password}"/>
 
                     <TextBlock Text="ComboBox" VerticalAlignment="Center" Grid.Row="9" />
                     <ComboBox Name="combo" Grid.Row="9" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="7" HorizontalAlignment="Left">
@@ -172,6 +173,24 @@
             </TabItem>
             <TabItem Header="TreeView">
                 <TreeView ItemsSource="{Binding TreeItems}" />
+            </TabItem>
+            <TabItem Header="Chart">
+                <c:Chart AxisYMajorUnit="50">
+                    <c:Chart.Series>
+                        <c:LineSeries2D>
+                            <c:LineSeries2D.Points>
+                                <c:SeriesPoint Argument="0" Value="0" />
+                                <c:SeriesPoint Argument="1" Value="10" />
+                                <c:SeriesPoint Argument="2" Value="20" />
+                                <c:SeriesPoint Argument="3" Value="50" />
+                                <c:SeriesPoint Argument="4" Value="100" />
+                                <c:SeriesPoint Argument="5" Value="200" />
+                                <c:SeriesPoint Argument="6" Value="500" />
+                            </c:LineSeries2D.Points>
+                        </c:LineSeries2D>
+                        <c:LineSeries2D LineThickness="1" Foreground="Orange" DataSource="{Binding ChartData}" />
+                    </c:Chart.Series>
+                </c:Chart>
             </TabItem>
             <TabItem Header="Shapes">
                 <Grid>

@@ -8,6 +8,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using System.CodeDom.Compiler;
     using System.Collections.ObjectModel;
     using EmptyKeys.UserInterface;
+    using EmptyKeys.UserInterface.Charts;
     using EmptyKeys.UserInterface.Data;
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
@@ -20,7 +21,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.10.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.11.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -370,7 +371,6 @@ namespace EmptyKeys.UserInterface.Generated {
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
-            FontManager.Instance.AddFont("Segoe UI", 12F, FontStyle.Regular, "Segoe_UI_9_Regular");
         }
         
         private static void InitializeElementResources(UIElement elem) {
