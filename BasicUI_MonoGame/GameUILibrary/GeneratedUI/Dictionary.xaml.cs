@@ -13,6 +13,8 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
     using EmptyKeys.UserInterface.Input;
+    using EmptyKeys.UserInterface.Interactions.Core;
+    using EmptyKeys.UserInterface.Interactivity;
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
@@ -21,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.11.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.12.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
