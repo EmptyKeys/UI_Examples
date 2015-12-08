@@ -7,7 +7,7 @@ Prerequisites: Visual Studio 2013 Update 2 or higher
 
 Note for MonoGame: Examples are using standalone version installed by installer (not NuGet). You can download it on http://www.monogame.net/2015/04/29/monogame-3-4/
 
-Note for Paradox3d: You need standard Paradox3d installed. You can download it on http://paradox3d.net/download/
+Note for Xenko: You need standard Xenko installed. You can download it on http://paradox3d.net/download/
 
 Note for SunBurn: SunBurn examples are using SunBurn Pro version. You will have to change references if you have different version. You need XNA - https://msxna.codeplex.com/releases.
 
