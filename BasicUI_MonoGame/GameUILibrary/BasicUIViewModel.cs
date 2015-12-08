@@ -28,6 +28,8 @@ namespace GameUILibrary
         private float numericTextBoxValue;
         private string password;
         private List<PointF> chartData;
+        private ObservableCollection<DragDropItem> dataOne;
+        private ObservableCollection<DragDropItem> dataTwo;
 
         /// <summary>
         /// Gets or sets the tetris.
@@ -183,7 +185,31 @@ namespace GameUILibrary
         {
             get { return chartData; }
             set { SetProperty(ref chartData, value); }
-        }        
+        }
+
+        /// <summary>
+        /// Gets or sets the data one.
+        /// </summary>
+        /// <value>
+        /// The data one.
+        /// </value>
+        public ObservableCollection<DragDropItem> DataOne
+        {
+            get { return dataOne; }
+            set { SetProperty(ref dataOne, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the data two.
+        /// </summary>
+        /// <value>
+        /// The data two.
+        /// </value>
+        public ObservableCollection<DragDropItem> DataTwo
+        {
+            get { return dataTwo; }
+            set { SetProperty(ref dataTwo, value); }
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicUIViewModel"/> class.
@@ -225,6 +251,18 @@ namespace GameUILibrary
             {
                 ChartData.Add(new PointF(i, i * 40));
             }
+
+            DataOne = new ObservableCollection<DragDropItem>
+            {
+                new DragDropItem { Name = "Selection 1"},
+                new DragDropItem { Name = "Selection 2"},
+                new DragDropItem { Name = "Selection 3"},
+                new DragDropItem { Name = "Selection 4"},
+                new DragDropItem { Name = "Selection 5"},
+                new DragDropItem { Name = "Selection 6"},
+            };
+
+            DataTwo = new ObservableCollection<DragDropItem>();
         }
 
         private void OnButtonClick(object obj)

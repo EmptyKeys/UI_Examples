@@ -112,39 +112,42 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [DataTemplateKey(GameData.CustomWindow)] DataTemplate
             Func<UIElement, UIElement> r_3_dtFunc = r_3_dtMethod;
             this.Add(typeof(GameData.CustomWindow), new DataTemplate(typeof(GameData.CustomWindow), r_3_dtFunc));
-            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
+            // Resource - [DataTemplateKey(GameData.DragDropItem)] DataTemplate
             Func<UIElement, UIElement> r_4_dtFunc = r_4_dtMethod;
-            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_4_dtFunc));
+            this.Add(typeof(GameData.DragDropItem), new DataTemplate(typeof(GameData.DragDropItem), r_4_dtFunc));
+            // Resource - [DataTemplateKey(GameData.TestTreeDataItem)] DataTemplate
+            Func<UIElement, UIElement> r_5_dtFunc = r_5_dtMethod;
+            this.Add(typeof(GameData.TestTreeDataItem), new DataTemplate(typeof(GameData.TestTreeDataItem), r_5_dtFunc));
             // Resource - [Image] BitmapImage
-            BitmapImage r_5_bm = new BitmapImage();
-            r_5_bm.TextureAsset = "Images/MonoGameLogo";
-            this.Add("Image", r_5_bm);
+            BitmapImage r_6_bm = new BitmapImage();
+            r_6_bm.TextureAsset = "Images/MonoGameLogo";
+            this.Add("Image", r_6_bm);
             // Resource - [Sounds] SoundSourceCollection
-            var r_6_sounds = new SoundSourceCollection();
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
+            var r_7_sounds = new SoundSourceCollection();
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
             SoundManager.Instance.AddSound("Click");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
             SoundManager.Instance.AddSound("KeyPress");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
             SoundManager.Instance.AddSound("Move");
-            r_6_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
             SoundManager.Instance.AddSound("Select");
-            this.Add("Sounds", r_6_sounds);
+            this.Add("Sounds", r_7_sounds);
             // Resource - [TetrisBorderBrush] SolidColorBrush
             this.Add("TetrisBorderBrush", new SolidColorBrush(new ColorW(114, 176, 218, 255)));
             // Resource - [TetrisBorderStyle] Style
-            Style r_8_s = new Style(typeof(Border));
-            Setter r_8_s_S_0 = new Setter(Border.SnapsToDevicePixelsProperty, true);
-            r_8_s.Setters.Add(r_8_s_S_0);
-            Setter r_8_s_S_1 = new Setter(Border.BackgroundProperty, new ResourceReferenceExpression("TetrisWindowBackground"));
-            r_8_s.Setters.Add(r_8_s_S_1);
-            Setter r_8_s_S_2 = new Setter(Border.BorderBrushProperty, new ResourceReferenceExpression("TetrisBorderBrush"));
-            r_8_s.Setters.Add(r_8_s_S_2);
-            Setter r_8_s_S_3 = new Setter(Border.BorderThicknessProperty, new Thickness(1F));
-            r_8_s.Setters.Add(r_8_s_S_3);
-            Setter r_8_s_S_4 = new Setter(Border.OpacityProperty, 0.9F);
-            r_8_s.Setters.Add(r_8_s_S_4);
-            this.Add("TetrisBorderStyle", r_8_s);
+            Style r_9_s = new Style(typeof(Border));
+            Setter r_9_s_S_0 = new Setter(Border.SnapsToDevicePixelsProperty, true);
+            r_9_s.Setters.Add(r_9_s_S_0);
+            Setter r_9_s_S_1 = new Setter(Border.BackgroundProperty, new ResourceReferenceExpression("TetrisWindowBackground"));
+            r_9_s.Setters.Add(r_9_s_S_1);
+            Setter r_9_s_S_2 = new Setter(Border.BorderBrushProperty, new ResourceReferenceExpression("TetrisBorderBrush"));
+            r_9_s.Setters.Add(r_9_s_S_2);
+            Setter r_9_s_S_3 = new Setter(Border.BorderThicknessProperty, new Thickness(1F));
+            r_9_s.Setters.Add(r_9_s_S_3);
+            Setter r_9_s_S_4 = new Setter(Border.OpacityProperty, 0.9F);
+            r_9_s.Setters.Add(r_9_s_S_4);
+            this.Add("TetrisBorderStyle", r_9_s);
             // Resource - [TetrisForeground] SolidColorBrush
             this.Add("TetrisForeground", new SolidColorBrush(new ColorW(255, 255, 255, 255)));
             // Resource - [TetrisWindowBackground] SolidColorBrush
@@ -213,10 +216,21 @@ namespace EmptyKeys.UserInterface.Generated {
             TextBlock e_6 = new TextBlock();
             e_6.Parent = parent;
             e_6.Name = "e_6";
-            e_6.Margin = new Thickness(2F, 2F, 2F, 2F);
+            e_6.Margin = new Thickness(5F, 5F, 5F, 5F);
             Binding binding_e_6_Text = new Binding("Name");
             e_6.SetBinding(TextBlock.TextProperty, binding_e_6_Text);
             return e_6;
+        }
+        
+        private static UIElement r_5_dtMethod(UIElement parent) {
+            // e_7 element
+            TextBlock e_7 = new TextBlock();
+            e_7.Parent = parent;
+            e_7.Name = "e_7";
+            e_7.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Binding binding_e_7_Text = new Binding("Name");
+            e_7.SetBinding(TextBlock.TextProperty, binding_e_7_Text);
+            return e_7;
         }
     }
 }

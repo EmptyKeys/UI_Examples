@@ -94,6 +94,10 @@
             </StackPanel>
         </Border>
     </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type data:DragDropItem}">
+        <TextBlock Margin="5" Text="{Binding Name}" />
+    </DataTemplate>
 
     <Style x:Key="TetrisBorderStyle" TargetType="{x:Type Border}">
         <Setter Property="SnapsToDevicePixels" Value="True" />

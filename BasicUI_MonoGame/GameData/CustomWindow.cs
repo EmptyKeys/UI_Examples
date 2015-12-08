@@ -32,14 +32,14 @@ namespace GameData
             TextData = "Custom Window";
 
             Top = 10;
-            Left = 100;
+            Left = 700;
             Height = 100;
             Width = 200;
             Opacity = 0.9f;
             IsHitTestVisible = true;
             IsOnTop = true;
             Title = "Title";
-            IsVisible = false;
+            IsVisible = true;
 
             HideCommand = new RelayCommand(new Action<object>(OnHide));
         }
