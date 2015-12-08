@@ -1,0 +1,18 @@
+﻿!SpriteFont
+Id: 65276ff7-b4f5-4edb-9a9c-a49c80030b70
+Tags: []
+Source: 
+FontName: Segoe UI
+Size: 9
+Style: Regular
+IsDynamic: false
+DefaultCharacter: '*'
+CharacterSet: 
+CharacterRegions:
+    -   Start: ' '
+        End: "\x7F"
+AntiAlias: ClearType
+NoPremultiply: false
+Spacing: 0.0
+LineSpacing: 0.0
+UseKerning: true

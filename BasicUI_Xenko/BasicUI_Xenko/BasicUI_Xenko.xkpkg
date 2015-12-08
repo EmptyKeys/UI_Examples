@@ -1,0 +1,56 @@
+!Package
+Id: 650dfdf3-e237-4050-9753-c4c4776b0a90
+SerializedVersion: {Assets: 0.0.2}
+Tags: []
+Meta:
+    Name: BasicUI_Xenko
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: BasicUI_Xenko
+    Dependencies:
+        -   Name: Xenko
+            Version: 1.4.0-beta
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: BasicUI_Xenko.Game/Effects
+        OutputGroupDirectories: {}
+        Properties: {}
+        ProjectReferences:
+            -   Id: 44547b06-90d6-477f-9348-cdd1915f980b
+                Location: BasicUI_Xenko.Game/BasicUI_Xenko.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        Properties:
+            Xenko.GraphicsPlatform: Direct3D11
+        ProjectReferences:
+            -   Id: e171415e-f63a-4adb-9f1d-35f83f00c484
+                Location: BasicUI_Xenko.Windows/BasicUI_Xenko.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets:
+    - 1a087696-5b79-4439-877b-3ab37dd1bd4a:Click_1
+    - 3caf45bc-264e-4d1b-9dc5-05fb9e1dcf46:Segoe_UI_15_Bold
+    - 4f5087d6-2774-4d77-8caf-fdf00b9851de:Move_1
+    - 5babf2df-84c3-49b0-acef-8193321e26b7:Click
+    - 65276ff7-b4f5-4edb-9a9c-a49c80030b70:Segoe_UI_9_Regular
+    - 734c90f6-466c-4dbf-bdea-1ba01c63b89d:Move
+    - 7db3ea1d-8d3d-4c7b-b1a2-e8661a17d483:Segoe_UI_10_Regular
+    - aaeb0c22-73bc-474d-aff6-7fb2ee4cf303:Images/EmptyKeysLogoTextSmall
+    - c0588c52-8e7a-4dfe-89fc-c92a28aa14e8:Select_1
+    - c2a3354c-828d-4bfa-be5f-8254b2eb47b3:KeyPress_1
+    - c545921c-735c-4230-9709-659b9a39e1a3:Select
+    - eed9e017-aa5d-4e74-9b58-aa0e0492b1cf:KeyPress
