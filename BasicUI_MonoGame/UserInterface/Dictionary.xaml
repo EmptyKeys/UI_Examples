@@ -97,7 +97,7 @@
     
     <DataTemplate DataType="{x:Type data:DragDropItem}">
         <TextBlock Margin="5" Text="{Binding Name}" />
-    </DataTemplate>
+    </DataTemplate>    
 
     <Style x:Key="TetrisBorderStyle" TargetType="{x:Type Border}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
@@ -109,6 +109,6 @@
 
     <SolidColorBrush x:Key="TetrisWindowBackground" Color="Black" />
     <SolidColorBrush x:Key="TetrisForeground" Color="White" />
-    <SolidColorBrush x:Key="TetrisBorderBrush" Color="#FF72B0DA" />
+    <SolidColorBrush x:Key="TetrisBorderBrush" Color="#FF72B0DA" />    
 
 </ResourceDictionary>

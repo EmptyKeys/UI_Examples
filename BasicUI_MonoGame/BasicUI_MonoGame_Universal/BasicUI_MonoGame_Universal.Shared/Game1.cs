@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using EmptyKeys.UserInterface;
+using EmptyKeys.UserInterface.Controls;
 using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
@@ -11,6 +12,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
+using Windows.Graphics.Display;
 
 namespace BasicUI_MonoGame_Universal
 {
@@ -35,6 +37,7 @@ namespace BasicUI_MonoGame_Universal
             Content.RootDirectory = "Content";
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;
             graphics.DeviceCreated += graphics_DeviceCreated;
+            graphics.IsFullScreen = true;
         }
 
         void graphics_DeviceCreated(object sender, EventArgs e)
@@ -52,7 +55,10 @@ namespace BasicUI_MonoGame_Universal
             graphics.PreferredBackBufferHeight = 1080;
 #else
             graphics.PreferredBackBufferWidth = 480;
-            graphics.PreferredBackBufferHeight = 854;
+            graphics.PreferredBackBufferHeight = 800;
+            var info = DisplayInformation.GetForCurrentView();
+            //UIRoot.DpiX = (int) info.RawDpiX;
+            //UIRoot.DpiY = (int) info.RawDpiY;
 #endif
             graphics.PreferMultiSampling = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;            
