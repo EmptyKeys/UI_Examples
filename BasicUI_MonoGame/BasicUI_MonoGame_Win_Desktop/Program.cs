@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using EmptyKeys.UserInterface.Mvvm;
 #endregion
 
 namespace BasicUI_MonoGame_Win_Desktop
@@ -18,6 +19,8 @@ namespace BasicUI_MonoGame_Win_Desktop
         [STAThread]
         static void Main()
         {
+            ServiceManager.Instance.AddService<IClipboardService>(new ClipboardService());
+
             using (var game = new Game1())
                 game.Run();
         }

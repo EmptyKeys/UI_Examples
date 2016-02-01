@@ -95,17 +95,17 @@
 
                     <TextBlock Text="TextBox" VerticalAlignment="Center" Grid.Row="6" />
                     <TextBox Name="textBox" Grid.Row="6" Grid.Column="1" Width="200" Text="{Binding TextBoxText}" 
-                              HorizontalAlignment="Left" Margin="5" TabIndex="5"/>
+                              HorizontalAlignment="Left" Margin="5" TabIndex="5" UndoLimit="20" SelectionBrush="Red" />
 
                     <TextBlock Text="Numeric" VerticalAlignment="Center" Grid.Row="7" />
                     <ek:NumericTextBox Name="numTextBox" Grid.Row="7" Grid.Column="1" Width="200" ValueFormat="F0" ValueStyle="Integer"
-                                       HorizontalAlignment="Left" Margin="5" TabIndex="5" Value="{Binding NumericTextBoxValue}" />
+                                       HorizontalAlignment="Left" Margin="5" TabIndex="6" Value="{Binding NumericTextBoxValue}" />
 
                     <TextBlock Text="PasswordBox" VerticalAlignment="Center" Grid.Row="8" />
-                    <ek:PasswordBox Grid.Row="8" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="6" Password="{Binding Password}"/>
+                    <ek:PasswordBox Grid.Row="8" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="5" TabIndex="7" Password="{Binding Password}"/>
 
                     <TextBlock Text="ComboBox" VerticalAlignment="Center" Grid.Row="9" />
-                    <ComboBox Name="combo" Grid.Row="9" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="7" HorizontalAlignment="Left">
+                    <ComboBox Name="combo" Grid.Row="9" Grid.Column="1" Width="200" Margin="5" SelectedIndex="2" TabIndex="8" HorizontalAlignment="Left">
                         <ComboBoxItem Name="item1" Content="Item 1" />
                         <ComboBoxItem Name="item2" Content="Item 2" />
                         <ComboBoxItem Name="item3" Content="Item 3" />
@@ -117,8 +117,8 @@
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <ListBox TabIndex="8" ItemsSource="{Binding DataOne}" ek:DragDrop.IsDropTarget="True" ek:DragDrop.IsDragSource="True" />
-                        <ListBox TabIndex="9" Grid.Column="1" ItemsSource="{Binding DataTwo}" ek:DragDrop.IsDropTarget="True" ek:DragDrop.IsDragSource="True" />
+                        <ListBox TabIndex="9" ItemsSource="{Binding DataOne}" ek:DragDrop.IsDropTarget="True" ek:DragDrop.IsDragSource="True" />
+                        <ListBox TabIndex="10" Grid.Column="1" ItemsSource="{Binding DataTwo}" ek:DragDrop.IsDropTarget="True" ek:DragDrop.IsDragSource="True" />
                     </Grid>
 
                     <TextBlock Text="RadioButton" VerticalAlignment="Center" Grid.Row="11" />

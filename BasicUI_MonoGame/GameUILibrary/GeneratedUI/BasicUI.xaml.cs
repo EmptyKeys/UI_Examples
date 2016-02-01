@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.12.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.13.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -281,6 +281,8 @@ namespace EmptyKeys.UserInterface.Generated {
             textBox.Margin = new Thickness(5F, 5F, 5F, 5F);
             textBox.HorizontalAlignment = HorizontalAlignment.Left;
             textBox.TabIndex = 5;
+            textBox.SelectionBrush = new SolidColorBrush(new ColorW(255, 0, 0, 255));
+            textBox.UndoLimit = 20;
             Grid.SetColumn(textBox, 1);
             Grid.SetRow(textBox, 6);
             Binding binding_textBox_Text = new Binding("TextBoxText");
@@ -299,7 +301,7 @@ namespace EmptyKeys.UserInterface.Generated {
             numTextBox.Width = 200F;
             numTextBox.Margin = new Thickness(5F, 5F, 5F, 5F);
             numTextBox.HorizontalAlignment = HorizontalAlignment.Left;
-            numTextBox.TabIndex = 5;
+            numTextBox.TabIndex = 6;
             numTextBox.ValueFormat = "F0";
             numTextBox.ValueStyle = ((System.Globalization.NumberStyles)(7));
             Grid.SetColumn(numTextBox, 1);
@@ -320,7 +322,7 @@ namespace EmptyKeys.UserInterface.Generated {
             e_13.Width = 200F;
             e_13.Margin = new Thickness(5F, 5F, 5F, 5F);
             e_13.HorizontalAlignment = HorizontalAlignment.Left;
-            e_13.TabIndex = 6;
+            e_13.TabIndex = 7;
             Grid.SetColumn(e_13, 1);
             Grid.SetRow(e_13, 8);
             Binding binding_e_13_Password = new Binding("Password");
@@ -339,7 +341,7 @@ namespace EmptyKeys.UserInterface.Generated {
             combo.Width = 200F;
             combo.Margin = new Thickness(5F, 5F, 5F, 5F);
             combo.HorizontalAlignment = HorizontalAlignment.Left;
-            combo.TabIndex = 7;
+            combo.TabIndex = 8;
             combo.ItemsSource = Get_combo_Items();
             combo.SelectedIndex = 2;
             Grid.SetColumn(combo, 1);
@@ -365,7 +367,7 @@ namespace EmptyKeys.UserInterface.Generated {
             ListBox e_17 = new ListBox();
             e_16.Children.Add(e_17);
             e_17.Name = "e_17";
-            e_17.TabIndex = 8;
+            e_17.TabIndex = 9;
             DragDrop.SetIsDragSource(e_17, true);
             DragDrop.SetIsDropTarget(e_17, true);
             Binding binding_e_17_ItemsSource = new Binding("DataOne");
@@ -374,7 +376,7 @@ namespace EmptyKeys.UserInterface.Generated {
             ListBox e_18 = new ListBox();
             e_16.Children.Add(e_18);
             e_18.Name = "e_18";
-            e_18.TabIndex = 9;
+            e_18.TabIndex = 10;
             Grid.SetColumn(e_18, 1);
             DragDrop.SetIsDragSource(e_18, true);
             DragDrop.SetIsDropTarget(e_18, true);
