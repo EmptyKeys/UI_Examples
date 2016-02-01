@@ -13,6 +13,8 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Controls;
     using EmptyKeys.UserInterface.Controls.Primitives;
     using EmptyKeys.UserInterface.Input;
+    using EmptyKeys.UserInterface.Interactions.Core;
+    using EmptyKeys.UserInterface.Interactivity;
     using EmptyKeys.UserInterface.Media;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
@@ -21,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.10.11.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.13.0.0")]
     public partial class Root : UIRoot {
         
         private Grid e_0;
