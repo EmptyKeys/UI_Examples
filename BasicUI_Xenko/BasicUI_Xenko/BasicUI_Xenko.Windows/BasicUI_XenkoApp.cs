@@ -7,13 +7,14 @@ namespace BasicUI_Xenko
 {
     class BasicUI_XenkoApp
     {
+        private static Game game;
+
         static void Main(string[] args)
         {
             // Profiler.EnableAll();
-            using (var game = new Game())
+            using (game = new Game())
             {
-                game.GraphicsDeviceManager.DeviceCreated += GraphicsDeviceManager_DeviceCreated;
-                XenkoInputDevice.NativeInputManager = game.Input;
+                game.GraphicsDeviceManager.DeviceCreated += GraphicsDeviceManager_DeviceCreated;                
                 game.Run();
             }
         }
@@ -21,6 +22,7 @@ namespace BasicUI_Xenko
         private static void GraphicsDeviceManager_DeviceCreated(object sender, System.EventArgs e)
         {
             GraphicsDeviceManager manager = sender as GraphicsDeviceManager;
+            XenkoInputDevice.NativeInputManager = game.Input;
             Engine engine = new XenkoEngine(manager, manager.GraphicsDevice.BackBuffer.Width, manager.GraphicsDevice.BackBuffer.Height);
         }
     }
