@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.13.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.0.0.0")]
     public partial class Root : UIRoot {
         
         private Grid e_0;

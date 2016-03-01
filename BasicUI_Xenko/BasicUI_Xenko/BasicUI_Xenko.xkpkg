@@ -10,7 +10,7 @@ Meta:
     RootNamespace: BasicUI_Xenko
     Dependencies:
         -   Name: Xenko
-            Version: 1.4.0-beta
+            Version: 1.5.0-beta
             RootAssets: []
 LocalDependencies: []
 Profiles:
@@ -43,14 +43,14 @@ Bundles: []
 TemplateFolders: []
 RootAssets:
     - 1a087696-5b79-4439-877b-3ab37dd1bd4a:Click_1
-    - 3caf45bc-264e-4d1b-9dc5-05fb9e1dcf46:Segoe_UI_15_Bold
     - 4f5087d6-2774-4d77-8caf-fdf00b9851de:Move_1
     - 5babf2df-84c3-49b0-acef-8193321e26b7:Click
     - 65276ff7-b4f5-4edb-9a9c-a49c80030b70:Segoe_UI_9_Regular
     - 734c90f6-466c-4dbf-bdea-1ba01c63b89d:Move
-    - 7db3ea1d-8d3d-4c7b-b1a2-e8661a17d483:Segoe_UI_10_Regular
     - aaeb0c22-73bc-474d-aff6-7fb2ee4cf303:Images/EmptyKeysLogoTextSmall
+    - b08b49c7-f32d-4c4d-a5e3-1e636890bd7d:Segoe_UI_10_Regular
     - c0588c52-8e7a-4dfe-89fc-c92a28aa14e8:Select_1
     - c2a3354c-828d-4bfa-be5f-8254b2eb47b3:KeyPress_1
     - c545921c-735c-4230-9709-659b9a39e1a3:Select
     - eed9e017-aa5d-4e74-9b58-aa0e0492b1cf:KeyPress
+    - fa6fffe7-b2e1-40a3-b107-baa23c3a77c2:Segoe_UI_15_Bold

@@ -3,6 +3,7 @@ Id: 4f5087d6-2774-4d77-8caf-fdf00b9851de
 Tags: []
 Source: ../../Content/Move.wav
 ~Base:
+    ~Id: c661a3fd-b2d4-4fa4-8c06-b7553e5580bd
     Location: --import--
     Asset: !SoundEffect
         Id: 00000000-0000-0000-0000-000000000000

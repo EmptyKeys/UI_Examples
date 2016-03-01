@@ -90,6 +90,7 @@
         <Border Background="Blue">
             <StackPanel>
                 <TextBlock Text="{Binding TextData}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding ManualBinding}" HorizontalAlignment="Center" VerticalAlignment="Center" ek:GeneratedBindings.Mode="Manual" />
                 <Button Content="Hide Window" Command="{Binding HideCommand}" />
             </StackPanel>
         </Border>

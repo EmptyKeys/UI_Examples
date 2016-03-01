@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmptyKeys.UserInterface.Data;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Mvvm;
 
@@ -42,11 +43,13 @@ namespace GameData
             IsVisible = true;
 
             HideCommand = new RelayCommand(new Action<object>(OnHide));
+
+            GeneratedPropertyInfo.RegisterGeneratedProperty(this.GetType(), "ManualBinding", typeof(ManualBindingProperty));
         }
 
         private void OnHide(object obj)
         {
             IsVisible = false;
         }
-    }
+    }    
 }

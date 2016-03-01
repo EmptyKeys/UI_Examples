@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "1.13.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.0.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -156,6 +156,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("TitleResource", "Basic UI Example");
             ImageManager.Instance.AddImage("Images/MonoGameLogo");
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
+            GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.CustomWindow), "TextData", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.CustomWindow_TextData_PropertyInfo));
+            GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.CustomWindow), "HideCommand", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.CustomWindow_HideCommand_PropertyInfo));
+            GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.DragDropItem), "Name", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.DragDropItem_Name_PropertyInfo));
+            GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.TestTreeDataItem), "Name", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.TestTreeDataItem_Name_PropertyInfo));
         }
         
         private static UIElement r_2_ctMethod(UIElement parent) {
@@ -200,37 +204,50 @@ namespace EmptyKeys.UserInterface.Generated {
             e_4.HorizontalAlignment = HorizontalAlignment.Center;
             e_4.VerticalAlignment = VerticalAlignment.Center;
             Binding binding_e_4_Text = new Binding("TextData");
+            binding_e_4_Text.UseGeneratedBindings = true;
             e_4.SetBinding(TextBlock.TextProperty, binding_e_4_Text);
             // e_5 element
-            Button e_5 = new Button();
+            TextBlock e_5 = new TextBlock();
             e_3.Children.Add(e_5);
             e_5.Name = "e_5";
-            e_5.Content = "Hide Window";
-            Binding binding_e_5_Command = new Binding("HideCommand");
-            e_5.SetBinding(Button.CommandProperty, binding_e_5_Command);
+            e_5.HorizontalAlignment = HorizontalAlignment.Center;
+            e_5.VerticalAlignment = VerticalAlignment.Center;
+            Binding binding_e_5_Text = new Binding("ManualBinding");
+            binding_e_5_Text.UseGeneratedBindings = true;
+            e_5.SetBinding(TextBlock.TextProperty, binding_e_5_Text);
+            // e_6 element
+            Button e_6 = new Button();
+            e_3.Children.Add(e_6);
+            e_6.Name = "e_6";
+            e_6.Content = "Hide Window";
+            Binding binding_e_6_Command = new Binding("HideCommand");
+            binding_e_6_Command.UseGeneratedBindings = true;
+            e_6.SetBinding(Button.CommandProperty, binding_e_6_Command);
             return e_2;
         }
         
         private static UIElement r_4_dtMethod(UIElement parent) {
-            // e_6 element
-            TextBlock e_6 = new TextBlock();
-            e_6.Parent = parent;
-            e_6.Name = "e_6";
-            e_6.Margin = new Thickness(5F, 5F, 5F, 5F);
-            Binding binding_e_6_Text = new Binding("Name");
-            e_6.SetBinding(TextBlock.TextProperty, binding_e_6_Text);
-            return e_6;
-        }
-        
-        private static UIElement r_5_dtMethod(UIElement parent) {
             // e_7 element
             TextBlock e_7 = new TextBlock();
             e_7.Parent = parent;
             e_7.Name = "e_7";
-            e_7.Margin = new Thickness(2F, 2F, 2F, 2F);
+            e_7.Margin = new Thickness(5F, 5F, 5F, 5F);
             Binding binding_e_7_Text = new Binding("Name");
+            binding_e_7_Text.UseGeneratedBindings = true;
             e_7.SetBinding(TextBlock.TextProperty, binding_e_7_Text);
             return e_7;
+        }
+        
+        private static UIElement r_5_dtMethod(UIElement parent) {
+            // e_8 element
+            TextBlock e_8 = new TextBlock();
+            e_8.Parent = parent;
+            e_8.Name = "e_8";
+            e_8.Margin = new Thickness(2F, 2F, 2F, 2F);
+            Binding binding_e_8_Text = new Binding("Name");
+            binding_e_8_Text.UseGeneratedBindings = true;
+            e_8.SetBinding(TextBlock.TextProperty, binding_e_8_Text);
+            return e_8;
         }
     }
 }
