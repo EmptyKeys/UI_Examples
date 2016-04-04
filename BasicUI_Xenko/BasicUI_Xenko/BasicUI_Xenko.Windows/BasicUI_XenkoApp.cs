@@ -23,7 +23,7 @@ namespace BasicUI_Xenko
         {
             GraphicsDeviceManager manager = sender as GraphicsDeviceManager;
             XenkoInputDevice.NativeInputManager = game.Input;
-            Engine engine = new XenkoEngine(manager, manager.GraphicsDevice.BackBuffer.Width, manager.GraphicsDevice.BackBuffer.Height);
+            Engine engine = new XenkoEngine(manager);
         }
     }
 }

@@ -3,7 +3,7 @@
 
 /outputDir:bin\$(Platform)
 /intermediateDir:obj\$(Platform)
-/platform:Windows
+/platform:WindowsStoreApp
 /config:
 /profile:HiDef
 /compress:True
@@ -21,6 +21,7 @@
 /processorParam:GenerateMipmaps=False
 /processorParam:PremultiplyAlpha=True
 /processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/EmptyKeysLogoTextSmall.png
 
@@ -32,6 +33,7 @@
 /processorParam:GenerateMipmaps=False
 /processorParam:PremultiplyAlpha=True
 /processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/MonogameLogo.png
 

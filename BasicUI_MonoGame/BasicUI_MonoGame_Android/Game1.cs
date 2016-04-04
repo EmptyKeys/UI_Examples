@@ -17,163 +17,163 @@ namespace BasicUI_MonoGame_Android
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-	public class Game1 : Game
-	{
-		GraphicsDeviceManager graphics;        
+    public class Game1 : Game
+    {
+        GraphicsDeviceManager graphics;        
 
-		private int nativeScreenWidth;
-		private int nativeScreenHeight;
+        private int nativeScreenWidth;
+        private int nativeScreenHeight;
 
-		private BasicUI basicUI;
-		private DebugViewModel debug;
-		private BasicUIViewModel viewModel;
+        private BasicUI basicUI;
+        private DebugViewModel debug;
+        private BasicUIViewModel viewModel;
 
-		public Game1()
-			: base()
-		{
-			graphics = new GraphicsDeviceManager(this);
-			Content.RootDirectory = "Content";
-			graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;            
-			graphics.DeviceCreated += graphics_DeviceCreated;
+        public Game1()
+            : base()
+        {
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;            
+            graphics.DeviceCreated += graphics_DeviceCreated;
 
-		}
+        }
 
-		void graphics_DeviceCreated(object sender, EventArgs e)
-		{
-			Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);                    
-		}
+        void graphics_DeviceCreated(object sender, EventArgs e)
+        {
+            Engine engine = new MonoGameEngine(GraphicsDevice, nativeScreenWidth, nativeScreenHeight);                    
+        }
 
-		private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
-		{
-			nativeScreenWidth = graphics.PreferredBackBufferWidth;
-			nativeScreenHeight = graphics.PreferredBackBufferHeight;
+        private void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)
+        {
+            nativeScreenWidth = graphics.PreferredBackBufferWidth;
+            nativeScreenHeight = graphics.PreferredBackBufferHeight;
 
-			graphics.PreferredBackBufferWidth = 1280;
-			graphics.PreferredBackBufferHeight = 720;
-			graphics.PreferMultiSampling = true;            
-			graphics.GraphicsProfile = GraphicsProfile.HiDef;
-			graphics.SynchronizeWithVerticalRetrace = true;
-			graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
-			e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
-		}
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferMultiSampling = true;            
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
+            graphics.SynchronizeWithVerticalRetrace = true;
+            graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
+            e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
+        }
 
-		/// <summary>
-		/// Allows the game to perform any initialization it needs to before starting to run.
-		/// This is where it can query for any required services and load any non-graphic
-		/// related content.  Calling base.Initialize will enumerate through any components
-		/// and initialize them as well.
-		/// </summary>
-		protected override void Initialize()
-		{
-			// TODO: Add your initialization logic here
+        /// <summary>
+        /// Allows the game to perform any initialization it needs to before starting to run.
+        /// This is where it can query for any required services and load any non-graphic
+        /// related content.  Calling base.Initialize will enumerate through any components
+        /// and initialize them as well.
+        /// </summary>
+        protected override void Initialize()
+        {
+            // TODO: Add your initialization logic here
 
-			base.Initialize();
-		}
+            base.Initialize();
+        }
 
-		/// <summary>
-		/// LoadContent will be called once per game and is the place to load
-		/// all of your content.
-		/// </summary>
-		protected override void LoadContent()
-		{
-			this.IsMouseVisible = true;
+        /// <summary>
+        /// LoadContent will be called once per game and is the place to load
+        /// all of your content.
+        /// </summary>
+        protected override void LoadContent()
+        {
+            this.IsMouseVisible = true;
 
-			SpriteFont font = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
-			FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
-			Viewport viewport = GraphicsDevice.Viewport;
-			basicUI = new BasicUI(viewport.Width, viewport.Height);
-			viewModel = new BasicUIViewModel();
-			viewModel.Tetris = new TetrisController(basicUI.TetrisContainer, basicUI.TetrisNextContainer);
-			basicUI.DataContext = viewModel;
-			debug = new DebugViewModel(basicUI);           
+            SpriteFont font = Content.Load<SpriteFont>("Segoe_UI_10_Regular");
+            FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
+            Viewport viewport = GraphicsDevice.Viewport;
+            basicUI = new BasicUI(viewport.Width, viewport.Height);
+            viewModel = new BasicUIViewModel();
+            viewModel.Tetris = new TetrisController(basicUI.TetrisContainer, basicUI.TetrisNextContainer);
+            basicUI.DataContext = viewModel;
+            debug = new DebugViewModel(basicUI);           
 
-			FontManager.Instance.LoadFonts(Content);
-			ImageManager.Instance.LoadImages(Content);
-			SoundManager.Instance.LoadSounds(Content);
+            FontManager.Instance.LoadFonts(Content);
+            //ImageManager.Instance.LoadImages(Content);
+            SoundManager.Instance.LoadSounds(Content);
 
-			RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
+            RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 
-			KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
-			basicUI.InputBindings.Add(keyBinding);
+            KeyBinding keyBinding = new KeyBinding(command, KeyCode.Escape, ModifierKeys.None);
+            basicUI.InputBindings.Add(keyBinding);
 
-			RelayCommand tetrisLeft = new RelayCommand(new Action<object>(OnLeft));            
-			KeyBinding left = new KeyBinding(tetrisLeft, KeyCode.A, ModifierKeys.None);
-			basicUI.InputBindings.Add(left);
+            RelayCommand tetrisLeft = new RelayCommand(new Action<object>(OnLeft));            
+            KeyBinding left = new KeyBinding(tetrisLeft, KeyCode.A, ModifierKeys.None);
+            basicUI.InputBindings.Add(left);
 
-			RelayCommand tetrisRight = new RelayCommand(new Action<object>(OnRight));
-			KeyBinding right = new KeyBinding(tetrisRight, KeyCode.D, ModifierKeys.None);
-			basicUI.InputBindings.Add(right);
+            RelayCommand tetrisRight = new RelayCommand(new Action<object>(OnRight));
+            KeyBinding right = new KeyBinding(tetrisRight, KeyCode.D, ModifierKeys.None);
+            basicUI.InputBindings.Add(right);
 
-			RelayCommand tetrisDown = new RelayCommand(new Action<object>(OnDown));
-			KeyBinding down = new KeyBinding(tetrisDown, KeyCode.S, ModifierKeys.None);
-			basicUI.InputBindings.Add(down);
+            RelayCommand tetrisDown = new RelayCommand(new Action<object>(OnDown));
+            KeyBinding down = new KeyBinding(tetrisDown, KeyCode.S, ModifierKeys.None);
+            basicUI.InputBindings.Add(down);
 
-			RelayCommand tetrisRotate = new RelayCommand(new Action<object>(OnRotate));
-			KeyBinding rotate = new KeyBinding(tetrisRotate, KeyCode.W, ModifierKeys.None);
-			basicUI.InputBindings.Add(rotate);
-		}
+            RelayCommand tetrisRotate = new RelayCommand(new Action<object>(OnRotate));
+            KeyBinding rotate = new KeyBinding(tetrisRotate, KeyCode.W, ModifierKeys.None);
+            basicUI.InputBindings.Add(rotate);
+        }
 
-		private void OnRotate(object obj)
-		{
-			viewModel.Tetris.Rotate();
-		}
+        private void OnRotate(object obj)
+        {
+            viewModel.Tetris.Rotate();
+        }
 
-		private void OnDown(object obj)
-		{
-			viewModel.Tetris.MoveDown();
-		}
+        private void OnDown(object obj)
+        {
+            viewModel.Tetris.MoveDown();
+        }
 
-		private void OnRight(object obj)
-		{            
-			viewModel.Tetris.MoveRight();
-		}
+        private void OnRight(object obj)
+        {            
+            viewModel.Tetris.MoveRight();
+        }
 
-		private void OnLeft(object obj)
-		{
-			viewModel.Tetris.MoveLeft();
-		}
+        private void OnLeft(object obj)
+        {
+            viewModel.Tetris.MoveLeft();
+        }
 
-		private void ExitEvent(object parameter)
-		{
-			Exit();
-		}
+        private void ExitEvent(object parameter)
+        {
+            Exit();
+        }
 
-		/// <summary>
-		/// UnloadContent will be called once per game and is the place to unload
-		/// all content.
-		/// </summary>
-		protected override void UnloadContent()
-		{
-			// TODO: Unload any non ContentManager content here
-		}
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
+            // TODO: Unload any non ContentManager content here
+        }
 
-		/// <summary>
-		/// Allows the game to run logic such as updating the world,
-		/// checking for collisions, gathering input, and playing audio.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Update(GameTime gameTime)
-		{
-			debug.Update();
-			basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
+        /// <summary>
+        /// Allows the game to run logic such as updating the world,
+        /// checking for collisions, gathering input, and playing audio.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Update(GameTime gameTime)
+        {
+            debug.Update();
+            basicUI.UpdateInput(gameTime.ElapsedGameTime.TotalMilliseconds);
 
-			viewModel.Update(gameTime.ElapsedGameTime.TotalMilliseconds);
-			basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
+            viewModel.Update(gameTime.ElapsedGameTime.TotalMilliseconds);
+            basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
-			base.Update(gameTime);
-		}
+            base.Update(gameTime);
+        }
 
-		/// <summary>
-		/// This is called when the game should draw itself.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
-		protected override void Draw(GameTime gameTime)
-		{
-			GraphicsDevice.Clear(Color.CornflowerBlue);
+        /// <summary>
+        /// This is called when the game should draw itself.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
-			basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
-			debug.Draw();
-			base.Draw(gameTime);
-		}
-	}
+            basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);
+            debug.Draw();
+            base.Draw(gameTime);
+        }
+    }
 }

@@ -7,6 +7,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
+using EmptyKeys.UserInterface.Renderers;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Graphics;
@@ -24,17 +25,17 @@ namespace BasicUI_Xenko
         public override async Task Execute()
         {
 
-            SpriteFont font = await Asset.LoadAsync<SpriteFont>("Segoe_UI_10_Regular");
+            SpriteFont font = await Content.LoadAsync<SpriteFont>("Segoe_UI_10_Regular");
             FontManager.DefaultFont = Engine.Instance.Renderer.CreateFont(font);
 
-            Viewport viewport = GraphicsDevice.Viewport;
-            uiRoot = new BasicUI((int)viewport.Width, (int)viewport.Height);
+            XenkoRenderer.GraphicsContext = Game.GraphicsContext;
+            uiRoot = new BasicUI();
             debug = new DebugViewModel(uiRoot);
             uiRoot.DataContext = new BasicUIViewModel();
             
-            FontManager.Instance.LoadFonts(Asset);
-            SoundManager.Instance.LoadSounds(Asset);
-            ImageManager.Instance.LoadImages(Asset);
+            FontManager.Instance.LoadFonts(Content);
+            SoundManager.Instance.LoadSounds(Content);
+            ImageManager.Instance.LoadImages(Content);
             
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
@@ -49,10 +50,10 @@ namespace BasicUI_Xenko
             }            
         }
 
-        private void Render(RenderContext arg1, RenderFrame arg2)
+        private void Render(RenderDrawContext arg1, RenderFrame arg2)
         {
             uiRoot.Draw(Game.UpdateTime.Elapsed.TotalMilliseconds);
             debug.Draw();
-        }
+        }        
     }
 }
