@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.1.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.2.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -124,14 +124,14 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("Image", r_6_bm);
             // Resource - [Sounds] SoundSourceCollection
             var r_7_sounds = new SoundSourceCollection();
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
             SoundManager.Instance.AddSound("Click");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click", Volume = 1f });
             SoundManager.Instance.AddSound("KeyPress");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress", Volume = 1f });
             SoundManager.Instance.AddSound("Move");
-            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move", Volume = 1f });
             SoundManager.Instance.AddSound("Select");
+            r_7_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select", Volume = 1f });
             this.Add("Sounds", r_7_sounds);
             // Resource - [TetrisBorderBrush] SolidColorBrush
             this.Add("TetrisBorderBrush", new SolidColorBrush(new ColorW(114, 176, 218, 255)));

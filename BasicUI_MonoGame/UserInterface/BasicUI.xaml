@@ -75,7 +75,8 @@
 
                     <TextBlock Text="Button" VerticalAlignment="Center" />
                     <Button Name="button1" Grid.Row="0" Grid.Column="1" Content="Button 1" Width="200" Height="30" Margin="5" HorizontalAlignment="Left"
-                            Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" TabIndex="1" />
+                            Command="{Binding ButtonCommand}" CommandParameter="Click Button 1" TabIndex="1">
+                    </Button>
 
                     <Button Name="button2" Grid.Row="1" Grid.Column="1" IsEnabled="{Binding ButtonEnabled}" HorizontalAlignment="Left"
                             Content="Button 2" Width="200" Height="30" Margin="5" TabIndex="2"

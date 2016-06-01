@@ -1,7 +1,7 @@
 ﻿{
   "dependencies": {
-    "EmptyKeysUI_MonoGame": "2.1.0",
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
+    "EmptyKeysUI_MonoGame": "2.2.0",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
   },
   "frameworks": {
     "uap10.0": {}
