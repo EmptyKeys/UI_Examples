@@ -1,6 +1,6 @@
 !SceneAsset
 Id: 8c93517a-df0a-4e5f-9c48-af808ae868af
-SerializedVersion: {Xenko: 1.5.0-alpha02}
+SerializedVersion: {Xenko: 1.6.0-beta03}
 Tags: []
 Hierarchy:
     ~Id: 3f975216-23b3-401c-a4ce-b49a611fa568
@@ -11,17 +11,14 @@ Hierarchy:
                 Id: ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
                 Name: Entity
                 Components:
-                    ScriptComponent.Key:
-                        ~Id: 516894d5-d551-450f-bc1c-2d5d6ba80e09
-                        Scripts:
-                            - !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
-                                Id: 1e143e57-0fe8-4e42-9c98-1770665b15c4
-                    TransformComponent.Key:
+                    - !TransformComponent
                         ~Id: 9b2fe5e7-041e-4575-834b-2c5dc0ba4c7b
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: []
+                    - !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
+                        ~Id: 1e143e57-0fe8-4e42-9c98-1770665b15c4
             Design: {}
 SceneSettings:
     ~Id: d048f352-a808-4f53-93fb-ce78f7adda61
@@ -43,6 +40,7 @@ SceneSettings:
                     Mode: !CameraRendererModeForward
                         ~Id: b798f6bb-ddfd-483c-9b4c-5b342a0deed2
                     Camera:
+                        ~Id: 66e82a7f-a52e-422c-b889-bdc2ba866956
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
@@ -56,6 +54,7 @@ SceneSettings:
             PostProcessingEffects:
                 ~Id: aeb07de9-1a81-46c5-9a37-20dc98780d48
                 Camera:
+                    ~Id: 001d9645-b3c0-44a4-87e5-4e90d414911d
                     Index: 0
                 DepthOfField:
                     ~Id: 63fea26e-fb76-460b-98c2-ebcd2cd79e6d

@@ -5,7 +5,6 @@ Tags: []
 Source: EmptyKeysLogoTextSmall.png
 ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
 ~Base:
-    ~Id: 4c323a4e-ac54-4fd6-ad69-f7966e38cc4e
     Location: --import--
     Asset: !Texture
         Id: 00000000-0000-0000-0000-000000000000

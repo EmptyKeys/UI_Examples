@@ -3,7 +3,6 @@ Id: 734c90f6-466c-4dbf-bdea-1ba01c63b89d
 Tags: []
 Source: ../../Content/Move.wav
 ~Base:
-    ~Id: 0835290a-8cba-44f6-95b3-e782073f41c0
     Location: --import--
     Asset: !SoundMusic
         Id: 00000000-0000-0000-0000-000000000000

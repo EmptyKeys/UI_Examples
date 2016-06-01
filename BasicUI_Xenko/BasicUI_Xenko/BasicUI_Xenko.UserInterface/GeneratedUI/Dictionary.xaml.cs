@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.1.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.2.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -117,14 +117,14 @@ namespace EmptyKeys.UserInterface.Generated {
             this.Add("MessageBoxButtonYes", "Yes!");
             // Resource - [Sounds] SoundSourceCollection
             var r_4_sounds = new SoundSourceCollection();
-            r_4_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click" });
             SoundManager.Instance.AddSound("Click");
-            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress" });
+            r_4_sounds.Add(new SoundSource { SoundType = SoundType.ButtonsClick, SoundAsset = "Click", Volume = 1f });
             SoundManager.Instance.AddSound("KeyPress");
-            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move" });
+            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TextBoxKeyPress, SoundAsset = "KeyPress", Volume = 1f });
             SoundManager.Instance.AddSound("Move");
-            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select" });
+            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TabControlMove, SoundAsset = "Move", Volume = 1f });
             SoundManager.Instance.AddSound("Select");
+            r_4_sounds.Add(new SoundSource { SoundType = SoundType.TabControlSelect, SoundAsset = "Select", Volume = 1f });
             this.Add("Sounds", r_4_sounds);
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");

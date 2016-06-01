@@ -1,18 +1,19 @@
-﻿!SpriteFont
+!SpriteFont
 Id: db2e0765-c9f0-4ea3-86e2-84108c88ba30
+SerializedVersion: {Xenko: 1.5.0-alpha09}
 Tags: []
 Source: 
 FontName: Segoe UI
-Size: 15
+Size: 15.0
 Style: Bold
 IsDynamic: false
 DefaultCharacter: '*'
 CharacterSet: 
 CharacterRegions:
-    -   Start: ' '
+    -   ~Id: b8a11b45-97d9-4ce0-aa48-a7fe43fec75a
+        Start: ' '
         End: "΃"
 AntiAlias: ClearType
-NoPremultiply: false
 Spacing: 0.0
 LineSpacing: 0.0
 UseKerning: true

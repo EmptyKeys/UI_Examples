@@ -3,7 +3,6 @@ Id: 1a087696-5b79-4439-877b-3ab37dd1bd4a
 Tags: []
 Source: ../../Content/Click.wav
 ~Base:
-    ~Id: 34e6b50d-67a5-47da-aa83-c4b2c1a8717c
     Location: --import--
     Asset: !SoundEffect
         Id: 00000000-0000-0000-0000-000000000000

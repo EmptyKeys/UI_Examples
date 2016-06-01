@@ -3,7 +3,6 @@ Id: c545921c-735c-4230-9709-659b9a39e1a3
 Tags: []
 Source: ../../Content/Select.wav
 ~Base:
-    ~Id: 4a373411-053f-47b2-b1fc-b9258e787cd3
     Location: --import--
     Asset: !SoundMusic
         Id: 00000000-0000-0000-0000-000000000000
