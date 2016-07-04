@@ -1,11 +1,6 @@
-!SoundMusic
+!Sound
 Id: c545921c-735c-4230-9709-659b9a39e1a3
 Tags: []
 Source: ../../Content/Select.wav
-~Base:
-    Location: --import--
-    Asset: !SoundMusic
-        Id: 00000000-0000-0000-0000-000000000000
-        Tags: []
-        Source: 
-        ImporterId: 5adcb5b0-7011-4d28-9741-23ec7c3df617
+Spatialized: false
+StreamFromDisk: true

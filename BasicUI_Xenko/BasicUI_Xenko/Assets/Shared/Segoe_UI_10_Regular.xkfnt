@@ -1,19 +1,18 @@
-!SpriteFont
-Id: e80374a8-3305-4361-81d6-2378f5791d72
-SerializedVersion: {Xenko: 1.5.0-alpha09}
+﻿!SpriteFont
+Id: afd00579-022c-41e0-8616-822e9aa9abdf
+SerializedVersion: {Xenko: 1.7.0-beta04}
 Tags: []
-Source: 
-FontName: Segoe UI
-Size: 10.0
-Style: Regular
-IsDynamic: false
+FontSource: !SystemFontProvider
+    ~Id: 23964979-4696-4623-8c57-b4422fc60e0b
+    FontName: Segoe UI
+    Style: Regular
+FontType: !OfflineRasterizedSpriteFontType
+    ~Id: 2aaaf0ad-8a90-4fb2-9e76-3e49aea50a01
+    Size: 13.3333333333333
+    CharacterSet: 
+    CharacterRegions:
+        -   ~Id: bb19ca7c-5e5b-4c83-88fb-10ceb9782c3d
+            Start: ' '
+            End: "΃"
+    AntiAlias: ClearType
 DefaultCharacter: '*'
-CharacterSet: 
-CharacterRegions:
-    -   ~Id: 0febac6d-2113-499b-8f48-6f94bb61e994
-        Start: ' '
-        End: "΃"
-AntiAlias: ClearType
-Spacing: 0.0
-LineSpacing: 0.0
-UseKerning: true

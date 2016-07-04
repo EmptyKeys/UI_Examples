@@ -1,25 +1,7 @@
 !SceneAsset
 Id: 8c93517a-df0a-4e5f-9c48-af808ae868af
-SerializedVersion: {Xenko: 1.6.0-beta03}
+SerializedVersion: {Xenko: 1.7.0-beta04}
 Tags: []
-Hierarchy:
-    ~Id: 3f975216-23b3-401c-a4ce-b49a611fa568
-    RootEntities:
-        - ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
-    Entities:
-        -   Entity:
-                Id: ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
-                Name: Entity
-                Components:
-                    - !TransformComponent
-                        ~Id: 9b2fe5e7-041e-4575-834b-2c5dc0ba4c7b
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: []
-                    - !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
-                        ~Id: 1e143e57-0fe8-4e42-9c98-1770665b15c4
-            Design: {}
 SceneSettings:
     ~Id: d048f352-a808-4f53-93fb-ce78f7adda61
     GraphicsCompositor: !SceneGraphicsCompositorLayers
@@ -44,6 +26,7 @@ SceneSettings:
                         Index: 0
                     Output: !CurrentRenderFrameProvider {}
                     Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+                    ForceAspectRatio: false
     EditorSettings:
         ~Id: 2174e9a2-7f6d-470f-bec1-fa38dfd7d48f
         GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
@@ -93,3 +76,20 @@ SceneSettings:
                             Color: {R: 0.0, G: 0.0, B: 0.0}
                 Antialiasing: !FXAAEffect
                     ~Id: ccf2365b-ea51-4f0f-9342-db3e0b033da1
+Hierarchy:
+    ~Id: 3f975216-23b3-401c-a4ce-b49a611fa568
+    RootPartIds:
+        - ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
+    Parts:
+        -   Entity:
+                Id: ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
+                Name: Entity
+                Components:
+                    - !TransformComponent
+                        ~Id: 9b2fe5e7-041e-4575-834b-2c5dc0ba4c7b
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                    - !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
+                        ~Id: 1e143e57-0fe8-4e42-9c98-1770665b15c4

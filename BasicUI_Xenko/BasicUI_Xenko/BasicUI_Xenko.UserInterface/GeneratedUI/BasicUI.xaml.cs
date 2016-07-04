@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.2.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.3.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -125,9 +125,6 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_1.Children.Add(this.logo);
             this.logo.Name = "logo";
             this.logo.HorizontalAlignment = HorizontalAlignment.Center;
-            BitmapImage logo_bm = new BitmapImage();
-            logo_bm.TextureAsset = "Images/EmptyKeysLogoTextSmall";
-            this.logo.Source = logo_bm;
             this.logo.Stretch = Stretch.None;
             this.logo.SetResourceReference(Image.SourceProperty, "logoEmptyKeys");
             // e_2 element
@@ -370,7 +367,6 @@ namespace EmptyKeys.UserInterface.Generated {
             Storyboard.SetTargetName(animBorder2_ET_0_AC_0_SB_TL_1, "animBorder2");
             Storyboard.SetTargetProperty(animBorder2_ET_0_AC_0_SB_TL_1, Border.OpacityProperty);
             animBorder2_ET_0_AC_0_SB.Children.Add(animBorder2_ET_0_AC_0_SB_TL_1);
-            ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
             FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
             FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
