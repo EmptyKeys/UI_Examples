@@ -85,6 +85,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UserControlTest.xaml.cs">
+      <DependentUpon>UserControlTest.xaml</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -109,6 +112,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControlTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="BehaviorsLicense.txt" />
@@ -130,7 +137,7 @@
   <PropertyGroup>
     <PostBuildEvent>CD "$(SolutionDir)packages\EmptyKeysUI_Generator*\tools"
 
-ekUIGen.exe -i="$(ProjectDir)\" -o="$(ProjectDir)..\GameUILibrary\GeneratedUI" -oa="$(ProjectDir)..\Content" -bd="$(TargetDir)\" -rm=MonoGame /generate-bindings</PostBuildEvent>
+ekUIGen.exe -i="$(ProjectDir)\" -o="$(ProjectDir)..\GameUILibrary\GeneratedUI" -oa="$(ProjectDir)..\Content" -bd="$(TargetDir)\" -rm=MonoGame /generate-bindings /da:UserInterface</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

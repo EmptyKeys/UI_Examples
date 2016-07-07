@@ -1010,6 +1010,15 @@ namespace EmptyKeys.UserInterface.Generated {
             e_81.Name = "e_81";
             e_81.Text = "Use A,S,D,W for left, down, right, rotate";
             items.Add(e_63);
+            // e_82 element
+            TabItem e_82 = new TabItem();
+            e_82.Name = "e_82";
+            e_82.Header = "User Control";
+            // e_83 element
+            UserControlTest e_83 = new UserControlTest();
+            e_82.Content = e_83;
+            e_83.Name = "e_83";
+            items.Add(e_82);
             return items;
         }
         
