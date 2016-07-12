@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
@@ -34,8 +35,17 @@ namespace BasicUI_MonoGame_Win_Desktop
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;            
-            graphics.DeviceCreated += graphics_DeviceCreated;
+            graphics.DeviceCreated += graphics_DeviceCreated;            
+            Window.ClientSizeChanged += Window_ClientSizeChanged;
+        }
 
+        private void Window_ClientSizeChanged(object sender, EventArgs e)
+        {
+            if (basicUI != null)
+            {
+                Viewport viewPort = GraphicsDevice.Viewport;
+                basicUI.Resize(viewPort.Width, viewPort.Height);                
+            }
         }
 
         void graphics_DeviceCreated(object sender, EventArgs e)
@@ -53,7 +63,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             graphics.PreferMultiSampling = true;            
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             graphics.SynchronizeWithVerticalRetrace = true;
-            graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;
+            graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;            
             e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
         }
 
@@ -111,6 +121,17 @@ namespace BasicUI_MonoGame_Win_Desktop
             RelayCommand tetrisRotate = new RelayCommand(new Action<object>(OnRotate));
             KeyBinding rotate = new KeyBinding(tetrisRotate, KeyCode.W, ModifierKeys.None);
             basicUI.InputBindings.Add(rotate);
+
+            RelayCommand resizeCommand = new RelayCommand(new Action<object>(OnResize));
+            KeyBinding resizeBinding = new KeyBinding(resizeCommand, KeyCode.R, ModifierKeys.Control);
+            basicUI.InputBindings.Add(resizeBinding);
+        }
+
+        private void OnResize(object obj)
+        {            
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.ApplyChanges();
         }
 
         private void OnRotate(object obj)
@@ -161,6 +182,8 @@ namespace BasicUI_MonoGame_Win_Desktop
             basicUI.UpdateLayout(gameTime.ElapsedGameTime.TotalMilliseconds);
 
             base.Update(gameTime);
+
+
         }
 
         /// <summary>
