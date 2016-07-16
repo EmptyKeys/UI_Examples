@@ -6,6 +6,7 @@ using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Media;
+using EmptyKeys.UserInterface.Media.Imaging;
 using GameUILibrary;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -20,10 +21,13 @@ namespace BasicUI_MonoGame_Win_Desktop
     /// </summary>
     public class Game1 : Game
     {
+        private readonly Random random = new Random();
+
         GraphicsDeviceManager graphics;        
 
         private int nativeScreenWidth;
         private int nativeScreenHeight;
+        private RenderTarget2D renderTarget;
 
         private BasicUI basicUI;
         private DebugViewModel debug;
@@ -125,6 +129,17 @@ namespace BasicUI_MonoGame_Win_Desktop
             RelayCommand resizeCommand = new RelayCommand(new Action<object>(OnResize));
             KeyBinding resizeBinding = new KeyBinding(resizeCommand, KeyCode.R, ModifierKeys.Control);
             basicUI.InputBindings.Add(resizeBinding);
+
+            renderTarget = new RenderTarget2D(GraphicsDevice,
+                100,
+                100,
+                false,
+                GraphicsDevice.PresentationParameters.BackBufferFormat,
+                DepthFormat.Depth24Stencil8);
+
+            viewModel.RenderTargetSource = new BitmapImage();
+            var texture = Engine.Instance.Renderer.CreateTexture(renderTarget);
+            viewModel.RenderTargetSource.Texture = texture;
         }
 
         private void OnResize(object obj)
@@ -192,6 +207,15 @@ namespace BasicUI_MonoGame_Win_Desktop
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.SetRenderTarget(renderTarget);
+            Color color = new Color();
+            color.A = 255;
+            color.R = (byte)random.Next(0, 255);
+            color.G = (byte)random.Next(0, 255);
+            color.B = (byte)random.Next(0, 255);
+            GraphicsDevice.Clear(color);
+            GraphicsDevice.SetRenderTarget(null);
+
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             basicUI.Draw(gameTime.ElapsedGameTime.TotalMilliseconds);

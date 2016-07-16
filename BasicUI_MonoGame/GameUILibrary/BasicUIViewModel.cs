@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Input;
+using EmptyKeys.UserInterface.Media.Imaging;
 using EmptyKeys.UserInterface.Mvvm;
 using GameData;
 
@@ -30,6 +31,7 @@ namespace GameUILibrary
         private List<PointF> chartData;
         private ObservableCollection<DragDropItem> dataOne;
         private ObservableCollection<DragDropItem> dataTwo;
+        private BitmapImage renderTargetSource;
 
         /// <summary>
         /// Gets or sets the tetris.
@@ -209,6 +211,18 @@ namespace GameUILibrary
         {
             get { return dataTwo; }
             set { SetProperty(ref dataTwo, value); }
+        }
+
+        /// <summary>
+        /// Gets or sets the render target source.
+        /// </summary>
+        /// <value>
+        /// The render target source.
+        /// </value>
+        public BitmapImage RenderTargetSource
+        {
+            get { return renderTargetSource; }
+            set { SetProperty(ref renderTargetSource, value); }
         }
 
         /// <summary>

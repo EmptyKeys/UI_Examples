@@ -722,54 +722,62 @@ namespace EmptyKeys.UserInterface.Generated {
             e_59.RadiusY = 10F;
             Grid.SetColumn(e_59, 1);
             Grid.SetRow(e_59, 2);
-            items.Add(e_48);
             // e_60 element
-            TabItem e_60 = new TabItem();
+            Image e_60 = new Image();
+            e_49.Children.Add(e_60);
             e_60.Name = "e_60";
-            e_60.Header = "Animations";
+            Grid.SetColumn(e_60, 2);
+            Grid.SetRow(e_60, 2);
+            Binding binding_e_60_Source = new Binding("RenderTargetSource");
+            e_60.SetBinding(Image.SourceProperty, binding_e_60_Source);
+            items.Add(e_48);
             // e_61 element
-            Grid e_61 = new Grid();
-            e_60.Content = e_61;
+            TabItem e_61 = new TabItem();
             e_61.Name = "e_61";
-            ColumnDefinition col_e_61_0 = new ColumnDefinition();
-            e_61.ColumnDefinitions.Add(col_e_61_0);
-            ColumnDefinition col_e_61_1 = new ColumnDefinition();
-            e_61.ColumnDefinitions.Add(col_e_61_1);
+            e_61.Header = "Animations";
             // e_62 element
-            StackPanel e_62 = new StackPanel();
-            e_61.Children.Add(e_62);
+            Grid e_62 = new Grid();
+            e_61.Content = e_62;
             e_62.Name = "e_62";
+            ColumnDefinition col_e_62_0 = new ColumnDefinition();
+            e_62.ColumnDefinitions.Add(col_e_62_0);
+            ColumnDefinition col_e_62_1 = new ColumnDefinition();
+            e_62.ColumnDefinitions.Add(col_e_62_1);
+            // e_63 element
+            StackPanel e_63 = new StackPanel();
+            e_62.Children.Add(e_63);
+            e_63.Name = "e_63";
             // animButton1 element
             Button animButton1 = new Button();
-            e_62.Children.Add(animButton1);
+            e_63.Children.Add(animButton1);
             animButton1.Name = "animButton1";
             animButton1.TabIndex = 1;
             animButton1.Content = "Mouse Over me!";
             animButton1.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton2 element
             Button animButton2 = new Button();
-            e_62.Children.Add(animButton2);
+            e_63.Children.Add(animButton2);
             animButton2.Name = "animButton2";
             animButton2.TabIndex = 2;
             animButton2.Content = "Mouse Over me!";
             animButton2.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton3 element
             Button animButton3 = new Button();
-            e_62.Children.Add(animButton3);
+            e_63.Children.Add(animButton3);
             animButton3.Name = "animButton3";
             animButton3.TabIndex = 3;
             animButton3.Content = "Mouse Over me!";
             animButton3.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animButton4 element
             Button animButton4 = new Button();
-            e_62.Children.Add(animButton4);
+            e_63.Children.Add(animButton4);
             animButton4.Name = "animButton4";
             animButton4.TabIndex = 4;
             animButton4.Content = "Mouse Over me!";
             animButton4.SetResourceReference(Button.StyleProperty, "buttonAnimStyle");
             // animBorder1 element
             Border animBorder1 = new Border();
-            e_61.Children.Add(animBorder1);
+            e_62.Children.Add(animBorder1);
             animBorder1.Name = "animBorder1";
             animBorder1.Height = 100F;
             animBorder1.Width = 200F;
@@ -798,7 +806,7 @@ namespace EmptyKeys.UserInterface.Generated {
             Grid.SetColumn(animBorder1, 1);
             // animBorder2 element
             Border animBorder2 = new Border();
-            e_61.Children.Add(animBorder2);
+            e_62.Children.Add(animBorder2);
             animBorder2.Name = "animBorder2";
             animBorder2.Height = 50F;
             animBorder2.Width = 100F;
@@ -835,190 +843,190 @@ namespace EmptyKeys.UserInterface.Generated {
             Storyboard.SetTargetProperty(animBorder2_ET_0_AC_0_SB_TL_1, Border.OpacityProperty);
             animBorder2_ET_0_AC_0_SB.Children.Add(animBorder2_ET_0_AC_0_SB_TL_1);
             Grid.SetColumn(animBorder2, 1);
-            items.Add(e_60);
-            // e_63 element
-            TabItem e_63 = new TabItem();
-            e_63.Name = "e_63";
-            e_63.Header = "Tetris";
+            items.Add(e_61);
             // e_64 element
-            Border e_64 = new Border();
-            e_63.Content = e_64;
+            TabItem e_64 = new TabItem();
             e_64.Name = "e_64";
+            e_64.Header = "Tetris";
             // e_65 element
-            Grid e_65 = new Grid();
-            e_64.Child = e_65;
+            Border e_65 = new Border();
+            e_64.Content = e_65;
             e_65.Name = "e_65";
-            e_65.Margin = new Thickness(10F, 10F, 10F, 10F);
-            RowDefinition row_e_65_0 = new RowDefinition();
-            row_e_65_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_65.RowDefinitions.Add(row_e_65_0);
-            RowDefinition row_e_65_1 = new RowDefinition();
-            row_e_65_1.Height = new GridLength(420F, GridUnitType.Pixel);
-            e_65.RowDefinitions.Add(row_e_65_1);
-            ColumnDefinition col_e_65_0 = new ColumnDefinition();
-            e_65.ColumnDefinitions.Add(col_e_65_0);
-            ColumnDefinition col_e_65_1 = new ColumnDefinition();
-            e_65.ColumnDefinitions.Add(col_e_65_1);
-            ColumnDefinition col_e_65_2 = new ColumnDefinition();
-            e_65.ColumnDefinitions.Add(col_e_65_2);
             // e_66 element
-            StackPanel e_66 = new StackPanel();
-            e_65.Children.Add(e_66);
+            Grid e_66 = new Grid();
+            e_65.Child = e_66;
             e_66.Name = "e_66";
-            e_66.HorizontalAlignment = HorizontalAlignment.Right;
-            e_66.Orientation = Orientation.Vertical;
-            Grid.SetRow(e_66, 1);
+            e_66.Margin = new Thickness(10F, 10F, 10F, 10F);
+            RowDefinition row_e_66_0 = new RowDefinition();
+            row_e_66_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_66.RowDefinitions.Add(row_e_66_0);
+            RowDefinition row_e_66_1 = new RowDefinition();
+            row_e_66_1.Height = new GridLength(420F, GridUnitType.Pixel);
+            e_66.RowDefinitions.Add(row_e_66_1);
+            ColumnDefinition col_e_66_0 = new ColumnDefinition();
+            e_66.ColumnDefinitions.Add(col_e_66_0);
+            ColumnDefinition col_e_66_1 = new ColumnDefinition();
+            e_66.ColumnDefinitions.Add(col_e_66_1);
+            ColumnDefinition col_e_66_2 = new ColumnDefinition();
+            e_66.ColumnDefinitions.Add(col_e_66_2);
             // e_67 element
-            TextBlock e_67 = new TextBlock();
+            StackPanel e_67 = new StackPanel();
             e_66.Children.Add(e_67);
             e_67.Name = "e_67";
-            e_67.Text = "Next";
+            e_67.HorizontalAlignment = HorizontalAlignment.Right;
+            e_67.Orientation = Orientation.Vertical;
+            Grid.SetRow(e_67, 1);
             // e_68 element
-            Border e_68 = new Border();
-            e_66.Children.Add(e_68);
+            TextBlock e_68 = new TextBlock();
+            e_67.Children.Add(e_68);
             e_68.Name = "e_68";
-            e_68.Height = 81F;
-            e_68.Width = 81F;
-            e_68.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            e_68.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
+            e_68.Text = "Next";
+            // e_69 element
+            Border e_69 = new Border();
+            e_67.Children.Add(e_69);
+            e_69.Name = "e_69";
+            e_69.Height = 81F;
+            e_69.Width = 81F;
+            e_69.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            e_69.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
             // tetrisNextContainer1 element
             Canvas tetrisNextContainer1 = new Canvas();
-            e_68.Child = tetrisNextContainer1;
+            e_69.Child = tetrisNextContainer1;
             tetrisNextContainer1.Name = "tetrisNextContainer1";
             tetrisNextContainer1.Height = 80F;
             tetrisNextContainer1.Width = 80F;
-            // e_69 element
-            Border e_69 = new Border();
-            e_65.Children.Add(e_69);
-            e_69.Name = "e_69";
-            e_69.Height = 401F;
-            e_69.Width = 201F;
-            e_69.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
-            e_69.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
-            Grid.SetColumn(e_69, 1);
-            Grid.SetRow(e_69, 1);
+            // e_70 element
+            Border e_70 = new Border();
+            e_66.Children.Add(e_70);
+            e_70.Name = "e_70";
+            e_70.Height = 401F;
+            e_70.Width = 201F;
+            e_70.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
+            e_70.BorderThickness = new Thickness(0F, 0F, 1F, 1F);
+            Grid.SetColumn(e_70, 1);
+            Grid.SetRow(e_70, 1);
             // tetrisContainer1 element
             Canvas tetrisContainer1 = new Canvas();
-            e_69.Child = tetrisContainer1;
+            e_70.Child = tetrisContainer1;
             tetrisContainer1.Name = "tetrisContainer1";
             tetrisContainer1.Height = 400F;
             tetrisContainer1.Width = 200F;
             tetrisContainer1.HorizontalAlignment = HorizontalAlignment.Left;
             tetrisContainer1.VerticalAlignment = VerticalAlignment.Top;
-            // e_70 element
-            Grid e_70 = new Grid();
-            e_65.Children.Add(e_70);
-            e_70.Name = "e_70";
-            RowDefinition row_e_70_0 = new RowDefinition();
-            row_e_70_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_70.RowDefinitions.Add(row_e_70_0);
-            RowDefinition row_e_70_1 = new RowDefinition();
-            row_e_70_1.Height = new GridLength(1F, GridUnitType.Auto);
-            e_70.RowDefinitions.Add(row_e_70_1);
-            ColumnDefinition col_e_70_0 = new ColumnDefinition();
-            col_e_70_0.Width = new GridLength(1F, GridUnitType.Auto);
-            e_70.ColumnDefinitions.Add(col_e_70_0);
-            ColumnDefinition col_e_70_1 = new ColumnDefinition();
-            col_e_70_1.Width = new GridLength(1F, GridUnitType.Star);
-            e_70.ColumnDefinitions.Add(col_e_70_1);
-            ColumnDefinition col_e_70_2 = new ColumnDefinition();
-            col_e_70_2.Width = new GridLength(1F, GridUnitType.Auto);
-            e_70.ColumnDefinitions.Add(col_e_70_2);
-            Grid.SetColumnSpan(e_70, 3);
-            Binding binding_e_70_DataContext = new Binding("Tetris");
-            e_70.SetBinding(Grid.DataContextProperty, binding_e_70_DataContext);
             // e_71 element
-            Button e_71 = new Button();
-            e_70.Children.Add(e_71);
+            Grid e_71 = new Grid();
+            e_66.Children.Add(e_71);
             e_71.Name = "e_71";
-            e_71.Height = 30F;
-            e_71.Content = "Start";
+            RowDefinition row_e_71_0 = new RowDefinition();
+            row_e_71_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_71.RowDefinitions.Add(row_e_71_0);
+            RowDefinition row_e_71_1 = new RowDefinition();
+            row_e_71_1.Height = new GridLength(1F, GridUnitType.Auto);
+            e_71.RowDefinitions.Add(row_e_71_1);
+            ColumnDefinition col_e_71_0 = new ColumnDefinition();
+            col_e_71_0.Width = new GridLength(1F, GridUnitType.Auto);
+            e_71.ColumnDefinitions.Add(col_e_71_0);
+            ColumnDefinition col_e_71_1 = new ColumnDefinition();
+            col_e_71_1.Width = new GridLength(1F, GridUnitType.Star);
+            e_71.ColumnDefinitions.Add(col_e_71_1);
+            ColumnDefinition col_e_71_2 = new ColumnDefinition();
+            col_e_71_2.Width = new GridLength(1F, GridUnitType.Auto);
+            e_71.ColumnDefinitions.Add(col_e_71_2);
             Grid.SetColumnSpan(e_71, 3);
-            Binding binding_e_71_Command = new Binding("StartCommand");
-            e_71.SetBinding(Button.CommandProperty, binding_e_71_Command);
+            Binding binding_e_71_DataContext = new Binding("Tetris");
+            e_71.SetBinding(Grid.DataContextProperty, binding_e_71_DataContext);
             // e_72 element
-            Grid e_72 = new Grid();
-            e_70.Children.Add(e_72);
+            Button e_72 = new Button();
+            e_71.Children.Add(e_72);
             e_72.Name = "e_72";
-            RowDefinition row_e_72_0 = new RowDefinition();
-            row_e_72_0.Height = new GridLength(1F, GridUnitType.Auto);
-            e_72.RowDefinitions.Add(row_e_72_0);
-            ColumnDefinition col_e_72_0 = new ColumnDefinition();
-            e_72.ColumnDefinitions.Add(col_e_72_0);
-            ColumnDefinition col_e_72_1 = new ColumnDefinition();
-            col_e_72_1.Width = new GridLength(70F, GridUnitType.Pixel);
-            e_72.ColumnDefinitions.Add(col_e_72_1);
-            ColumnDefinition col_e_72_2 = new ColumnDefinition();
-            e_72.ColumnDefinitions.Add(col_e_72_2);
-            Grid.SetColumn(e_72, 1);
-            Grid.SetRow(e_72, 1);
+            e_72.Height = 30F;
+            e_72.Content = "Start";
+            Grid.SetColumnSpan(e_72, 3);
+            Binding binding_e_72_Command = new Binding("StartCommand");
+            e_72.SetBinding(Button.CommandProperty, binding_e_72_Command);
+            // e_73 element
+            Grid e_73 = new Grid();
+            e_71.Children.Add(e_73);
+            e_73.Name = "e_73";
+            RowDefinition row_e_73_0 = new RowDefinition();
+            row_e_73_0.Height = new GridLength(1F, GridUnitType.Auto);
+            e_73.RowDefinitions.Add(row_e_73_0);
+            ColumnDefinition col_e_73_0 = new ColumnDefinition();
+            e_73.ColumnDefinitions.Add(col_e_73_0);
+            ColumnDefinition col_e_73_1 = new ColumnDefinition();
+            col_e_73_1.Width = new GridLength(70F, GridUnitType.Pixel);
+            e_73.ColumnDefinitions.Add(col_e_73_1);
+            ColumnDefinition col_e_73_2 = new ColumnDefinition();
+            e_73.ColumnDefinitions.Add(col_e_73_2);
+            Grid.SetColumn(e_73, 1);
+            Grid.SetRow(e_73, 1);
             // spPlayer1 element
             StackPanel spPlayer1 = new StackPanel();
-            e_72.Children.Add(spPlayer1);
+            e_73.Children.Add(spPlayer1);
             spPlayer1.Name = "spPlayer1";
             spPlayer1.HorizontalAlignment = HorizontalAlignment.Right;
             spPlayer1.Orientation = Orientation.Vertical;
-            // e_73 element
-            TextBlock e_73 = new TextBlock();
-            spPlayer1.Children.Add(e_73);
-            e_73.Name = "e_73";
-            Binding binding_e_73_Text = new Binding("Score");
-            e_73.SetBinding(TextBlock.TextProperty, binding_e_73_Text);
             // e_74 element
             TextBlock e_74 = new TextBlock();
             spPlayer1.Children.Add(e_74);
             e_74.Name = "e_74";
-            Binding binding_e_74_Text = new Binding("Lines");
+            Binding binding_e_74_Text = new Binding("Score");
             e_74.SetBinding(TextBlock.TextProperty, binding_e_74_Text);
             // e_75 element
             TextBlock e_75 = new TextBlock();
             spPlayer1.Children.Add(e_75);
             e_75.Name = "e_75";
-            Binding binding_e_75_Text = new Binding("Level");
+            Binding binding_e_75_Text = new Binding("Lines");
             e_75.SetBinding(TextBlock.TextProperty, binding_e_75_Text);
             // e_76 element
-            StackPanel e_76 = new StackPanel();
-            e_72.Children.Add(e_76);
+            TextBlock e_76 = new TextBlock();
+            spPlayer1.Children.Add(e_76);
             e_76.Name = "e_76";
-            e_76.HorizontalAlignment = HorizontalAlignment.Center;
-            e_76.Orientation = Orientation.Vertical;
-            Grid.SetColumn(e_76, 1);
+            Binding binding_e_76_Text = new Binding("Level");
+            e_76.SetBinding(TextBlock.TextProperty, binding_e_76_Text);
             // e_77 element
-            TextBlock e_77 = new TextBlock();
-            e_76.Children.Add(e_77);
+            StackPanel e_77 = new StackPanel();
+            e_73.Children.Add(e_77);
             e_77.Name = "e_77";
-            e_77.Text = "SCORE";
+            e_77.HorizontalAlignment = HorizontalAlignment.Center;
+            e_77.Orientation = Orientation.Vertical;
+            Grid.SetColumn(e_77, 1);
             // e_78 element
             TextBlock e_78 = new TextBlock();
-            e_76.Children.Add(e_78);
+            e_77.Children.Add(e_78);
             e_78.Name = "e_78";
-            e_78.Text = "LINES";
+            e_78.Text = "SCORE";
             // e_79 element
             TextBlock e_79 = new TextBlock();
-            e_76.Children.Add(e_79);
+            e_77.Children.Add(e_79);
             e_79.Name = "e_79";
-            e_79.Text = "LEVEL";
+            e_79.Text = "LINES";
             // e_80 element
-            StackPanel e_80 = new StackPanel();
-            e_72.Children.Add(e_80);
+            TextBlock e_80 = new TextBlock();
+            e_77.Children.Add(e_80);
             e_80.Name = "e_80";
-            e_80.HorizontalAlignment = HorizontalAlignment.Left;
-            e_80.Orientation = Orientation.Horizontal;
+            e_80.Text = "LEVEL";
             // e_81 element
-            TextBlock e_81 = new TextBlock();
-            e_80.Children.Add(e_81);
+            StackPanel e_81 = new StackPanel();
+            e_73.Children.Add(e_81);
             e_81.Name = "e_81";
-            e_81.Text = "Use A,S,D,W for left, down, right, rotate";
-            items.Add(e_63);
+            e_81.HorizontalAlignment = HorizontalAlignment.Left;
+            e_81.Orientation = Orientation.Horizontal;
             // e_82 element
-            TabItem e_82 = new TabItem();
+            TextBlock e_82 = new TextBlock();
+            e_81.Children.Add(e_82);
             e_82.Name = "e_82";
-            e_82.Header = "User Control";
+            e_82.Text = "Use A,S,D,W for left, down, right, rotate";
+            items.Add(e_64);
             // e_83 element
-            UserControlTest e_83 = new UserControlTest();
-            e_82.Content = e_83;
+            TabItem e_83 = new TabItem();
             e_83.Name = "e_83";
-            items.Add(e_82);
+            e_83.Header = "User Control";
+            // e_84 element
+            UserControlTest e_84 = new UserControlTest();
+            e_83.Content = e_84;
+            e_84.Name = "e_84";
+            items.Add(e_83);
             return items;
         }
         

@@ -250,6 +250,8 @@
                             <ImageBrush Stretch="None" ImageSource="{StaticResource Image}" />
                         </Rectangle.Fill>
                     </Rectangle>
+
+                    <Image Grid.Row="2" Grid.Column="2" Source="{Binding RenderTargetSource}" />
                 </Grid>
             </TabItem>
             <TabItem Header="Animations">
