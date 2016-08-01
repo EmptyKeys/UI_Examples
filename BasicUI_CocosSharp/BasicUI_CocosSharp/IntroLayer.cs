@@ -5,6 +5,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
+using EmptyKeys.UserInterface.Media.Effects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -46,6 +47,7 @@ namespace BasicUI_CocosSharp
             SoundManager.Instance.LoadSounds(content, "sounds");
             ImageManager.Instance.LoadImages(content);
             FontManager.Instance.LoadFonts(content, "fonts");
+            EffectManager.Instance.LoadEffects(content);
 
             Schedule(UpdateUI);
 

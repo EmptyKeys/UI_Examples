@@ -16,6 +16,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Interactions.Core;
     using EmptyKeys.UserInterface.Interactivity;
     using EmptyKeys.UserInterface.Media;
+    using EmptyKeys.UserInterface.Media.Effects;
     using EmptyKeys.UserInterface.Media.Animation;
     using EmptyKeys.UserInterface.Media.Imaging;
     using EmptyKeys.UserInterface.Shapes;
@@ -23,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.3.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.4.0.0")]
     public partial class BasicUI : UIRoot {
         
         private Grid e_0;
@@ -125,6 +126,10 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_1.Children.Add(this.logo);
             this.logo.Name = "logo";
             this.logo.HorizontalAlignment = HorizontalAlignment.Center;
+            DirectionalBlurEffect logo_dbef = new DirectionalBlurEffect();
+            logo_dbef.Angle = 0F;
+            logo_dbef.BlurAmount = 0.002F;
+            this.logo.Effect = logo_dbef;
             this.logo.Stretch = Stretch.None;
             this.logo.SetResourceReference(Image.SourceProperty, "logoEmptyKeys");
             // e_2 element

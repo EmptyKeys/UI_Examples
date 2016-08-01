@@ -3,6 +3,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
+             xmlns:ef="clr-namespace:EmptyKeys.UserInterface.Designer.Effects;assembly=EmptyKeys.UserInterface.Designer"
              xmlns:c="clr-namespace:EmptyKeys.UserInterface.Designer.Charts;assembly=EmptyKeys.UserInterface.Designer"
              xmlns:local="clr-namespace:UserInterface"
              mc:Ignorable="d" 
@@ -47,6 +48,9 @@
                 <Image.Source>
                     <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
                 </Image.Source>
+                <Image.Effect>
+                    <ef:DirectionalBlurEffect Angle="0" BlurAmount="0.002" />
+                </Image.Effect>
             </Image>
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />

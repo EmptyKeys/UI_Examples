@@ -6,6 +6,7 @@ using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Input;
 using EmptyKeys.UserInterface.Media;
+using EmptyKeys.UserInterface.Media.Effects;
 using EmptyKeys.UserInterface.Media.Imaging;
 using GameUILibrary;
 using Microsoft.Xna.Framework;
@@ -104,6 +105,7 @@ namespace BasicUI_MonoGame_Win_Desktop
             FontManager.Instance.LoadFonts(Content);
             ImageManager.Instance.LoadImages(Content);
             SoundManager.Instance.LoadSounds(Content);
+            EffectManager.Instance.LoadEffects(Content);
 
             RelayCommand command = new RelayCommand(new Action<object>(ExitEvent));
 

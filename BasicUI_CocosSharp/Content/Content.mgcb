@@ -21,6 +21,7 @@
 /processorParam:GenerateMipmaps=False
 /processorParam:PremultiplyAlpha=True
 /processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/EmptyKeysLogoTextSmall.png
 
@@ -65,4 +66,10 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Select.wav
+
+#begin DirectionalBlurShader.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:DirectionalBlurShader.fx
 

@@ -7,6 +7,7 @@ using EmptyKeys.UserInterface;
 using EmptyKeys.UserInterface.Debug;
 using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
+using EmptyKeys.UserInterface.Media.Effects;
 using EmptyKeys.UserInterface.Renderers;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
@@ -36,6 +37,7 @@ namespace BasicUI_Xenko
             FontManager.Instance.LoadFonts(Content);
             SoundManager.Instance.LoadSounds(Content);
             ImageManager.Instance.LoadImages(Content);
+            EffectManager.Instance.LoadEffects(EffectSystem);
             
             var scene = SceneSystem.SceneInstance.Scene;
             var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);

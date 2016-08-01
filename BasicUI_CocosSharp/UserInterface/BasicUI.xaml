@@ -3,6 +3,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ek="clr-namespace:EmptyKeys.UserInterface.Designer;assembly=EmptyKeys.UserInterface.Designer"
+             xmlns:ef="clr-namespace:EmptyKeys.UserInterface.Designer.Effects;assembly=EmptyKeys.UserInterface.Designer"
              mc:Ignorable="d" 
              d:DesignHeight="640" d:DesignWidth="800" FontSize="10pt" ek:SoundManager.Sounds="{DynamicResource Sounds}">
 
@@ -41,6 +42,9 @@
         </Grid.ColumnDefinitions>
         <StackPanel Background="Black" Grid.ColumnSpan="2">
             <Image Name="logo" Stretch="None" HorizontalAlignment="Center" Source="{DynamicResource logoEmptyKeys}">
+                <Image.Effect>
+                    <ef:DirectionalBlurEffect Angle="0" BlurAmount="0.002" />
+                </Image.Effect>
             </Image>
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />
