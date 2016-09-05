@@ -7,6 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-  <SwapChainPanel x:Name="swapChainPanel" />
+    <Viewbox Stretch="Fill">
+        <SwapChainPanel x:Name="swapChainPanel" />
+    </Viewbox>
 
 </Page>

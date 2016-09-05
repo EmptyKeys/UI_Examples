@@ -31,6 +31,9 @@ namespace BasicUI_MonoGame_Windows10_UWP
 			// Create the game.
 			var launchArguments = string.Empty;
             _game = MonoGame.Framework.XamlGame<Game1>.Create(launchArguments, Window.Current.CoreWindow, swapChainPanel);
+
+            swapChainPanel.Width = _game.GraphicsDevice.PresentationParameters.BackBufferWidth;
+            swapChainPanel.Height = _game.GraphicsDevice.PresentationParameters.BackBufferHeight;            
         }
     }
 }
