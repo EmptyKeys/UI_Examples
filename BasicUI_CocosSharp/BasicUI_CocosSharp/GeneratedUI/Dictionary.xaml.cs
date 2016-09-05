@@ -24,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.4.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.5.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -132,8 +132,6 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [ToolTipText] String
             this.Add("ToolTipText", "Click to open message box");
             ImageManager.Instance.AddImage("Images/EmptyKeysLogoTextSmall");
-            FontManager.Instance.AddFont("Segoe UI", 13.33333F, FontStyle.Regular, "Segoe_UI_10_Regular");
-            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
     }
 }
