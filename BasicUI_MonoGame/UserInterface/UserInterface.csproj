@@ -36,24 +36,24 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.4.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.5.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.4.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.5.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Debug, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.4.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Debug, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.5.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Designer, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_Generator.2.4.0.0\lib\net45\EmptyKeys.UserInterface.Designer.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Designer, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_Generator.2.5.0.0\lib\net45\EmptyKeys.UserInterface.Designer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.4.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.2.5.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing" />
@@ -118,6 +118,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="shaders\DirectionalBlurShader.fx" />
     <Resource Include="BehaviorsLicense.txt" />
     <Content Include="Images\EmptyKeysLogoTextSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

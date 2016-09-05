@@ -24,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.4.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.5.0.0")]
     public partial class TetrisBlock : UserControl {
         
         private Border rect;
@@ -44,7 +44,6 @@ namespace EmptyKeys.UserInterface.Generated {
             this.rect.SnapsToDevicePixels = true;
             this.rect.BorderBrush = new SolidColorBrush(new ColorW(255, 255, 255, 255));
             this.rect.BorderThickness = new Thickness(1F, 1F, 0F, 0F);
-            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
     }
 }

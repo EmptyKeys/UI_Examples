@@ -24,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.4.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.5.0.0")]
     public sealed class Dictionary : ResourceDictionary {
         
         private static Dictionary singleton = new Dictionary();
@@ -156,7 +156,6 @@ namespace EmptyKeys.UserInterface.Generated {
             // Resource - [TitleResource] String
             this.Add("TitleResource", "Basic UI Example");
             ImageManager.Instance.AddImage("Images/MonoGameLogo");
-            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
             GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.CustomWindow), "TextData", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.CustomWindow_TextData_PropertyInfo));
             GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.CustomWindow), "HideCommand", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.CustomWindow_HideCommand_PropertyInfo));
             GeneratedPropertyInfo.RegisterGeneratedProperty(typeof(GameData.DragDropItem), "Name", typeof(EmptyKeys.UserInterface.Generated.Dictionary_Bindings.DragDropItem_Name_PropertyInfo));

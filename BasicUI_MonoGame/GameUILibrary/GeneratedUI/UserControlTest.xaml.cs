@@ -24,7 +24,7 @@ namespace EmptyKeys.UserInterface.Generated {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.4.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.5.0.0")]
     public partial class UserControlTest : UserControl {
         
         private Grid e_0;
@@ -48,7 +48,6 @@ namespace EmptyKeys.UserInterface.Generated {
             this.e_0.Children.Add(this.e_1);
             this.e_1.Name = "e_1";
             this.e_1.Text = "User Control Test";
-            FontManager.Instance.AddFont("Segoe UI", 20F, FontStyle.Bold, "Segoe_UI_15_Bold");
         }
     }
 }
