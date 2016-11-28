@@ -32,8 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface.Designer, Version=2.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\Empty_MonoGame_Example\packages\EmptyKeysUI_Generator.2.5.0.0\lib\net45\EmptyKeys.UserInterface.Designer.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Designer, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Empty_MonoGame_Example\packages\EmptyKeysUI_Generator.2.6.0\lib\net45\EmptyKeys.UserInterface.Designer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
