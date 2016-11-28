@@ -3,9 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicUI_Xenko", "BasicUI_Xenko", "{650DFDF3-E237-4050-9753-C4C4776B0A90}"
-	ProjectSection(SolutionItems) = preProject
-		BasicUI_Xenko\BasicUI_Xenko.xkpkg = BasicUI_Xenko\BasicUI_Xenko.xkpkg
-	EndProjectSection
 	ProjectSection(SiliconStudioPackage) = preProject
 		BasicUI_Xenko/BasicUI_Xenko.xkpkg = BasicUI_Xenko/BasicUI_Xenko.xkpkg
 	EndProjectSection

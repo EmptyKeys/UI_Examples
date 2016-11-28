@@ -1,6 +1,6 @@
 !Package
 Id: 650dfdf3-e237-4050-9753-c4c4776b0a90
-SerializedVersion: {Assets: 0.0.2}
+SerializedVersion: {Assets: 0.0.4}
 Tags: []
 Meta:
     Name: BasicUI_Xenko
@@ -10,7 +10,7 @@ Meta:
     RootNamespace: BasicUI_Xenko
     Dependencies:
         -   Name: Xenko
-            Version: 1.8.0-beta
+            Version: 1.9.0-beta
             RootAssets: []
 LocalDependencies: []
 Profiles:
@@ -21,7 +21,6 @@ Profiles:
             -   Path: Assets/Shared
             -   Path: BasicUI_Xenko.Game/Effects
         OutputGroupDirectories: {}
-        Properties: {}
         ProjectReferences:
             -   Id: 44547b06-90d6-477f-9348-cdd1915f980b
                 Location: BasicUI_Xenko.Game/BasicUI_Xenko.Game.csproj
@@ -32,8 +31,6 @@ Profiles:
         AssetFolders:
             -   Path: Assets/Windows
         OutputGroupDirectories: {}
-        Properties:
-            Xenko.GraphicsPlatform: Direct3D11
         ProjectReferences:
             -   Id: e171415e-f63a-4adb-9f1d-35f83f00c484
                 Location: BasicUI_Xenko.Windows/BasicUI_Xenko.Windows.csproj
