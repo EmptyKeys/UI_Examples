@@ -40,9 +40,10 @@ namespace BasicUI_MonoGame_Windows10_UWP
         {
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
-            
+
             graphics.PreferredBackBufferWidth = 1366;
             graphics.PreferredBackBufferHeight = 768;
+
             /*
             graphics.PreferMultiSampling = true;
             graphics.GraphicsProfile = GraphicsProfile.HiDef;

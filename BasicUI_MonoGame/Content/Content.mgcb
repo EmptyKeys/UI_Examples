@@ -3,7 +3,7 @@
 
 /outputDir:bin\$(Platform)
 /intermediateDir:obj\$(Platform)
-/platform:DesktopGL
+/platform:Windows
 /config:
 /profile:HiDef
 /compress:True
@@ -58,18 +58,21 @@
 #begin Segoe_UI_9_Regular.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Color
 /build:Segoe_UI_9_Regular.spritefont
 
 #begin Segoe_UI_10_Regular.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Color
 /build:Segoe_UI_10_Regular.spritefont
 
 #begin Segoe_UI_15_Bold.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Color
 /build:Segoe_UI_15_Bold.spritefont
 

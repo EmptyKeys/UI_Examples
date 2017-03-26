@@ -2,7 +2,7 @@
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -1793,7 +1793,7 @@
       }
     },
     "UAP,Version=v10.0/win10-arm": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -3445,7 +3445,7 @@
       }
     },
     "UAP,Version=v10.0/win10-arm-aot": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -5055,7 +5055,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x64": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -6715,7 +6715,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x64-aot": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -8325,7 +8325,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x86": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -9985,7 +9985,7 @@
       }
     },
     "UAP,Version=v10.0/win10-x86-aot": {
-      "EmptyKeysUI_MonoGame/2.6.0": {
+      "EmptyKeysUI_MonoGame/3.0.0": {
         "compile": {
           "lib/netcore/EmptyKeys.UserInterface.Core.dll": {},
           "lib/netcore/EmptyKeys.UserInterface.Debug.dll": {},
@@ -11596,15 +11596,15 @@
     }
   },
   "libraries": {
-    "EmptyKeysUI_MonoGame/2.6.0": {
-      "sha512": "1STjh9LqLLUhRqtfU5fR6LX4ML95TN36iR1TbMPdHVK97gIQYWLQmLiT/jesll2/rNJleKcwRKGClRZE10KU0Q==",
+    "EmptyKeysUI_MonoGame/3.0.0": {
+      "sha512": "l0zRKEZNXNUsn8JwNWEEaIoSV/tL4CRh/QEnvP6cW1BkRK4Ynl+1M4J1Ngo1jZZ+0XKSQc3OetLxvV+zu8DCfA==",
       "type": "package",
-      "path": "emptykeysui_monogame/2.6.0",
+      "path": "emptykeysui_monogame/3.0.0",
       "files": [
         "content/BehaviorsLicense.txt",
         "content/license.txt",
         "content/shaders/DirectionalBlurShader.fx",
-        "emptykeysui_monogame.2.6.0.nupkg.sha512",
+        "emptykeysui_monogame.3.0.0.nupkg.sha512",
         "emptykeysui_monogame.nuspec",
         "lib/netcore/EmptyKeys.UserInterface.Core.XML",
         "lib/netcore/EmptyKeys.UserInterface.Core.dll",
@@ -14891,7 +14891,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "EmptyKeysUI_MonoGame >= 2.6.0",
+      "EmptyKeysUI_MonoGame >= 3.0.0",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0"
     ],
     "UAP,Version=v10.0": []

@@ -23,7 +23,7 @@ namespace EmptyKeys.UserInterface.Generated.Dictionary_Bindings {
     using EmptyKeys.UserInterface.Themes;
     
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.6.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "3.0.0.0")]
     public class CustomWindow_TextData_PropertyInfo : IPropertyInfo {
         
         public System.Type PropertyType {
@@ -54,7 +54,7 @@ namespace EmptyKeys.UserInterface.Generated.Dictionary_Bindings {
         }
     }
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.6.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "3.0.0.0")]
     public class CustomWindow_HideCommand_PropertyInfo : IPropertyInfo {
         
         public System.Type PropertyType {
@@ -85,7 +85,7 @@ namespace EmptyKeys.UserInterface.Generated.Dictionary_Bindings {
         }
     }
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.6.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "3.0.0.0")]
     public class DragDropItem_Name_PropertyInfo : IPropertyInfo {
         
         public System.Type PropertyType {
@@ -116,7 +116,7 @@ namespace EmptyKeys.UserInterface.Generated.Dictionary_Bindings {
         }
     }
     
-    [GeneratedCodeAttribute("Empty Keys UI Generator", "2.6.0.0")]
+    [GeneratedCodeAttribute("Empty Keys UI Generator", "3.0.0.0")]
     public class TestTreeDataItem_Name_PropertyInfo : IPropertyInfo {
         
         public System.Type PropertyType {

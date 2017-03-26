@@ -13,7 +13,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Storage;
 
 namespace BasicUI_MonoGame_Win_Desktop
 {
@@ -39,6 +38,8 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1366;
+            graphics.PreferredBackBufferHeight = 768;
             graphics.PreparingDeviceSettings += graphics_PreparingDeviceSettings;            
             graphics.DeviceCreated += graphics_DeviceCreated;            
             Window.ClientSizeChanged += Window_ClientSizeChanged;
@@ -62,14 +63,12 @@ namespace BasicUI_MonoGame_Win_Desktop
         {
             nativeScreenWidth = graphics.PreferredBackBufferWidth;
             nativeScreenHeight = graphics.PreferredBackBufferHeight;
-
-            graphics.PreferredBackBufferWidth = 1366;
-            graphics.PreferredBackBufferHeight = 768;
+            
             graphics.PreferMultiSampling = true;            
             graphics.GraphicsProfile = GraphicsProfile.HiDef;
             graphics.SynchronizeWithVerticalRetrace = true;
             graphics.PreferredDepthStencilFormat = DepthFormat.Depth24Stencil8;            
-            e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 16;
+            e.GraphicsDeviceInformation.PresentationParameters.MultiSampleCount = 8;
         }
 
         /// <summary>
