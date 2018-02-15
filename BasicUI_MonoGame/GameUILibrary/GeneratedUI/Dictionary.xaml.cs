@@ -193,6 +193,8 @@ namespace EmptyKeys.UserInterface.Generated {
             e_2.Parent = parent;
             e_2.Name = "e_2";
             e_2.Background = new SolidColorBrush(new ColorW(0, 0, 255, 255));
+            e_2.BorderBrush = new SolidColorBrush(new ColorW(128, 128, 128, 255));
+            e_2.BorderThickness = new Thickness(2F, 2F, 2F, 2F);
             // e_3 element
             StackPanel e_3 = new StackPanel();
             e_2.Child = e_3;
@@ -219,10 +221,17 @@ namespace EmptyKeys.UserInterface.Generated {
             Button e_6 = new Button();
             e_3.Children.Add(e_6);
             e_6.Name = "e_6";
-            e_6.Content = "Hide Window";
+            e_6.Content = "Hide Window ddddddddddddddddddddddddddddddddddddddddddddddd";
             Binding binding_e_6_Command = new Binding("HideCommand");
             binding_e_6_Command.UseGeneratedBindings = true;
             e_6.SetBinding(Button.CommandProperty, binding_e_6_Command);
+            // PART_WindowResizeBorder element
+            Border PART_WindowResizeBorder = new Border();
+            e_3.Children.Add(PART_WindowResizeBorder);
+            PART_WindowResizeBorder.Name = "PART_WindowResizeBorder";
+            PART_WindowResizeBorder.Height = 15F;
+            PART_WindowResizeBorder.Width = 100F;
+            PART_WindowResizeBorder.Background = new SolidColorBrush(new ColorW(0, 128, 0, 255));
             return e_2;
         }
         

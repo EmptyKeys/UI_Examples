@@ -36,11 +36,14 @@ namespace GameData
             Left = 700;
             Height = 100;
             Width = 200;
+            MinHeight = 100;
+            MinWidth = 200;
             Opacity = 0.9f;
             IsHitTestVisible = true;
             IsOnTop = true;
             Title = "Title";
             IsVisible = true;
+            CanResize = true;
 
             HideCommand = new RelayCommand(new Action<object>(OnHide));
 

@@ -87,11 +87,13 @@
     </ControlTemplate>
 
     <DataTemplate DataType="{x:Type data:CustomWindow}">
-        <Border Background="Blue">
+        <Border Background="Blue" BorderThickness="2" BorderBrush="Gray">
             <StackPanel>
                 <TextBlock Text="{Binding TextData}" HorizontalAlignment="Center" VerticalAlignment="Center" />
                 <TextBlock Text="{Binding ManualBinding}" HorizontalAlignment="Center" VerticalAlignment="Center" ek:GeneratedBindings.Mode="Manual" />
-                <Button Content="Hide Window" Command="{Binding HideCommand}" />
+                <Button Content="Hide Window ddddddddddddddddddddddddddddddddddddddddddddddd" Command="{Binding HideCommand}" />
+
+                <Border Name="PART_WindowResizeBorder" Height="15" Width="100" Background="Green" />
             </StackPanel>
         </Border>
     </DataTemplate>

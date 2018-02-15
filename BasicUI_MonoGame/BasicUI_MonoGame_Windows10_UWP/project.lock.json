@@ -1,4 +1,5 @@
 {
+  "locked": false,
   "version": 1,
   "targets": {
     "UAP,Version=v10.0": {
@@ -11597,9 +11598,8 @@
   },
   "libraries": {
     "EmptyKeysUI_MonoGame/3.0.0": {
-      "sha512": "l0zRKEZNXNUsn8JwNWEEaIoSV/tL4CRh/QEnvP6cW1BkRK4Ynl+1M4J1Ngo1jZZ+0XKSQc3OetLxvV+zu8DCfA==",
+      "sha512": "O7iiMSwNi99fQzmiJPrOJPQGJO5ukB2yAIRKQdhEzpSJE2HRK8Lp/W2Oiq2NpwsuhLlg5S+Aa5+tl2mWOuW4Tg==",
       "type": "package",
-      "path": "emptykeysui_monogame/3.0.0",
       "files": [
         "content/BehaviorsLicense.txt",
         "content/license.txt",
@@ -14895,8 +14895,5 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.1.0"
     ],
     "UAP,Version=v10.0": []
-  },
-  "packageFolders": {
-    "C:\\Users\\filco\\.nuget\\packages\\": {}
   }
 }
