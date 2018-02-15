@@ -5,7 +5,7 @@ Examples for Empty Keys UI Library
 
 Prerequisites: Visual Studio 2015
 
-Note for MonoGame: Examples are using standalone version installed by installer (not NuGet). You can download it on http://www.monogame.net/2016/03/17/monogame-3-5/
+Note for MonoGame: Examples are using standalone version installed by installer (not NuGet). You can download it on http://www.monogame.net/2017/03/01/monogame-3-6/
 
 Note for Xenko: You need standard Xenko installed. You can download it on http://xenko.com/download/
 
