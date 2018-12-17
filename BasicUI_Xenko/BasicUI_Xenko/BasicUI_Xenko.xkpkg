@@ -1,7 +1,6 @@
 !Package
-Id: 650dfdf3-e237-4050-9753-c4c4776b0a90
+Id: fe9a8541-0ff9-46bc-acf7-6afc376b00b1
 SerializedVersion: {Assets: 0.0.4}
-Tags: []
 Meta:
     Name: BasicUI_Xenko
     Version: 1.0.0.0
@@ -10,7 +9,7 @@ Meta:
     RootNamespace: BasicUI_Xenko
     Dependencies:
         -   Name: Xenko
-            Version: 1.9.0-beta
+            Version: 3.0.0.5
             RootAssets: []
 LocalDependencies: []
 Profiles:
@@ -20,9 +19,11 @@ Profiles:
         AssetFolders:
             -   Path: Assets/Shared
             -   Path: BasicUI_Xenko.Game/Effects
+        ResourceFolders:
+            - Resources
         OutputGroupDirectories: {}
         ProjectReferences:
-            -   Id: 44547b06-90d6-477f-9348-cdd1915f980b
+            -   Id: 191671cf-3ab3-4194-9f6b-9d467852a3f7
                 Location: BasicUI_Xenko.Game/BasicUI_Xenko.Game.csproj
                 Type: Library
     -   Name: Windows
@@ -30,23 +31,19 @@ Profiles:
         InheritProfiles: []
         AssetFolders:
             -   Path: Assets/Windows
+        ResourceFolders: []
         OutputGroupDirectories: {}
         ProjectReferences:
-            -   Id: e171415e-f63a-4adb-9f1d-35f83f00c484
+            -   Id: 3aa4493b-70d6-4c6d-8176-2458bc557dd7
                 Location: BasicUI_Xenko.Windows/BasicUI_Xenko.Windows.csproj
                 Type: Executable
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
 RootAssets:
-    - 1a087696-5b79-4439-877b-3ab37dd1bd4a:Click_1
-    - 4f5087d6-2774-4d77-8caf-fdf00b9851de:Move_1
-    - 5babf2df-84c3-49b0-acef-8193321e26b7:Click
-    - 734c90f6-466c-4dbf-bdea-1ba01c63b89d:Move
-    - aaeb0c22-73bc-474d-aff6-7fb2ee4cf303:Images/EmptyKeysLogoTextSmall
-    - afd00579-022c-41e0-8616-822e9aa9abdf:Segoe_UI_10_Regular
-    - c0588c52-8e7a-4dfe-89fc-c92a28aa14e8:Select_1
-    - c2a3354c-828d-4bfa-be5f-8254b2eb47b3:KeyPress_1
-    - c545921c-735c-4230-9709-659b9a39e1a3:Select
-    - ddf49db8-8304-4cb4-a4ad-84b741166cd9:Segoe_UI_15_Bold
-    - eed9e017-aa5d-4e74-9b58-aa0e0492b1cf:KeyPress
+    - 2f6db307-9b35-4b87-ace8-70f73cbb2abc:Segoe_UI_15_Bold
+    - 4c820c4a-bf9d-448d-8e43-929f1c52d87a:Segoe_UI_10_Regular
+    - 529f61a3-5de8-4840-967b-9ecbf07f3a87:Click
+    - 69bcb736-6aea-41a6-bbd2-4d047752d9c7:KeyPress
+    - 6e7f71b8-3e0a-41ef-9c10-4a74b00d5f3f:Select
+    - 85001bfc-3d41-4f6f-9b48-93a0108b40cd:Move

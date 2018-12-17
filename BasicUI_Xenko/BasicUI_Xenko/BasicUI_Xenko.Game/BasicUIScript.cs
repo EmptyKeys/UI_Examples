@@ -9,12 +9,12 @@ using EmptyKeys.UserInterface.Generated;
 using EmptyKeys.UserInterface.Media;
 using EmptyKeys.UserInterface.Media.Effects;
 using EmptyKeys.UserInterface.Renderers;
-using SiliconStudio.Core.Mathematics;
-using SiliconStudio.Xenko.Engine;
-using SiliconStudio.Xenko.Graphics;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Xenko.Rendering;
-using SiliconStudio.Xenko.Rendering.Composers;
+using Xenko.Core.Mathematics;
+using Xenko.Engine;
+using Xenko.Graphics;
+using Xenko.Input;
+using Xenko.Rendering;
+using Xenko.Rendering.Compositing;
 
 namespace BasicUI_Xenko
 {
@@ -22,6 +22,7 @@ namespace BasicUI_Xenko
     {
         private BasicUI uiRoot;
         private DebugViewModel debug;
+        private DelegateSceneRenderer customRenderDelegate;
 
         public override async Task Execute()
         {
@@ -38,10 +39,11 @@ namespace BasicUI_Xenko
             SoundManager.Instance.LoadSounds(Content);
             ImageManager.Instance.LoadImages(Content);
             EffectManager.Instance.LoadEffects(EffectSystem);
-            
-            var scene = SceneSystem.SceneInstance.Scene;
-            var compositor = ((SceneGraphicsCompositorLayers)scene.Settings.GraphicsCompositor);
-            compositor.Master.Renderers.Add(new SceneDelegateRenderer(Render));
+
+            var scene = SceneSystem.SceneInstance.RootScene;
+            var compositor = SceneSystem.GraphicsCompositor;
+            customRenderDelegate = new DelegateSceneRenderer(Render);
+            ((SceneRendererCollection)((SceneCameraRenderer)compositor.Game).Child).Children.Add(customRenderDelegate);
 
             while (Game.IsRunning)
             {
@@ -52,10 +54,10 @@ namespace BasicUI_Xenko
             }            
         }
 
-        private void Render(RenderDrawContext arg1, RenderFrame arg2)
+        private void Render(RenderDrawContext obj)
         {
             uiRoot.Draw(Game.UpdateTime.Elapsed.TotalMilliseconds);
             debug.Draw();
-        }        
+        }
     }
 }

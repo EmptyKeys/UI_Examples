@@ -1,73 +1,22 @@
 !SceneAsset
-Id: 8c93517a-df0a-4e5f-9c48-af808ae868af
-SerializedVersion: {Xenko: 1.9.0-beta05}
+Id: 971355db-f993-41c6-898f-522472562131
+SerializedVersion: {Xenko: 2.1.0.1}
 Tags: []
-SceneSettings:
-    Id: d048f352-a808-4f53-93fb-ce78f7adda61
-    GraphicsCompositor: !SceneGraphicsCompositorLayers
-        Cameras: {}
-        Layers: {}
-        Master:
-            Name: SceneGraphicsLayer
-            Output: !MasterRenderFrameProvider {}
-            Renderers:
-                78278fbacf46a142a9173715cdc6abf0: !ClearRenderFrameRenderer
-                    Color: {R: 0.0, G: 0.0, B: 0.0, A: 1.0}
-                    Output: !CurrentRenderFrameProvider {}
-                ba8a135d19d7d148b3800d7c5c3530d1: !SceneCameraRenderer
-                    Mode: !CameraRendererModeForward {}
-                    Camera:
-                        Index: 0
-                    Output: !CurrentRenderFrameProvider {}
-                    Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
-                    ForceAspectRatio: false
-    EditorSettings:
-        GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
-        SceneUnit: 1.0
-        Mode: !SceneEditorGraphicsModeHDRSettings
-            BackgroundColor: {R: 0.470588237, G: 0.470588237, B: 0.470588237}
-            PostProcessingEffects:
-                Camera:
-                    Index: 0
-                AmbientOcclusion: {}
-                DepthOfField:
-                    Enabled: false
-                    DOFAreas: {X: 0.5, Y: 6.0, Z: 50.0, W: 200.0}
-                BrightFilter:
-                    Color: {R: 1.0, G: 1.0, B: 1.0}
-                Bloom:
-                    Enabled: false
-                    Distortion: {X: 1.0, Y: 1.0}
-                    Afterimage:
-                        Enabled: false
-                LightStreak:
-                    Enabled: false
-                    Attenuation: 0.7
-                LensFlare:
-                    Enabled: false
-                ColorTransforms:
-                    Transforms:
-                        a25c711b0b3594478544de89e43b3d30: !ToneMap
-                            Operator: !ToneMapHejlDawsonOperator {}
-                        f2001d4444afef4f94f3246470f07f45: !FilmGrain
-                            Enabled: false
-                        03923c190a8be34186f3f1185f33b5d4: !Vignetting
-                            Enabled: false
-                            Color: {R: 0.0, G: 0.0, B: 0.0}
-                Antialiasing: !FXAAEffect {}
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
-    RootPartIds:
-        - ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
+    RootParts:
+        - ref!! ba1c243d-10c7-49f7-b9cc-4a96fca3ebd3
     Parts:
         -   Entity:
-                Id: ec1d6490-31f7-4b20-9e2c-7fe56a1d3157
+                Id: ba1c243d-10c7-49f7-b9cc-4a96fca3ebd3
                 Name: Entity
                 Components:
-                    e7e52f9b1e047545834b2c5dc0ba4c7b: !TransformComponent
-                        Id: 9b2fe5e7-041e-4575-834b-2c5dc0ba4c7b
+                    f92e3ac4c0636172952efaf6908d6cd6: !TransformComponent
+                        Id: 41a1d7ae-45ca-4fee-9217-f59ed1d95eaf
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    573e141ee80f424e9c981770665b15c4: !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
-                        Id: 1e143e57-0fe8-4e42-9c98-1770665b15c4
+                    f4e411fedcb623e5c2085ce9ddf75aad: !BasicUI_Xenko.BasicUIScript,BasicUI_Xenko.Game
+                        Id: 4bf1a256-b1b2-4d22-8a12-c9d74cda0702

@@ -1,6 +1,8 @@
 !Sound
-Id: 5babf2df-84c3-49b0-acef-8193321e26b7
+Id: 529f61a3-5de8-4840-967b-9ecbf07f3a87
+SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
-Source: ../../Content/Click.wav
-StreamFromDisk: true
+Source: ../../Resources/Click.wav
+CompressionRatio: 15
+StreamFromDisk: false
 Spatialized: false

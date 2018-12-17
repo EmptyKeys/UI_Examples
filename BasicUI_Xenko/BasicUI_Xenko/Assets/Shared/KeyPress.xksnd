@@ -1,6 +1,8 @@
 !Sound
-Id: eed9e017-aa5d-4e74-9b58-aa0e0492b1cf
+Id: 69bcb736-6aea-41a6-bbd2-4d047752d9c7
+SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
-Source: ../../Content/KeyPress.wav
-StreamFromDisk: true
+Source: ../../Resources/KeyPress.wav
+CompressionRatio: 15
+StreamFromDisk: false
 Spatialized: false
