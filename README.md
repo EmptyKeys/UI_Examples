@@ -3,15 +3,13 @@ UI_Examples
 
 Examples for Empty Keys UI Library
 
-Prerequisites: Visual Studio 2015
+Prerequisites: Visual Studio 2017 15.9.2+
 
-Note for MonoGame: Examples are using standalone version installed by installer (not NuGet). You can download it on http://www.monogame.net/2017/03/01/monogame-3-6/
+Note for MonoGame: Examples are using standalone version installed by installer (not NuGet). You can download it on http://community.monogame.net/t/monogame-3-7-1-release/11173
 
 Note for Xenko: You need standard Xenko installed. You can download it on http://xenko.com/download/
 
-Note for Linux: You need support for PCL, on Debian you can install that with
- 
- sudo apt-get install referenceassemblies-pcl
+Note for Linux: You need .NET Core and .NET Standard 2.0
 
 How to make them work
 =====================
