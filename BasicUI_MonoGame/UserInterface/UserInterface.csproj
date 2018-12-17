@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UserInterface</RootNamespace>
     <AssemblyName>UserInterface</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <ExpressionBlendVersion>12.0.51020.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,25 +37,20 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Designer, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_Generator.3.0.0\lib\net45\EmptyKeys.UserInterface.Designer.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface.Designer, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_Generator.3.1.0\lib\net462\EmptyKeys.UserInterface.Designer.dll</HintPath>
     </Reference>
     <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing" />
     <Reference Include="System" />
@@ -98,7 +94,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="BasicUI.xaml">
@@ -119,6 +114,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="shaders\DirectionalBlurShader.fx" />
     <Resource Include="BehaviorsLicense.txt" />
     <Content Include="Images\EmptyKeysLogoTextSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -129,9 +125,9 @@
     <Resource Include="license.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GameData\GameData.csproj">
-      <Project>{650d2c89-daa1-45c4-a660-2bde693c1fb6}</Project>
-      <Name>GameData</Name>
+    <ProjectReference Include="..\GameData\GameData.Standard.csproj">
+      <Project>{d01c5caa-f771-4a3d-ac5f-ce61bafc7d64}</Project>
+      <Name>GameData.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

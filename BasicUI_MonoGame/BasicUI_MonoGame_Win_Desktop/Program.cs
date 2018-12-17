@@ -18,9 +18,7 @@ namespace BasicUI_MonoGame_Win_Desktop
         /// </summary>
         [STAThread]
         static void Main()
-        {
-            ServiceManager.Instance.AddService<IClipboardService>(new ClipboardService());
-
+        {            
             using (var game = new Game1())
                 game.Run();
         }
