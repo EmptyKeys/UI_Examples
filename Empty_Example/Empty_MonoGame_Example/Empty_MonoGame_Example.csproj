@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,8 +12,9 @@
     <RootNamespace>Empty_MonoGame_Example</RootNamespace>
     <AssemblyName>Empty_MonoGame_Example</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MonoGamePlatform>Windows</MonoGamePlatform>    
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>    
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -68,21 +69,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Common\AnyCPU\EmptyKeys.UserInterface.Debug.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
     </Reference>
     <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\EmptyKeysUI_MonoGame.3.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\MonoGame\AnyCPU\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
@@ -94,6 +91,7 @@
     <Content Include="BehaviorsLicense.txt" />
     <Content Include="Icon.ico" />
     <Content Include="license.txt" />
+    <Content Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
@@ -102,12 +100,11 @@
     <None Include="app.config" />
     <None Include="app.manifest" />
     <None Include="packages.config" />
-    <None Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GameLibrary\GameLibrary.csproj">
-      <Project>{0acda0a0-9460-4226-b1c6-9e9fca4d483e}</Project>
-      <Name>GameLibrary</Name>
+    <ProjectReference Include="..\GameLibrary\GameLibrary.Standard.csproj">
+      <Project>{9f89b7c6-a259-4ad6-bfa7-496fe60743db}</Project>
+      <Name>GameLibrary.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
