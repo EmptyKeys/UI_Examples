@@ -15,4 +15,13 @@
   <ItemGroup>
     <ProjectReference Include="..\BasicUI_Xenko.UserInterface\BasicUI_Xenko.UserInterface.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Shaders\DirectionalBlurShader.xksl">
+      <Generator>XenkoShaderKeyGenerator</Generator>
+    </None>
+    <None Update="Shaders\SDFFontShader.xksl">
+      <Generator>XenkoShaderKeyGenerator</Generator>
+    </None>
+  </ItemGroup>
 </Project>
