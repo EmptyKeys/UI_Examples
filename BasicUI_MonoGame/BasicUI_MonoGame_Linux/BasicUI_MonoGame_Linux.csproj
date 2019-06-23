@@ -69,17 +69,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
     <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.1.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
     </Reference>
     <Reference Include="MonoGame.Framework, Version=3.7.1.189, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.7.1.189\lib\net45\MonoGame.Framework.dll</HintPath>
@@ -99,7 +99,6 @@
     </Content>
     <Content Include="Icon.ico" />
     <Content Include="license.txt" />
-    <Content Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Content\bin\Linux\Click.xnb">
@@ -156,6 +155,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="packages.config" />
+    <None Include="shaders\DirectionalBlurShader.fx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GameData\GameData.Standard.csproj">

@@ -252,3 +252,6 @@ EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.Core.XML
 EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.Debug.dll
 EmptyKeysUI/Common/AnyCPU/EmptyKeys.UserInterface.xml
 /Empty_Example/Empty_MonoGame_Example/.vs/Empty_MonoGame_Example/v15/Server/sqlite3
+BasicUI_MonoGame/.vs/BasicUI_MonoGame/v15/Server/sqlite3/storage.ide
+BasicUI_MonoGame/.vs/BasicUI_MonoGame/v15/Server/sqlite3/storage.ide-shm
+BasicUI_MonoGame/.vs/BasicUI_MonoGame/v15/Server/sqlite3/storage.ide-wal
