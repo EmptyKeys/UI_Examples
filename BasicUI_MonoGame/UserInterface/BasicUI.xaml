@@ -48,9 +48,6 @@
                 <Image.Source>
                     <BitmapImage UriSource="Images/EmptyKeysLogoTextSmall.png" />
                 </Image.Source>
-                <Image.Effect>
-                    <ef:DirectionalBlurEffect Angle="0" BlurAmount="0.002" />
-                </Image.Effect>
             </Image>
             <TextBlock TextWrapping="Wrap" Text="{DynamicResource TitleResource}" HorizontalAlignment="Center" VerticalAlignment="Center" 
                    FontSize="15pt" FontWeight="Bold" FontFamily="Segoe UI" Foreground="LightGray" />

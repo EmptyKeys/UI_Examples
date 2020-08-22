@@ -37,20 +37,20 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EmptyKeys.UserInterface, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.3.0\lib\netstandard2.0\EmptyKeys.UserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Core, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.3.0\lib\netstandard2.0\EmptyKeys.UserInterface.Core.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Debug, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.3.0\lib\netstandard2.0\EmptyKeys.UserInterface.Debug.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.Designer, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_Generator.3.2.0\lib\net461\EmptyKeys.UserInterface.Designer.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.Designer, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_Generator.3.3.0\lib\net461\EmptyKeys.UserInterface.Designer.dll</HintPath>
     </Reference>
-    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.2.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
+    <Reference Include="EmptyKeys.UserInterface.MonoGame, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EmptyKeysUI_MonoGame.3.3.0\lib\netstandard2.0\EmptyKeys.UserInterface.MonoGame.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Drawing" />
     <Reference Include="System" />
