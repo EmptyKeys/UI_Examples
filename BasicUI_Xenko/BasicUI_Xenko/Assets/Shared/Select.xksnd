@@ -1,9 +1,0 @@
-!Sound
-Id: 6e7f71b8-3e0a-41ef-9c10-4a74b00d5f3f
-SerializedVersion: {Xenko: 2.0.0.0}
-Tags: []
-Source: ../../Resources/Select.wav
-SampleRate: 48000
-CompressionRatio: 15
-StreamFromDisk: false
-Spatialized: false

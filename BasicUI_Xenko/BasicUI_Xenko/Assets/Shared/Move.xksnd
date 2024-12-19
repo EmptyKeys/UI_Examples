@@ -1,9 +1,0 @@
-!Sound
-Id: 85001bfc-3d41-4f6f-9b48-93a0108b40cd
-SerializedVersion: {Xenko: 2.0.0.0}
-Tags: []
-Source: ../../Resources/Move.wav
-SampleRate: 48000
-CompressionRatio: 15
-StreamFromDisk: false
-Spatialized: false
