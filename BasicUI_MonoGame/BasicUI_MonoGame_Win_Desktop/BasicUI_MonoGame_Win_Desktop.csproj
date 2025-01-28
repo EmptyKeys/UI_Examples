@@ -11,7 +11,7 @@
     <RootNamespace>BasicUI_MonoGame_Win_Desktop</RootNamespace>
     <AssemblyName>BasicUI_MonoGame_Win_Desktop</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
