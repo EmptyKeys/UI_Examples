@@ -3,11 +3,8 @@ UI_Examples
 
 Examples for Empty Keys UI Library
 
-Prerequisites: Visual Studio 2017 15.9.2+
+Prerequisites: Visual Studio 2022, .NET 8
 
-Note for Xenko: You need standard Xenko installed. You can download it on http://xenko.com/download/
-
-Note for Linux: You need .NET Core and .NET Standard 2.0
 
 How to make them work
 =====================
